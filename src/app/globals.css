@@ -56,3 +56,23 @@
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(227 50 92 / var(--tw-ring-opacity)) /* #3b82f6 */;
 }
+
+.p-datepicker-trigger .pi {
+  color: #e3325c !important; /* Example: blue-500 */
+}
+
+/* Or more generally if you want to apply to all PrimeIcons within buttons */
+.p-button .pi {
+  color: #e3325c !important;
+  background-color: #e3325c !important;
+}
+
+.custom-calendar-icon .p-datepicker-trigger .pi {
+  color: #ef4444; /* Example: a red color */
+  background-color: #e3325c;
+}
+
+.p-calendar .p-button {
+  background-color: #4f46e5;
+  color: #ffffff;
+}

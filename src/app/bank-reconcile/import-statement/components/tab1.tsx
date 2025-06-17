@@ -1,7 +1,7 @@
 import { Calendar } from "lucide-react";
 import ImportStatementDetail from "./detail";
 import TextSearch from "@/app/components/search/TextSearchProps";
-import CustomStyledCalendar from "@/app/components/search/MyDatePicker";
+import MyDatePicker from "@/app/components/search/MyDatePicker";
 
 function Tab1() {
   return (
@@ -33,7 +33,7 @@ function Tab1() {
             </span>
           </div>
         </div> */}
-        <CustomStyledCalendar></CustomStyledCalendar>
+        <MyDatePicker></MyDatePicker>
         {/* Account Dropdown */}
         <div>
           <label

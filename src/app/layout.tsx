@@ -22,8 +22,8 @@ export default function RootLayout({
         <AuthGuard>
           <AlertProvider>
             <ClientLayout>
-              {/* <PrimeReactProviders>{children}</PrimeReactProviders> */}
-              {children}
+              <PrimeReactProviders>{children}</PrimeReactProviders>
+              {/* {children} */}
             </ClientLayout>
           </AlertProvider>
         </AuthGuard>
