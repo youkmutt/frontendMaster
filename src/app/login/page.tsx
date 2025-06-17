@@ -19,6 +19,8 @@ function Login() {
           sessionStorage.removeItem("refreshToken");
           sessionStorage.removeItem("permission");
           sessionStorage.removeItem("menu");
+          sessionStorage.removeItem("lang");
+          sessionStorage.removeItem("user");
 
           sessionStorage.setItem(
             "authToken",
@@ -37,6 +39,7 @@ function Login() {
             "menu",
             JSON.stringify(response.data?.menus) ?? ""
           );
+          sessionStorage.setItem("lang", "th");
 
           const extractedData: UserDetailModel = {
             employeeId: response.data?.employeeId,

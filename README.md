@@ -77,6 +77,11 @@ npm install lucide-react
 
 npm install framer-motion
 
+# Install prime react
+
+npm install primereact primeicons
+npm install primeicons
+
 # Install OpenAi generate service and model from swagger
 
 npm install rimraf --save-dev

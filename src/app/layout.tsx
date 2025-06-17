@@ -3,6 +3,8 @@ import "./globals.css";
 import AuthGuard from "./components/AuthGuard";
 import { AlertProvider } from "./context/AlertContext";
 import ClientLayout from "./client_layout";
+import PrimeReactProviders from "./context/PrimeReactProvider";
+import "primeicons/primeicons.css";
 
 export const metadata: Metadata = {
   title: "Frontend App",
@@ -19,7 +21,10 @@ export default function RootLayout({
       <body>
         <AuthGuard>
           <AlertProvider>
-            <ClientLayout>{children}</ClientLayout>
+            <ClientLayout>
+              {/* <PrimeReactProviders>{children}</PrimeReactProviders> */}
+              {children}
+            </ClientLayout>
           </AlertProvider>
         </AuthGuard>
       </body>

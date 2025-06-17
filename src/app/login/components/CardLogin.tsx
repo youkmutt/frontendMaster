@@ -153,7 +153,7 @@ const CardLogin: React.FC<CardLoginProps> = ({
                       validateLogin();
                     }}
                     text={"Login"}
-                    additional_class={"bg-fa-primary w-full"}
+                    additional_class={"w-full"}
                   />
                 </div>
               </div>

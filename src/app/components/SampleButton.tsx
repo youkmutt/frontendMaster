@@ -17,7 +17,8 @@ const SampleButton: React.FC<SampleButtonProps> = ({
       onClick={onClick}
       className={`
          // เมื่อเอาเมาส์ชี้ สีพื้นหลังจะเข้มขึ้น
-        text-white         // สีข้อความเป็นสีขาว
+        ${additional_class || ""}
+        text-white       // สีข้อความเป็นสีขาว
         font-bold          // ตัวหนา
         py-2               // Padding ด้านบนและล่าง 2 หน่วย
         px-4               // Padding ด้านซ้ายและขวา 4 หน่วย
@@ -26,7 +27,8 @@ const SampleButton: React.FC<SampleButtonProps> = ({
         transition         // ทำให้การเปลี่ยนแปลงมีอนิเมชั่น
         duration-300       // ระยะเวลาอนิเมชั่น 300ms
         ease-in-out        // ชนิดของอนิเมชั่น
-        ${additional_class || "bg-blue-600 hover:bg-blue-700"}
+        bg-fa-primary
+         hover:bg-rose-500
       `}
     >
       {text}

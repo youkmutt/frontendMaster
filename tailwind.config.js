@@ -4,10 +4,12 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
     "./src/app/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/primereact/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       fontFamily: {
+        sans: ["Inter", "sans-serif"],
         inter: ["Inter", "sans-serif"],
         jamjuree: ["Bai Jamjuree", "sans-serif"],
       },
