@@ -21,18 +21,6 @@ import type {
   DropdownSubDistrictModelListBaseResponseModel,
   DropdownTreeModelListBaseResponseModel,
 } from '../models/index';
-import {
-    DropdownEmployeeModelBaseResponsePaginationFromJSON,
-    DropdownEmployeeModelBaseResponsePaginationToJSON,
-    DropdownModelListBaseResponseModelFromJSON,
-    DropdownModelListBaseResponseModelToJSON,
-    DropdownRoleModelListBaseResponseModelFromJSON,
-    DropdownRoleModelListBaseResponseModelToJSON,
-    DropdownSubDistrictModelListBaseResponseModelFromJSON,
-    DropdownSubDistrictModelListBaseResponseModelToJSON,
-    DropdownTreeModelListBaseResponseModelFromJSON,
-    DropdownTreeModelListBaseResponseModelToJSON,
-} from '../models/index';
 
 export interface ApiDropdownDdlDistrictGetRequest {
     provinceId?: number;
@@ -53,9 +41,312 @@ export interface ApiDropdownDdlSubdistrictGetRequest {
 }
 
 /**
+ * DropdownApi - interface
+ * 
+ * @export
+ * @interface DropdownApiInterface
+ */
+export interface DropdownApiInterface {
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlAddressTypeGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlAddressTypeGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlBankAccountGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlBankAccountGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlBankGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlBankGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlChartAccountGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlChartAccountGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlCompanyPayrollGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlCompanyPayrollGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlCurrencyGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlCurrencyGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlCustomerCreditTypeGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlCustomerCreditTypeGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlCustomerRegisterStatusGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlCustomerRegisterStatusGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlDepositGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlDepositGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {number} [provinceId] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlDistrictGetRaw(requestParameters: ApiDropdownDdlDistrictGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlDistrictGet(requestParameters: ApiDropdownDdlDistrictGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {string} [employeeName] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlEmployeeAvaliableGetRaw(requestParameters: ApiDropdownDdlEmployeeAvaliableGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownEmployeeModelBaseResponsePagination>>;
+
+    /**
+     */
+    apiDropdownDdlEmployeeAvaliableGet(requestParameters: ApiDropdownDdlEmployeeAvaliableGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownEmployeeModelBaseResponsePagination>;
+
+    /**
+     * 
+     * @param {any} [mappingType] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlFileTypeGetRaw(requestParameters: ApiDropdownDdlFileTypeGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlFileTypeGet(requestParameters: ApiDropdownDdlFileTypeGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlOrganizeGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownTreeModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlOrganizeGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownTreeModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlPersonTypeGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlPersonTypeGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlProjectGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlProjectGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlProvinceGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlProvinceGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlRequestUnholdStatusGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlRequestUnholdStatusGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlRequestUpdateCustomerStatusGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlRequestUpdateCustomerStatusGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlRequestUpdateCustomerTypeStatusGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlRequestUpdateCustomerTypeStatusGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlRoleGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownRoleModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlRoleGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownRoleModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlSopPaymentRoundGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlSopPaymentRoundGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {number} [districtId] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlSubdistrictGetRaw(requestParameters: ApiDropdownDdlSubdistrictGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownSubDistrictModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlSubdistrictGet(requestParameters: ApiDropdownDdlSubdistrictGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownSubDistrictModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlTitleGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlTitleGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DropdownApiInterface
+     */
+    apiDropdownDdlUserGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DropdownModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDropdownDdlUserGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DropdownModelListBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class DropdownApi extends runtime.BaseAPI {
+export class DropdownApi extends runtime.BaseAPI implements DropdownApiInterface {
 
     /**
      */
@@ -71,7 +362,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -95,7 +386,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -119,7 +410,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -143,7 +434,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -167,7 +458,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -191,7 +482,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -215,7 +506,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -239,7 +530,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -263,7 +554,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -291,7 +582,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -327,7 +618,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownEmployeeModelBaseResponsePaginationFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -355,7 +646,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -379,7 +670,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownTreeModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -403,7 +694,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -427,7 +718,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -451,7 +742,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -475,7 +766,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -499,7 +790,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -523,7 +814,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -547,7 +838,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownRoleModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -571,7 +862,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -599,7 +890,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownSubDistrictModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -623,7 +914,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -647,7 +938,7 @@ export class DropdownApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DropdownModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

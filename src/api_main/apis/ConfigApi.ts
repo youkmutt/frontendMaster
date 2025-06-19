@@ -19,14 +19,6 @@ import type {
   ConfigDetailModelBaseResponseModel,
   ConfigModelBaseResponsePagination,
 } from '../models/index';
-import {
-    ConfigDetailModelFromJSON,
-    ConfigDetailModelToJSON,
-    ConfigDetailModelBaseResponseModelFromJSON,
-    ConfigDetailModelBaseResponseModelToJSON,
-    ConfigModelBaseResponsePaginationFromJSON,
-    ConfigModelBaseResponsePaginationToJSON,
-} from '../models/index';
 
 export interface ApiConfigDetailIdGetRequest {
     id: number;
@@ -47,9 +39,72 @@ export interface ApiConfigUpdatePostRequest {
 }
 
 /**
+ * ConfigApi - interface
+ * 
+ * @export
+ * @interface ConfigApiInterface
+ */
+export interface ConfigApiInterface {
+    /**
+     * 
+     * @param {number} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigApiInterface
+     */
+    apiConfigDetailIdGetRaw(requestParameters: ApiConfigDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ConfigDetailModelBaseResponseModel>>;
+
+    /**
+     */
+    apiConfigDetailIdGet(requestParameters: ApiConfigDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ConfigDetailModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {string} key 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigApiInterface
+     */
+    apiConfigDetailbykeyKeyGetRaw(requestParameters: ApiConfigDetailbykeyKeyGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ConfigDetailModelBaseResponseModel>>;
+
+    /**
+     */
+    apiConfigDetailbykeyKeyGet(requestParameters: ApiConfigDetailbykeyKeyGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ConfigDetailModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {string} [configType] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigApiInterface
+     */
+    apiConfigListGetRaw(requestParameters: ApiConfigListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ConfigModelBaseResponsePagination>>;
+
+    /**
+     */
+    apiConfigListGet(requestParameters: ApiConfigListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ConfigModelBaseResponsePagination>;
+
+    /**
+     * 
+     * @param {ConfigDetailModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigApiInterface
+     */
+    apiConfigUpdatePostRaw(requestParameters: ApiConfigUpdatePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ConfigDetailModelBaseResponseModel>>;
+
+    /**
+     */
+    apiConfigUpdatePost(requestParameters: ApiConfigUpdatePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ConfigDetailModelBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class ConfigApi extends runtime.BaseAPI {
+export class ConfigApi extends runtime.BaseAPI implements ConfigApiInterface {
 
     /**
      */
@@ -76,7 +131,7 @@ export class ConfigApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ConfigDetailModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -111,7 +166,7 @@ export class ConfigApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ConfigDetailModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -151,7 +206,7 @@ export class ConfigApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ConfigModelBaseResponsePaginationFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -179,10 +234,10 @@ export class ConfigApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ConfigDetailModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ConfigDetailModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

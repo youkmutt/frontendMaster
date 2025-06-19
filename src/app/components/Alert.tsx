@@ -1,5 +1,5 @@
 import React, { JSX, useState } from "react";
-import { CheckCircle, AlertCircle, Info, AlertTriangle, X } from "lucide-react";
+// import { CheckCircle, AlertCircle, Info, AlertTriangle, X } from "lucide-react";
 
 type AlertType = "success" | "error" | "info" | "warning";
 
@@ -17,10 +17,10 @@ const alertStyles: Record<AlertType, string> = {
 };
 
 const alertIcons: Record<AlertType, JSX.Element> = {
-  success: <CheckCircle className="w-5 h-5 mr-2" />,
-  error: <AlertCircle className="w-5 h-5 mr-2" />,
-  info: <Info className="w-5 h-5 mr-2" />,
-  warning: <AlertTriangle className="w-5 h-5 mr-2" />,
+  success: <i className="pt-1 w-5 h-5 mr-2 pi pi-check-circle" />,
+  error: <i className="pt-1 w-5 h-5 mr-2 pi pi-times-circle" />,
+  info: <i className="pt-1 w-5 h-5 mr-2 pi pi-info" />,
+  warning: <i className="pt-1 w-5 h-5 mr-2 pi pi-exclamation-circle" />,
 };
 
 const Alert: React.FC<AlertProps> = ({
@@ -43,7 +43,7 @@ const Alert: React.FC<AlertProps> = ({
           onClick={() => setVisible(false)}
           className="text-xl text-inherit hover:opacity-70"
         >
-          <X className="w-4 h-4" />
+          <i className="w-4 h-4 pi pi-x" />
         </button>
       )}
     </div>

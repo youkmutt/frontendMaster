@@ -26,10 +26,10 @@ const InputText: React.FC<InputTextProps> = ({
         value={value}
         placeholder={placeholder}
         onChange={(e) => {
-          setValue(e.target.value); // ✅ update internal state
-          onChange(e.target.value); // ✅ notify parent
+          setValue(e.target.value);
+          onChange(e.target.value);
         }}
-        className="px-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-fa"
+        className="px-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:border-fa-primary"
       />
     </div>
   );

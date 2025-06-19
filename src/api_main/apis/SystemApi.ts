@@ -43,9 +43,99 @@ export interface ApiSystemSendEmailGetRequest {
 }
 
 /**
+ * SystemApi - interface
+ * 
+ * @export
+ * @interface SystemApiInterface
+ */
+export interface SystemApiInterface {
+    /**
+     * 
+     * @param {string} [key] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SystemApiInterface
+     */
+    apiSystemDeleteRedisPostRaw(requestParameters: ApiSystemDeleteRedisPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<void>>;
+
+    /**
+     */
+    apiSystemDeleteRedisPost(requestParameters: ApiSystemDeleteRedisPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<void>;
+
+    /**
+     * 
+     * @param {Blob} [file] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SystemApiInterface
+     */
+    apiSystemImportMenuPostRaw(requestParameters: ApiSystemImportMenuPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<void>>;
+
+    /**
+     */
+    apiSystemImportMenuPost(requestParameters: ApiSystemImportMenuPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<void>;
+
+    /**
+     * 
+     * @param {Blob} [file] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SystemApiInterface
+     */
+    apiSystemImportPermissionPostRaw(requestParameters: ApiSystemImportPermissionPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<void>>;
+
+    /**
+     */
+    apiSystemImportPermissionPost(requestParameters: ApiSystemImportPermissionPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<void>;
+
+    /**
+     * 
+     * @param {Blob} [file] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SystemApiInterface
+     */
+    apiSystemImportUserPostRaw(requestParameters: ApiSystemImportUserPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<void>>;
+
+    /**
+     */
+    apiSystemImportUserPost(requestParameters: ApiSystemImportUserPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<void>;
+
+    /**
+     * 
+     * @param {string} [migrationKey] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SystemApiInterface
+     */
+    apiSystemMigratePostRaw(requestParameters: ApiSystemMigratePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<void>>;
+
+    /**
+     */
+    apiSystemMigratePost(requestParameters: ApiSystemMigratePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<void>;
+
+    /**
+     * 
+     * @param {string} [sendForm] 
+     * @param {string} [sendTo] 
+     * @param {string} [subject] 
+     * @param {string} [htmlBody] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SystemApiInterface
+     */
+    apiSystemSendEmailGetRaw(requestParameters: ApiSystemSendEmailGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<void>>;
+
+    /**
+     */
+    apiSystemSendEmailGet(requestParameters: ApiSystemSendEmailGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<void>;
+
+}
+
+/**
  * 
  */
-export class SystemApi extends runtime.BaseAPI {
+export class SystemApi extends runtime.BaseAPI implements SystemApiInterface {
 
     /**
      */

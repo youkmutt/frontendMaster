@@ -4,16 +4,19 @@ import { useRouter } from "next/navigation";
 import CardLogin from "./components/CardLogin";
 import { UserApi, UserLoginRequestModel, UserDetailModel } from "@/api_main";
 import { useAlert } from "@/app/context/AlertContext";
+import { useLoading } from "../context/LoadingContext";
 
 function Login() {
   const router = useRouter();
   const user_api = new UserApi();
   const { showAlert } = useAlert();
+  const { setLoading } = useLoading();
 
   const handleLogin = async (model: UserLoginRequestModel) => {
     try {
+      setLoading(true);
       await user_api.apiUserSigninPost({ body: model }).then((response) => {
-        console.log(response);
+        setLoading(false);
         if (response.success == true) {
           sessionStorage.removeItem("authToken");
           sessionStorage.removeItem("refreshToken");
@@ -53,7 +56,7 @@ function Login() {
 
           sessionStorage.setItem("userDetail", JSON.stringify(extractedData));
 
-          router.push("/dashboard");
+          router.push("/pages/dashboard");
         } else {
           console.log(response);
           showAlert("Invalid username or password", "error");

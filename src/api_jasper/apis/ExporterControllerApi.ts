@@ -18,12 +18,6 @@ import type {
   BaseRequestModel,
   BaseResponseModel,
 } from '../models/index';
-import {
-    BaseRequestModelFromJSON,
-    BaseRequestModelToJSON,
-    BaseResponseModelFromJSON,
-    BaseResponseModelToJSON,
-} from '../models/index';
 
 export interface DownloadFileRequest {
     filename: string;
@@ -34,9 +28,44 @@ export interface ExportPDFRequest {
 }
 
 /**
+ * ExporterControllerApi - interface
+ * 
+ * @export
+ * @interface ExporterControllerApiInterface
+ */
+export interface ExporterControllerApiInterface {
+    /**
+     * 
+     * @param {string} filename 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExporterControllerApiInterface
+     */
+    downloadFileRaw(requestParameters: DownloadFileRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Blob>>;
+
+    /**
+     */
+    downloadFile(requestParameters: DownloadFileRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<Blob>;
+
+    /**
+     * 
+     * @param {BaseRequestModel} baseRequestModel 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExporterControllerApiInterface
+     */
+    exportPDFRaw(requestParameters: ExportPDFRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<BaseResponseModel>>;
+
+    /**
+     */
+    exportPDF(requestParameters: ExportPDFRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<BaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class ExporterControllerApi extends runtime.BaseAPI {
+export class ExporterControllerApi extends runtime.BaseAPI implements ExporterControllerApiInterface {
 
     /**
      */
@@ -90,10 +119,10 @@ export class ExporterControllerApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: BaseRequestModelToJSON(requestParameters['baseRequestModel']),
+            body: requestParameters['baseRequestModel'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => BaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

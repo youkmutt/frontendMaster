@@ -24,24 +24,6 @@ import type {
   DebtLetterBookInvoiceInterfaceModelListBaseResponseModel,
   DebtLetterInvoiceGetSearchModelBaseResponsePagination,
 } from '../models/index';
-import {
-    BooleanBaseResponseModelFromJSON,
-    BooleanBaseResponseModelToJSON,
-    DebtLetterBookInvoiceGetModelBaseResponsePaginationFromJSON,
-    DebtLetterBookInvoiceGetModelBaseResponsePaginationToJSON,
-    DebtLetterBookInvoiceGetSearchInterfaceModelBaseResponsePaginationFromJSON,
-    DebtLetterBookInvoiceGetSearchInterfaceModelBaseResponsePaginationToJSON,
-    DebtLetterBookInvoiceGetSearchModelBaseResponsePaginationFromJSON,
-    DebtLetterBookInvoiceGetSearchModelBaseResponsePaginationToJSON,
-    DebtLetterBookInvoiceInterfaceModelFromJSON,
-    DebtLetterBookInvoiceInterfaceModelToJSON,
-    DebtLetterBookInvoiceInterfaceModelBaseResponseModelFromJSON,
-    DebtLetterBookInvoiceInterfaceModelBaseResponseModelToJSON,
-    DebtLetterBookInvoiceInterfaceModelListBaseResponseModelFromJSON,
-    DebtLetterBookInvoiceInterfaceModelListBaseResponseModelToJSON,
-    DebtLetterInvoiceGetSearchModelBaseResponsePaginationFromJSON,
-    DebtLetterInvoiceGetSearchModelBaseResponsePaginationToJSON,
-} from '../models/index';
 
 export interface ApiDebtLetterCreateDebtLetterBookInvoicePostRequest {
     body?: DebtLetterBookInvoiceInterfaceModel;
@@ -69,8 +51,8 @@ export interface ApiDebtLetterGetDebtLetterBookInvoiceByIdGetRequest {
 export interface ApiDebtLetterGetDebtLetterBookInvoiceListGetRequest {
     bookNumber?: string;
     customerName?: string;
-    bookDateStart?: Date;
-    bookDateEnd?: Date;
+    bookDateStart?: string;
+    bookDateEnd?: string;
     pageIndex?: number;
     pageSize?: number;
 }
@@ -86,9 +68,123 @@ export interface ApiDebtLetterUpdateDebtLetterBookInvoicePutRequest {
 }
 
 /**
+ * DebtLetterApi - interface
+ * 
+ * @export
+ * @interface DebtLetterApiInterface
+ */
+export interface DebtLetterApiInterface {
+    /**
+     * 
+     * @param {DebtLetterBookInvoiceInterfaceModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DebtLetterApiInterface
+     */
+    apiDebtLetterCreateDebtLetterBookInvoicePostRaw(requestParameters: ApiDebtLetterCreateDebtLetterBookInvoicePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DebtLetterBookInvoiceInterfaceModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiDebtLetterCreateDebtLetterBookInvoicePost(requestParameters: ApiDebtLetterCreateDebtLetterBookInvoicePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DebtLetterBookInvoiceInterfaceModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {number} [bookId] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DebtLetterApiInterface
+     */
+    apiDebtLetterDeleteDebtLetterBookInvoicePatchRaw(requestParameters: ApiDebtLetterDeleteDebtLetterBookInvoicePatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<BooleanBaseResponseModel>>;
+
+    /**
+     */
+    apiDebtLetterDeleteDebtLetterBookInvoicePatch(requestParameters: ApiDebtLetterDeleteDebtLetterBookInvoicePatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<BooleanBaseResponseModel>;
+
+    /**
+     * 
+     * @param {number} [customerId] 
+     * @param {number} [organizationId] 
+     * @param {string} [invoiceNo] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DebtLetterApiInterface
+     */
+    apiDebtLetterGetBookInvoiceListByCustomerIdGetRaw(requestParameters: ApiDebtLetterGetBookInvoiceListByCustomerIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DebtLetterBookInvoiceGetSearchInterfaceModelBaseResponsePagination>>;
+
+    /**
+     */
+    apiDebtLetterGetBookInvoiceListByCustomerIdGet(requestParameters: ApiDebtLetterGetBookInvoiceListByCustomerIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DebtLetterBookInvoiceGetSearchInterfaceModelBaseResponsePagination>;
+
+    /**
+     * 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {number} [bookId] 
+     * @param {number} [isTrue] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DebtLetterApiInterface
+     */
+    apiDebtLetterGetDebtLetterBookInvoiceByIdGetRaw(requestParameters: ApiDebtLetterGetDebtLetterBookInvoiceByIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DebtLetterBookInvoiceGetModelBaseResponsePagination>>;
+
+    /**
+     */
+    apiDebtLetterGetDebtLetterBookInvoiceByIdGet(requestParameters: ApiDebtLetterGetDebtLetterBookInvoiceByIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DebtLetterBookInvoiceGetModelBaseResponsePagination>;
+
+    /**
+     * 
+     * @param {string} [bookNumber] 
+     * @param {string} [customerName] 
+     * @param {string} [bookDateStart] 
+     * @param {string} [bookDateEnd] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DebtLetterApiInterface
+     */
+    apiDebtLetterGetDebtLetterBookInvoiceListGetRaw(requestParameters: ApiDebtLetterGetDebtLetterBookInvoiceListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DebtLetterBookInvoiceGetSearchModelBaseResponsePagination>>;
+
+    /**
+     */
+    apiDebtLetterGetDebtLetterBookInvoiceListGet(requestParameters: ApiDebtLetterGetDebtLetterBookInvoiceListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DebtLetterBookInvoiceGetSearchModelBaseResponsePagination>;
+
+    /**
+     * 
+     * @param {string} [customerName] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DebtLetterApiInterface
+     */
+    apiDebtLetterGetInvoiceListGetRaw(requestParameters: ApiDebtLetterGetInvoiceListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DebtLetterInvoiceGetSearchModelBaseResponsePagination>>;
+
+    /**
+     */
+    apiDebtLetterGetInvoiceListGet(requestParameters: ApiDebtLetterGetInvoiceListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DebtLetterInvoiceGetSearchModelBaseResponsePagination>;
+
+    /**
+     * 
+     * @param {DebtLetterBookInvoiceInterfaceModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DebtLetterApiInterface
+     */
+    apiDebtLetterUpdateDebtLetterBookInvoicePutRaw(requestParameters: ApiDebtLetterUpdateDebtLetterBookInvoicePutRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DebtLetterBookInvoiceInterfaceModelBaseResponseModel>>;
+
+    /**
+     */
+    apiDebtLetterUpdateDebtLetterBookInvoicePut(requestParameters: ApiDebtLetterUpdateDebtLetterBookInvoicePutRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DebtLetterBookInvoiceInterfaceModelBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class DebtLetterApi extends runtime.BaseAPI {
+export class DebtLetterApi extends runtime.BaseAPI implements DebtLetterApiInterface {
 
     /**
      */
@@ -108,10 +204,10 @@ export class DebtLetterApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: DebtLetterBookInvoiceInterfaceModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DebtLetterBookInvoiceInterfaceModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -143,7 +239,7 @@ export class DebtLetterApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => BooleanBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -191,7 +287,7 @@ export class DebtLetterApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DebtLetterBookInvoiceGetSearchInterfaceModelBaseResponsePaginationFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -235,7 +331,7 @@ export class DebtLetterApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DebtLetterBookInvoiceGetModelBaseResponsePaginationFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -259,11 +355,11 @@ export class DebtLetterApi extends runtime.BaseAPI {
         }
 
         if (requestParameters['bookDateStart'] != null) {
-            queryParameters['book_date_start'] = (requestParameters['bookDateStart'] as any).toISOString();
+            queryParameters['book_date_start'] = requestParameters['bookDateStart'];
         }
 
         if (requestParameters['bookDateEnd'] != null) {
-            queryParameters['book_date_end'] = (requestParameters['bookDateEnd'] as any).toISOString();
+            queryParameters['book_date_end'] = requestParameters['bookDateEnd'];
         }
 
         if (requestParameters['pageIndex'] != null) {
@@ -287,7 +383,7 @@ export class DebtLetterApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DebtLetterBookInvoiceGetSearchModelBaseResponsePaginationFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -327,7 +423,7 @@ export class DebtLetterApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DebtLetterInvoiceGetSearchModelBaseResponsePaginationFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -355,10 +451,10 @@ export class DebtLetterApi extends runtime.BaseAPI {
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
-            body: DebtLetterBookInvoiceInterfaceModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => DebtLetterBookInvoiceInterfaceModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

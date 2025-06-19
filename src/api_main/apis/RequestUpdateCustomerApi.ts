@@ -22,20 +22,6 @@ import type {
   RequestUpdateCustomerModel,
   RequestUpdateCustomerModelBaseResponseModel,
 } from '../models/index';
-import {
-    BooleanBaseResponseModelFromJSON,
-    BooleanBaseResponseModelToJSON,
-    RequestUpdateCreditAmountFromJSON,
-    RequestUpdateCreditAmountToJSON,
-    RequestUpdateCreditAmountBaseResponseModelFromJSON,
-    RequestUpdateCreditAmountBaseResponseModelToJSON,
-    RequestUpdateCustomerGetSearchModelBaseResponsePaginationFromJSON,
-    RequestUpdateCustomerGetSearchModelBaseResponsePaginationToJSON,
-    RequestUpdateCustomerModelFromJSON,
-    RequestUpdateCustomerModelToJSON,
-    RequestUpdateCustomerModelBaseResponseModelFromJSON,
-    RequestUpdateCustomerModelBaseResponseModelToJSON,
-} from '../models/index';
 
 export interface ApiRequestUpdateCustomerCreateRequestUpdateCustomerPostRequest {
     body?: Omit<RequestUpdateCustomerModel, 'customer_type_name'|'req_type_name'|'req_credit_type_name'|'customer_credit_type_name_old'|'customer_credit_type_name'|'regis_status_name'>;
@@ -55,8 +41,8 @@ export interface ApiRequestUpdateCustomerGetRequestUpdateCustomerListGetRequest 
     customerCreditType?: any;
     reqType?: any;
     regisStatus?: any;
-    startDate?: Date;
-    endDate?: Date;
+    startDate?: string;
+    endDate?: string;
     isApprove?: boolean;
     pageIndex?: number;
     pageSize?: number;
@@ -71,9 +57,105 @@ export interface ApiRequestUpdateCustomerUpdateRequestUpdateCustomerPutRequest {
 }
 
 /**
+ * RequestUpdateCustomerApi - interface
+ * 
+ * @export
+ * @interface RequestUpdateCustomerApiInterface
+ */
+export interface RequestUpdateCustomerApiInterface {
+    /**
+     * 
+     * @param {RequestUpdateCustomerModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RequestUpdateCustomerApiInterface
+     */
+    apiRequestUpdateCustomerCreateRequestUpdateCustomerPostRaw(requestParameters: ApiRequestUpdateCustomerCreateRequestUpdateCustomerPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<RequestUpdateCustomerModelBaseResponseModel>>;
+
+    /**
+     */
+    apiRequestUpdateCustomerCreateRequestUpdateCustomerPost(requestParameters: ApiRequestUpdateCustomerCreateRequestUpdateCustomerPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RequestUpdateCustomerModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {number} [reqId] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RequestUpdateCustomerApiInterface
+     */
+    apiRequestUpdateCustomerDeleteRequestUpdateCustomerPatchRaw(requestParameters: ApiRequestUpdateCustomerDeleteRequestUpdateCustomerPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<BooleanBaseResponseModel>>;
+
+    /**
+     */
+    apiRequestUpdateCustomerDeleteRequestUpdateCustomerPatch(requestParameters: ApiRequestUpdateCustomerDeleteRequestUpdateCustomerPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<BooleanBaseResponseModel>;
+
+    /**
+     * 
+     * @param {number} reqId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RequestUpdateCustomerApiInterface
+     */
+    apiRequestUpdateCustomerGetRequestUpdateCustomerByIdReqIdGetRaw(requestParameters: ApiRequestUpdateCustomerGetRequestUpdateCustomerByIdReqIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<RequestUpdateCustomerModelBaseResponseModel>>;
+
+    /**
+     */
+    apiRequestUpdateCustomerGetRequestUpdateCustomerByIdReqIdGet(requestParameters: ApiRequestUpdateCustomerGetRequestUpdateCustomerByIdReqIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RequestUpdateCustomerModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {string} [reqCode] 
+     * @param {string} [customerName] 
+     * @param {any} [customerCreditType] 
+     * @param {any} [reqType] 
+     * @param {any} [regisStatus] 
+     * @param {string} [startDate] 
+     * @param {string} [endDate] 
+     * @param {boolean} [isApprove] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RequestUpdateCustomerApiInterface
+     */
+    apiRequestUpdateCustomerGetRequestUpdateCustomerListGetRaw(requestParameters: ApiRequestUpdateCustomerGetRequestUpdateCustomerListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<RequestUpdateCustomerGetSearchModelBaseResponsePagination>>;
+
+    /**
+     */
+    apiRequestUpdateCustomerGetRequestUpdateCustomerListGet(requestParameters: ApiRequestUpdateCustomerGetRequestUpdateCustomerListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RequestUpdateCustomerGetSearchModelBaseResponsePagination>;
+
+    /**
+     * 
+     * @param {RequestUpdateCreditAmount} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RequestUpdateCustomerApiInterface
+     */
+    apiRequestUpdateCustomerUpdateRequestCreditAmountPatchRaw(requestParameters: ApiRequestUpdateCustomerUpdateRequestCreditAmountPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<RequestUpdateCreditAmountBaseResponseModel>>;
+
+    /**
+     */
+    apiRequestUpdateCustomerUpdateRequestCreditAmountPatch(requestParameters: ApiRequestUpdateCustomerUpdateRequestCreditAmountPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RequestUpdateCreditAmountBaseResponseModel>;
+
+    /**
+     * 
+     * @param {RequestUpdateCustomerModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RequestUpdateCustomerApiInterface
+     */
+    apiRequestUpdateCustomerUpdateRequestUpdateCustomerPutRaw(requestParameters: ApiRequestUpdateCustomerUpdateRequestUpdateCustomerPutRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<RequestUpdateCustomerModelBaseResponseModel>>;
+
+    /**
+     */
+    apiRequestUpdateCustomerUpdateRequestUpdateCustomerPut(requestParameters: ApiRequestUpdateCustomerUpdateRequestUpdateCustomerPutRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RequestUpdateCustomerModelBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class RequestUpdateCustomerApi extends runtime.BaseAPI {
+export class RequestUpdateCustomerApi extends runtime.BaseAPI implements RequestUpdateCustomerApiInterface {
 
     /**
      */
@@ -93,10 +175,10 @@ export class RequestUpdateCustomerApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: RequestUpdateCustomerModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => RequestUpdateCustomerModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -128,7 +210,7 @@ export class RequestUpdateCustomerApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => BooleanBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -163,7 +245,7 @@ export class RequestUpdateCustomerApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => RequestUpdateCustomerModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -199,11 +281,11 @@ export class RequestUpdateCustomerApi extends runtime.BaseAPI {
         }
 
         if (requestParameters['startDate'] != null) {
-            queryParameters['start_date'] = (requestParameters['startDate'] as any).toISOString();
+            queryParameters['start_date'] = requestParameters['startDate'];
         }
 
         if (requestParameters['endDate'] != null) {
-            queryParameters['end_date'] = (requestParameters['endDate'] as any).toISOString();
+            queryParameters['end_date'] = requestParameters['endDate'];
         }
 
         if (requestParameters['isApprove'] != null) {
@@ -231,7 +313,7 @@ export class RequestUpdateCustomerApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => RequestUpdateCustomerGetSearchModelBaseResponsePaginationFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -259,10 +341,10 @@ export class RequestUpdateCustomerApi extends runtime.BaseAPI {
             method: 'PATCH',
             headers: headerParameters,
             query: queryParameters,
-            body: RequestUpdateCreditAmountToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => RequestUpdateCreditAmountBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -290,10 +372,10 @@ export class RequestUpdateCustomerApi extends runtime.BaseAPI {
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
-            body: RequestUpdateCustomerModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => RequestUpdateCustomerModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

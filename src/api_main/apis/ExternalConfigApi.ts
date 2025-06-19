@@ -17,10 +17,6 @@ import * as runtime from '../runtime';
 import type {
   ConfigModelListBaseResponseModel,
 } from '../models/index';
-import {
-    ConfigModelListBaseResponseModelFromJSON,
-    ConfigModelListBaseResponseModelToJSON,
-} from '../models/index';
 
 export interface ApiExternalConfigGetConfigGetRequest {
     configType?: string;
@@ -28,9 +24,32 @@ export interface ApiExternalConfigGetConfigGetRequest {
 }
 
 /**
+ * ExternalConfigApi - interface
+ * 
+ * @export
+ * @interface ExternalConfigApiInterface
+ */
+export interface ExternalConfigApiInterface {
+    /**
+     * 
+     * @param {string} [configType] 
+     * @param {string} [appKey] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExternalConfigApiInterface
+     */
+    apiExternalConfigGetConfigGetRaw(requestParameters: ApiExternalConfigGetConfigGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ConfigModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiExternalConfigGetConfigGet(requestParameters: ApiExternalConfigGetConfigGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ConfigModelListBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class ExternalConfigApi extends runtime.BaseAPI {
+export class ExternalConfigApi extends runtime.BaseAPI implements ExternalConfigApiInterface {
 
     /**
      */
@@ -54,7 +73,7 @@ export class ExternalConfigApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ConfigModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

@@ -22,20 +22,6 @@ import type {
   RequestUnholdSOGetModelBaseResponsePagination,
   RequestUnholdSearchGetSOModelBaseResponsePagination,
 } from '../models/index';
-import {
-    BooleanBaseResponseModelFromJSON,
-    BooleanBaseResponseModelToJSON,
-    RequestUnholdGetSearchResponseModelFromJSON,
-    RequestUnholdGetSearchResponseModelToJSON,
-    RequestUnholdGroupModelFromJSON,
-    RequestUnholdGroupModelToJSON,
-    RequestUnholdGroupModelListBaseResponseModelFromJSON,
-    RequestUnholdGroupModelListBaseResponseModelToJSON,
-    RequestUnholdSOGetModelBaseResponsePaginationFromJSON,
-    RequestUnholdSOGetModelBaseResponsePaginationToJSON,
-    RequestUnholdSearchGetSOModelBaseResponsePaginationFromJSON,
-    RequestUnholdSearchGetSOModelBaseResponsePaginationToJSON,
-} from '../models/index';
 
 export interface ApiRequestUnholdCreateRequestUnholdSoPostRequest {
     body?: Omit<RequestUnholdGroupModel, 'req_status_name'>;
@@ -54,8 +40,8 @@ export interface ApiRequestUnholdGetRequestUnholdSoDetailByIdGetRequest {
 export interface ApiRequestUnholdGetRequestUnholdSoListGetRequest {
     customerName?: string;
     reqStatus?: any;
-    startReqDate?: Date;
-    endReqDate?: Date;
+    startReqDate?: string;
+    endReqDate?: string;
     currentStepId?: number;
     isApprove?: boolean;
     pageIndex?: number;
@@ -75,9 +61,109 @@ export interface ApiRequestUnholdUpdateRequestUnholdSoPutRequest {
 }
 
 /**
+ * RequestUnholdApi - interface
+ * 
+ * @export
+ * @interface RequestUnholdApiInterface
+ */
+export interface RequestUnholdApiInterface {
+    /**
+     * 
+     * @param {RequestUnholdGroupModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RequestUnholdApiInterface
+     */
+    apiRequestUnholdCreateRequestUnholdSoPostRaw(requestParameters: ApiRequestUnholdCreateRequestUnholdSoPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<RequestUnholdGroupModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiRequestUnholdCreateRequestUnholdSoPost(requestParameters: ApiRequestUnholdCreateRequestUnholdSoPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RequestUnholdGroupModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {number} [reqUnholdId] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RequestUnholdApiInterface
+     */
+    apiRequestUnholdDeleteRequestUnholdSoPatchRaw(requestParameters: ApiRequestUnholdDeleteRequestUnholdSoPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<BooleanBaseResponseModel>>;
+
+    /**
+     */
+    apiRequestUnholdDeleteRequestUnholdSoPatch(requestParameters: ApiRequestUnholdDeleteRequestUnholdSoPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<BooleanBaseResponseModel>;
+
+    /**
+     * 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {number} [reqUnholdId] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RequestUnholdApiInterface
+     */
+    apiRequestUnholdGetRequestUnholdSoDetailByIdGetRaw(requestParameters: ApiRequestUnholdGetRequestUnholdSoDetailByIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<RequestUnholdSOGetModelBaseResponsePagination>>;
+
+    /**
+     */
+    apiRequestUnholdGetRequestUnholdSoDetailByIdGet(requestParameters: ApiRequestUnholdGetRequestUnholdSoDetailByIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RequestUnholdSOGetModelBaseResponsePagination>;
+
+    /**
+     * 
+     * @param {string} [customerName] 
+     * @param {any} [reqStatus] 
+     * @param {string} [startReqDate] 
+     * @param {string} [endReqDate] 
+     * @param {number} [currentStepId] 
+     * @param {boolean} [isApprove] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RequestUnholdApiInterface
+     */
+    apiRequestUnholdGetRequestUnholdSoListGetRaw(requestParameters: ApiRequestUnholdGetRequestUnholdSoListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<RequestUnholdGetSearchResponseModel>>;
+
+    /**
+     */
+    apiRequestUnholdGetRequestUnholdSoListGet(requestParameters: ApiRequestUnholdGetRequestUnholdSoListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RequestUnholdGetSearchResponseModel>;
+
+    /**
+     * 
+     * @param {string} [customerName] 
+     * @param {string} [soNo] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {number} [customerId] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RequestUnholdApiInterface
+     */
+    apiRequestUnholdGetUnholdSoListGetRaw(requestParameters: ApiRequestUnholdGetUnholdSoListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<RequestUnholdSearchGetSOModelBaseResponsePagination>>;
+
+    /**
+     */
+    apiRequestUnholdGetUnholdSoListGet(requestParameters: ApiRequestUnholdGetUnholdSoListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RequestUnholdSearchGetSOModelBaseResponsePagination>;
+
+    /**
+     * 
+     * @param {Array<RequestUnholdGroupModel>} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RequestUnholdApiInterface
+     */
+    apiRequestUnholdUpdateRequestUnholdSoPutRaw(requestParameters: ApiRequestUnholdUpdateRequestUnholdSoPutRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<RequestUnholdGroupModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiRequestUnholdUpdateRequestUnholdSoPut(requestParameters: ApiRequestUnholdUpdateRequestUnholdSoPutRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RequestUnholdGroupModelListBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class RequestUnholdApi extends runtime.BaseAPI {
+export class RequestUnholdApi extends runtime.BaseAPI implements RequestUnholdApiInterface {
 
     /**
      */
@@ -97,10 +183,10 @@ export class RequestUnholdApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: RequestUnholdGroupModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => RequestUnholdGroupModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -132,7 +218,7 @@ export class RequestUnholdApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => BooleanBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -172,7 +258,7 @@ export class RequestUnholdApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => RequestUnholdSOGetModelBaseResponsePaginationFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -196,11 +282,11 @@ export class RequestUnholdApi extends runtime.BaseAPI {
         }
 
         if (requestParameters['startReqDate'] != null) {
-            queryParameters['start_req_date'] = (requestParameters['startReqDate'] as any).toISOString();
+            queryParameters['start_req_date'] = requestParameters['startReqDate'];
         }
 
         if (requestParameters['endReqDate'] != null) {
-            queryParameters['end_req_date'] = (requestParameters['endReqDate'] as any).toISOString();
+            queryParameters['end_req_date'] = requestParameters['endReqDate'];
         }
 
         if (requestParameters['currentStepId'] != null) {
@@ -232,7 +318,7 @@ export class RequestUnholdApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => RequestUnholdGetSearchResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -280,7 +366,7 @@ export class RequestUnholdApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => RequestUnholdSearchGetSOModelBaseResponsePaginationFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -308,10 +394,10 @@ export class RequestUnholdApi extends runtime.BaseAPI {
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
-            body: requestParameters['body']!.map(RequestUnholdGroupModelToJSON),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => RequestUnholdGroupModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

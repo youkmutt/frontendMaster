@@ -20,16 +20,6 @@ import type {
   RolePermissionRequestModel,
   StringBaseResponseModel,
 } from '../models/index';
-import {
-    MenuResponseModelListBaseResponseModelFromJSON,
-    MenuResponseModelListBaseResponseModelToJSON,
-    PermissionResponseModelListBaseResponseModelFromJSON,
-    PermissionResponseModelListBaseResponseModelToJSON,
-    RolePermissionRequestModelFromJSON,
-    RolePermissionRequestModelToJSON,
-    StringBaseResponseModelFromJSON,
-    StringBaseResponseModelToJSON,
-} from '../models/index';
 
 export interface ApiRolePermissionMenuAllRoleIDGetRequest {
     roleID: number;
@@ -44,9 +34,57 @@ export interface ApiRolePermissionUpdatePermissionPostRequest {
 }
 
 /**
+ * RolePermissionApi - interface
+ * 
+ * @export
+ * @interface RolePermissionApiInterface
+ */
+export interface RolePermissionApiInterface {
+    /**
+     * 
+     * @param {number} roleID 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RolePermissionApiInterface
+     */
+    apiRolePermissionMenuAllRoleIDGetRaw(requestParameters: ApiRolePermissionMenuAllRoleIDGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MenuResponseModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiRolePermissionMenuAllRoleIDGet(requestParameters: ApiRolePermissionMenuAllRoleIDGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MenuResponseModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {number} roleID 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RolePermissionApiInterface
+     */
+    apiRolePermissionPermissionAllRoleIDGetRaw(requestParameters: ApiRolePermissionPermissionAllRoleIDGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<PermissionResponseModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiRolePermissionPermissionAllRoleIDGet(requestParameters: ApiRolePermissionPermissionAllRoleIDGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<PermissionResponseModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {RolePermissionRequestModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RolePermissionApiInterface
+     */
+    apiRolePermissionUpdatePermissionPostRaw(requestParameters: ApiRolePermissionUpdatePermissionPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<StringBaseResponseModel>>;
+
+    /**
+     */
+    apiRolePermissionUpdatePermissionPost(requestParameters: ApiRolePermissionUpdatePermissionPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<StringBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class RolePermissionApi extends runtime.BaseAPI {
+export class RolePermissionApi extends runtime.BaseAPI implements RolePermissionApiInterface {
 
     /**
      */
@@ -73,7 +111,7 @@ export class RolePermissionApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MenuResponseModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -108,7 +146,7 @@ export class RolePermissionApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => PermissionResponseModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -136,10 +174,10 @@ export class RolePermissionApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: RolePermissionRequestModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => StringBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

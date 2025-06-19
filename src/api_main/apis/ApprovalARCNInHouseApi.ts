@@ -19,14 +19,6 @@ import type {
   ApprovalARCNInHouseDetailBaseResponseModel,
   ApprovalARCNInHouseResponseModel,
 } from '../models/index';
-import {
-    ApprovalARCNInHouseDetailFromJSON,
-    ApprovalARCNInHouseDetailToJSON,
-    ApprovalARCNInHouseDetailBaseResponseModelFromJSON,
-    ApprovalARCNInHouseDetailBaseResponseModelToJSON,
-    ApprovalARCNInHouseResponseModelFromJSON,
-    ApprovalARCNInHouseResponseModelToJSON,
-} from '../models/index';
 
 export interface ApiApprovalARCNInHouseDetailIdGetRequest {
     id: number;
@@ -35,8 +27,8 @@ export interface ApiApprovalARCNInHouseDetailIdGetRequest {
 export interface ApiApprovalARCNInHouseListGetRequest {
     rebateCode?: string;
     customerCode?: string;
-    startDate?: Date;
-    endDate?: Date;
+    startDate?: string;
+    endDate?: string;
     currentStepId?: number;
     pageIndex?: number;
     pageSize?: number;
@@ -47,9 +39,63 @@ export interface ApiApprovalARCNInHouseUpdatePostRequest {
 }
 
 /**
+ * ApprovalARCNInHouseApi - interface
+ * 
+ * @export
+ * @interface ApprovalARCNInHouseApiInterface
+ */
+export interface ApprovalARCNInHouseApiInterface {
+    /**
+     * 
+     * @param {number} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ApprovalARCNInHouseApiInterface
+     */
+    apiApprovalARCNInHouseDetailIdGetRaw(requestParameters: ApiApprovalARCNInHouseDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApprovalARCNInHouseDetailBaseResponseModel>>;
+
+    /**
+     */
+    apiApprovalARCNInHouseDetailIdGet(requestParameters: ApiApprovalARCNInHouseDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApprovalARCNInHouseDetailBaseResponseModel>;
+
+    /**
+     * 
+     * @param {string} [rebateCode] 
+     * @param {string} [customerCode] 
+     * @param {string} [startDate] 
+     * @param {string} [endDate] 
+     * @param {number} [currentStepId] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ApprovalARCNInHouseApiInterface
+     */
+    apiApprovalARCNInHouseListGetRaw(requestParameters: ApiApprovalARCNInHouseListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApprovalARCNInHouseResponseModel>>;
+
+    /**
+     */
+    apiApprovalARCNInHouseListGet(requestParameters: ApiApprovalARCNInHouseListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApprovalARCNInHouseResponseModel>;
+
+    /**
+     * 
+     * @param {ApprovalARCNInHouseDetail} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ApprovalARCNInHouseApiInterface
+     */
+    apiApprovalARCNInHouseUpdatePostRaw(requestParameters: ApiApprovalARCNInHouseUpdatePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApprovalARCNInHouseDetailBaseResponseModel>>;
+
+    /**
+     */
+    apiApprovalARCNInHouseUpdatePost(requestParameters: ApiApprovalARCNInHouseUpdatePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApprovalARCNInHouseDetailBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class ApprovalARCNInHouseApi extends runtime.BaseAPI {
+export class ApprovalARCNInHouseApi extends runtime.BaseAPI implements ApprovalARCNInHouseApiInterface {
 
     /**
      */
@@ -76,7 +122,7 @@ export class ApprovalARCNInHouseApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApprovalARCNInHouseDetailBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -100,11 +146,11 @@ export class ApprovalARCNInHouseApi extends runtime.BaseAPI {
         }
 
         if (requestParameters['startDate'] != null) {
-            queryParameters['start_date'] = (requestParameters['startDate'] as any).toISOString();
+            queryParameters['start_date'] = requestParameters['startDate'];
         }
 
         if (requestParameters['endDate'] != null) {
-            queryParameters['end_date'] = (requestParameters['endDate'] as any).toISOString();
+            queryParameters['end_date'] = requestParameters['endDate'];
         }
 
         if (requestParameters['currentStepId'] != null) {
@@ -132,7 +178,7 @@ export class ApprovalARCNInHouseApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApprovalARCNInHouseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -160,10 +206,10 @@ export class ApprovalARCNInHouseApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApprovalARCNInHouseDetailToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApprovalARCNInHouseDetailBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

@@ -17,19 +17,37 @@ import * as runtime from '../runtime';
 import type {
   DebtLetterFormModel,
 } from '../models/index';
-import {
-    DebtLetterFormModelFromJSON,
-    DebtLetterFormModelToJSON,
-} from '../models/index';
 
 export interface ApiGeneratePDFDebtLetterPdfPostRequest {
     body?: DebtLetterFormModel;
 }
 
 /**
+ * GeneratePDFApi - interface
+ * 
+ * @export
+ * @interface GeneratePDFApiInterface
+ */
+export interface GeneratePDFApiInterface {
+    /**
+     * 
+     * @param {DebtLetterFormModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GeneratePDFApiInterface
+     */
+    apiGeneratePDFDebtLetterPdfPostRaw(requestParameters: ApiGeneratePDFDebtLetterPdfPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<void>>;
+
+    /**
+     */
+    apiGeneratePDFDebtLetterPdfPost(requestParameters: ApiGeneratePDFDebtLetterPdfPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<void>;
+
+}
+
+/**
  * 
  */
-export class GeneratePDFApi extends runtime.BaseAPI {
+export class GeneratePDFApi extends runtime.BaseAPI implements GeneratePDFApiInterface {
 
     /**
      */
@@ -45,7 +63,7 @@ export class GeneratePDFApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: DebtLetterFormModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
         return new runtime.VoidApiResponse(response);

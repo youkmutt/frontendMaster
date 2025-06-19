@@ -52,27 +52,18 @@
   src: url("./assets/fonts/BaiJamjuree-Italic.woff2") format("woff2");
 }
 
-.focus\:ring-fa:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(227 50 92 / var(--tw-ring-opacity)) /* #3b82f6 */;
+input:hover {
+  outline: none !important;
+  --tw-border-opacity: 1;
+  border-color: rgb(227 50 92 / var(--tw-border-opacity)) /* #e3325c */;
 }
 
-.p-datepicker-trigger .pi {
-  color: #e3325c !important; /* Example: blue-500 */
+input:focus {
+  outline: none !important;
+  --tw-border-opacity: 1;
+  border-color: rgb(227 50 92 / var(--tw-border-opacity)) /* #e3325c */;
 }
 
-/* Or more generally if you want to apply to all PrimeIcons within buttons */
-.p-button .pi {
-  color: #e3325c !important;
-  background-color: #e3325c !important;
-}
-
-.custom-calendar-icon .p-datepicker-trigger .pi {
-  color: #ef4444; /* Example: a red color */
-  background-color: #e3325c;
-}
-
-.p-calendar .p-button {
-  background-color: #4f46e5;
-  color: #ffffff;
+.custom-header-center .flex {
+  justify-content: center !important;
 }

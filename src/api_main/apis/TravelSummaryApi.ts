@@ -23,22 +23,6 @@ import type {
   TravelSummaryResponseModel,
   TravelSummaryRoundList,
 } from '../models/index';
-import {
-    RemarkModelFromJSON,
-    RemarkModelToJSON,
-    StringBaseResponseModelFromJSON,
-    StringBaseResponseModelToJSON,
-    TravelDetailListResponseModelFromJSON,
-    TravelDetailListResponseModelToJSON,
-    TravelSummaryDataModelBaseResponseModelFromJSON,
-    TravelSummaryDataModelBaseResponseModelToJSON,
-    TravelSummaryReceiveModelFromJSON,
-    TravelSummaryReceiveModelToJSON,
-    TravelSummaryResponseModelFromJSON,
-    TravelSummaryResponseModelToJSON,
-    TravelSummaryRoundListFromJSON,
-    TravelSummaryRoundListToJSON,
-} from '../models/index';
 
 export interface ApiTravelSummaryGetTravelSummaryDetailIdGetRequest {
     id: number;
@@ -69,9 +53,112 @@ export interface ApiTravelSummaryUpdateTravelSummaryDetailPostRequest {
 }
 
 /**
+ * TravelSummaryApi - interface
+ * 
+ * @export
+ * @interface TravelSummaryApiInterface
+ */
+export interface TravelSummaryApiInterface {
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TravelSummaryApiInterface
+     */
+    apiTravelSummaryGetRequestRoundListGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Array<TravelSummaryRoundList>>>;
+
+    /**
+     */
+    apiTravelSummaryGetRequestRoundListGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<Array<TravelSummaryRoundList>>;
+
+    /**
+     * 
+     * @param {number} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TravelSummaryApiInterface
+     */
+    apiTravelSummaryGetTravelSummaryDetailIdGetRaw(requestParameters: ApiTravelSummaryGetTravelSummaryDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<TravelSummaryDataModelBaseResponseModel>>;
+
+    /**
+     */
+    apiTravelSummaryGetTravelSummaryDetailIdGet(requestParameters: ApiTravelSummaryGetTravelSummaryDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<TravelSummaryDataModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {number} [companyPayroll] 
+     * @param {number} [reqRoundId] 
+     * @param {number} [currentStepId] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TravelSummaryApiInterface
+     */
+    apiTravelSummaryGetTravelSummaryGetRaw(requestParameters: ApiTravelSummaryGetTravelSummaryGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<TravelSummaryResponseModel>>;
+
+    /**
+     */
+    apiTravelSummaryGetTravelSummaryGet(requestParameters: ApiTravelSummaryGetTravelSummaryGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<TravelSummaryResponseModel>;
+
+    /**
+     * 
+     * @param {number} reqTravelId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TravelSummaryApiInterface
+     */
+    apiTravelSummaryGetTraveldetailReqTravelIdGetRaw(requestParameters: ApiTravelSummaryGetTraveldetailReqTravelIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Array<TravelDetailListResponseModel>>>;
+
+    /**
+     */
+    apiTravelSummaryGetTraveldetailReqTravelIdGet(requestParameters: ApiTravelSummaryGetTraveldetailReqTravelIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<Array<TravelDetailListResponseModel>>;
+
+    /**
+     * 
+     * @param {number} reqTravelId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TravelSummaryApiInterface
+     */
+    apiTravelSummaryGetTravelformReqTravelIdGetRaw(requestParameters: ApiTravelSummaryGetTravelformReqTravelIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<void>>;
+
+    /**
+     */
+    apiTravelSummaryGetTravelformReqTravelIdGet(requestParameters: ApiTravelSummaryGetTravelformReqTravelIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<void>;
+
+    /**
+     * 
+     * @param {Array<TravelSummaryReceiveModel>} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TravelSummaryApiInterface
+     */
+    apiTravelSummaryReceiveTravelSummaryFromSAMG2PostRaw(requestParameters: ApiTravelSummaryReceiveTravelSummaryFromSAMG2PostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<StringBaseResponseModel>>;
+
+    /**
+     */
+    apiTravelSummaryReceiveTravelSummaryFromSAMG2Post(requestParameters: ApiTravelSummaryReceiveTravelSummaryFromSAMG2PostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<StringBaseResponseModel>;
+
+    /**
+     * 
+     * @param {RemarkModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TravelSummaryApiInterface
+     */
+    apiTravelSummaryUpdateTravelSummaryDetailPostRaw(requestParameters: ApiTravelSummaryUpdateTravelSummaryDetailPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<boolean>>;
+
+    /**
+     */
+    apiTravelSummaryUpdateTravelSummaryDetailPost(requestParameters: ApiTravelSummaryUpdateTravelSummaryDetailPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<boolean>;
+
+}
+
+/**
  * 
  */
-export class TravelSummaryApi extends runtime.BaseAPI {
+export class TravelSummaryApi extends runtime.BaseAPI implements TravelSummaryApiInterface {
 
     /**
      */
@@ -91,7 +178,7 @@ export class TravelSummaryApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(TravelSummaryRoundListFromJSON));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -126,7 +213,7 @@ export class TravelSummaryApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => TravelSummaryDataModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -174,7 +261,7 @@ export class TravelSummaryApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => TravelSummaryResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -205,7 +292,7 @@ export class TravelSummaryApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(TravelDetailListResponseModelFromJSON));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -263,10 +350,10 @@ export class TravelSummaryApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: requestParameters['body']!.map(TravelSummaryReceiveModelToJSON),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => StringBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -294,7 +381,7 @@ export class TravelSummaryApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: RemarkModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
         if (this.isJsonMime(response.headers.get('content-type'))) {

@@ -20,16 +20,6 @@ import type {
   RebateSendArcnInhFaModel,
   StringBaseResponseModel,
 } from '../models/index';
-import {
-    RebateSendApcnFaB2bModelFromJSON,
-    RebateSendApcnFaB2bModelToJSON,
-    RebateSendArcnBrnFaModelFromJSON,
-    RebateSendArcnBrnFaModelToJSON,
-    RebateSendArcnInhFaModelFromJSON,
-    RebateSendArcnInhFaModelToJSON,
-    StringBaseResponseModelFromJSON,
-    StringBaseResponseModelToJSON,
-} from '../models/index';
 
 export interface ApiRebateRebateSendApcnFaB2bPostRequest {
     body?: RebateSendApcnFaB2bModel;
@@ -48,9 +38,70 @@ export interface ApiRebateRebateSendArcnInhFaPostRequest {
 }
 
 /**
+ * RebateApi - interface
+ * 
+ * @export
+ * @interface RebateApiInterface
+ */
+export interface RebateApiInterface {
+    /**
+     * 
+     * @param {RebateSendApcnFaB2bModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RebateApiInterface
+     */
+    apiRebateRebateSendApcnFaB2bPostRaw(requestParameters: ApiRebateRebateSendApcnFaB2bPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<StringBaseResponseModel>>;
+
+    /**
+     */
+    apiRebateRebateSendApcnFaB2bPost(requestParameters: ApiRebateRebateSendApcnFaB2bPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<StringBaseResponseModel>;
+
+    /**
+     * 
+     * @param {RebateSendApcnFaB2bModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RebateApiInterface
+     */
+    apiRebateRebateSendApcnFaMnlPostRaw(requestParameters: ApiRebateRebateSendApcnFaMnlPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<StringBaseResponseModel>>;
+
+    /**
+     */
+    apiRebateRebateSendApcnFaMnlPost(requestParameters: ApiRebateRebateSendApcnFaMnlPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<StringBaseResponseModel>;
+
+    /**
+     * 
+     * @param {RebateSendArcnBrnFaModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RebateApiInterface
+     */
+    apiRebateRebateSendArcnBrnFaPostRaw(requestParameters: ApiRebateRebateSendArcnBrnFaPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<StringBaseResponseModel>>;
+
+    /**
+     */
+    apiRebateRebateSendArcnBrnFaPost(requestParameters: ApiRebateRebateSendArcnBrnFaPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<StringBaseResponseModel>;
+
+    /**
+     * 
+     * @param {RebateSendArcnInhFaModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RebateApiInterface
+     */
+    apiRebateRebateSendArcnInhFaPostRaw(requestParameters: ApiRebateRebateSendArcnInhFaPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<StringBaseResponseModel>>;
+
+    /**
+     */
+    apiRebateRebateSendArcnInhFaPost(requestParameters: ApiRebateRebateSendArcnInhFaPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<StringBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class RebateApi extends runtime.BaseAPI {
+export class RebateApi extends runtime.BaseAPI implements RebateApiInterface {
 
     /**
      */
@@ -66,10 +117,10 @@ export class RebateApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: RebateSendApcnFaB2bModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => StringBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -93,10 +144,10 @@ export class RebateApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: RebateSendApcnFaB2bModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => StringBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -120,10 +171,10 @@ export class RebateApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: RebateSendArcnBrnFaModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => StringBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -147,10 +198,10 @@ export class RebateApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: RebateSendArcnInhFaModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => StringBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

@@ -16,9 +16,30 @@
 import * as runtime from '../runtime';
 
 /**
+ * BaseWebAPIApi - interface
+ * 
+ * @export
+ * @interface BaseWebAPIApiInterface
+ */
+export interface BaseWebAPIApiInterface {
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof BaseWebAPIApiInterface
+     */
+    enqueueGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<string>>;
+
+    /**
+     */
+    enqueueGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<string>;
+
+}
+
+/**
  * 
  */
-export class BaseWebAPIApi extends runtime.BaseAPI {
+export class BaseWebAPIApi extends runtime.BaseAPI implements BaseWebAPIApiInterface {
 
     /**
      */

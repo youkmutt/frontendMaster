@@ -19,23 +19,49 @@ import type {
   ClaimCNRequestModel,
   StringBaseResponseModel,
 } from '../models/index';
-import {
-    ClaimCNPaymentModelListBaseResponseModelFromJSON,
-    ClaimCNPaymentModelListBaseResponseModelToJSON,
-    ClaimCNRequestModelFromJSON,
-    ClaimCNRequestModelToJSON,
-    StringBaseResponseModelFromJSON,
-    StringBaseResponseModelToJSON,
-} from '../models/index';
 
 export interface ApiClaimCNCreateClaimCnPostRequest {
     body?: Array<ClaimCNRequestModel>;
 }
 
 /**
+ * ClaimCNApi - interface
+ * 
+ * @export
+ * @interface ClaimCNApiInterface
+ */
+export interface ClaimCNApiInterface {
+    /**
+     * 
+     * @param {Array<ClaimCNRequestModel>} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ClaimCNApiInterface
+     */
+    apiClaimCNCreateClaimCnPostRaw(requestParameters: ApiClaimCNCreateClaimCnPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<StringBaseResponseModel>>;
+
+    /**
+     */
+    apiClaimCNCreateClaimCnPost(requestParameters: ApiClaimCNCreateClaimCnPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<StringBaseResponseModel>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ClaimCNApiInterface
+     */
+    apiClaimCNGetClaimCnGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ClaimCNPaymentModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiClaimCNGetClaimCnGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ClaimCNPaymentModelListBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class ClaimCNApi extends runtime.BaseAPI {
+export class ClaimCNApi extends runtime.BaseAPI implements ClaimCNApiInterface {
 
     /**
      */
@@ -51,10 +77,10 @@ export class ClaimCNApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: requestParameters['body']!.map(ClaimCNRequestModelToJSON),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => StringBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -78,7 +104,7 @@ export class ClaimCNApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ClaimCNPaymentModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

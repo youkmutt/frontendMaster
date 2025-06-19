@@ -45,7 +45,7 @@ const InputTextLogin: React.FC<InputTextLogin> = ({
           onChange(e.target.value); // ✅ notify parent
         }}
         onKeyDown={handleKeyDown}
-        className={`px-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-1 focus:ring-fa ${
+        className={`px-4 py-2 border border-gray-300 rounded-xl shadow-sm ${
           !validator || "border-fa-primary"
         } `}
       />

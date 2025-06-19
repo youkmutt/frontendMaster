@@ -19,14 +19,6 @@ import type {
   ApprovalARCNRebateDetailModelBaseResponseModel,
   ApprovalARCNRebateResponseModel,
 } from '../models/index';
-import {
-    ApprovalARCNRebateDetailModelFromJSON,
-    ApprovalARCNRebateDetailModelToJSON,
-    ApprovalARCNRebateDetailModelBaseResponseModelFromJSON,
-    ApprovalARCNRebateDetailModelBaseResponseModelToJSON,
-    ApprovalARCNRebateResponseModelFromJSON,
-    ApprovalARCNRebateResponseModelToJSON,
-} from '../models/index';
 
 export interface ApiApprovalARCNRebateDetailIdGetRequest {
     id: number;
@@ -36,8 +28,8 @@ export interface ApiApprovalARCNRebateListGetRequest {
     rebateCode?: string;
     customerCode?: string;
     brandId?: number;
-    startDate?: Date;
-    endDate?: Date;
+    startDate?: string;
+    endDate?: string;
     currentStepId?: number;
     pageIndex?: number;
     pageSize?: number;
@@ -48,9 +40,64 @@ export interface ApiApprovalARCNRebateUpdatePostRequest {
 }
 
 /**
+ * ApprovalARCNRebateApi - interface
+ * 
+ * @export
+ * @interface ApprovalARCNRebateApiInterface
+ */
+export interface ApprovalARCNRebateApiInterface {
+    /**
+     * 
+     * @param {number} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ApprovalARCNRebateApiInterface
+     */
+    apiApprovalARCNRebateDetailIdGetRaw(requestParameters: ApiApprovalARCNRebateDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApprovalARCNRebateDetailModelBaseResponseModel>>;
+
+    /**
+     */
+    apiApprovalARCNRebateDetailIdGet(requestParameters: ApiApprovalARCNRebateDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApprovalARCNRebateDetailModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {string} [rebateCode] 
+     * @param {string} [customerCode] 
+     * @param {number} [brandId] 
+     * @param {string} [startDate] 
+     * @param {string} [endDate] 
+     * @param {number} [currentStepId] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ApprovalARCNRebateApiInterface
+     */
+    apiApprovalARCNRebateListGetRaw(requestParameters: ApiApprovalARCNRebateListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApprovalARCNRebateResponseModel>>;
+
+    /**
+     */
+    apiApprovalARCNRebateListGet(requestParameters: ApiApprovalARCNRebateListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApprovalARCNRebateResponseModel>;
+
+    /**
+     * 
+     * @param {ApprovalARCNRebateDetailModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ApprovalARCNRebateApiInterface
+     */
+    apiApprovalARCNRebateUpdatePostRaw(requestParameters: ApiApprovalARCNRebateUpdatePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApprovalARCNRebateDetailModelBaseResponseModel>>;
+
+    /**
+     */
+    apiApprovalARCNRebateUpdatePost(requestParameters: ApiApprovalARCNRebateUpdatePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApprovalARCNRebateDetailModelBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class ApprovalARCNRebateApi extends runtime.BaseAPI {
+export class ApprovalARCNRebateApi extends runtime.BaseAPI implements ApprovalARCNRebateApiInterface {
 
     /**
      */
@@ -77,7 +124,7 @@ export class ApprovalARCNRebateApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApprovalARCNRebateDetailModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -105,11 +152,11 @@ export class ApprovalARCNRebateApi extends runtime.BaseAPI {
         }
 
         if (requestParameters['startDate'] != null) {
-            queryParameters['start_date'] = (requestParameters['startDate'] as any).toISOString();
+            queryParameters['start_date'] = requestParameters['startDate'];
         }
 
         if (requestParameters['endDate'] != null) {
-            queryParameters['end_date'] = (requestParameters['endDate'] as any).toISOString();
+            queryParameters['end_date'] = requestParameters['endDate'];
         }
 
         if (requestParameters['currentStepId'] != null) {
@@ -137,7 +184,7 @@ export class ApprovalARCNRebateApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApprovalARCNRebateResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -165,10 +212,10 @@ export class ApprovalARCNRebateApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApprovalARCNRebateDetailModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApprovalARCNRebateDetailModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

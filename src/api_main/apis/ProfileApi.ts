@@ -17,19 +17,37 @@ import * as runtime from '../runtime';
 import type {
   ProfileModelBaseResponseModel,
 } from '../models/index';
-import {
-    ProfileModelBaseResponseModelFromJSON,
-    ProfileModelBaseResponseModelToJSON,
-} from '../models/index';
 
 export interface ApiProfileGetProfileCustomerGetRequest {
     cusId?: number;
 }
 
 /**
+ * ProfileApi - interface
+ * 
+ * @export
+ * @interface ProfileApiInterface
+ */
+export interface ProfileApiInterface {
+    /**
+     * 
+     * @param {number} [cusId] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ProfileApiInterface
+     */
+    apiProfileGetProfileCustomerGetRaw(requestParameters: ApiProfileGetProfileCustomerGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ProfileModelBaseResponseModel>>;
+
+    /**
+     */
+    apiProfileGetProfileCustomerGet(requestParameters: ApiProfileGetProfileCustomerGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ProfileModelBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class ProfileApi extends runtime.BaseAPI {
+export class ProfileApi extends runtime.BaseAPI implements ProfileApiInterface {
 
     /**
      */
@@ -49,7 +67,7 @@ export class ProfileApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ProfileModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

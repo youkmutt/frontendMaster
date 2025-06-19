@@ -22,20 +22,6 @@ import type {
   RoleResponseModelBaseResponsePagination,
   RoleResponseModelListBaseResponseModel,
 } from '../models/index';
-import {
-    BooleanBaseResponseModelFromJSON,
-    BooleanBaseResponseModelToJSON,
-    RoleRequestModelFromJSON,
-    RoleRequestModelToJSON,
-    RoleRequestModelBaseResponseModelFromJSON,
-    RoleRequestModelBaseResponseModelToJSON,
-    RoleResponseModelBaseResponseModelFromJSON,
-    RoleResponseModelBaseResponseModelToJSON,
-    RoleResponseModelBaseResponsePaginationFromJSON,
-    RoleResponseModelBaseResponsePaginationToJSON,
-    RoleResponseModelListBaseResponseModelFromJSON,
-    RoleResponseModelListBaseResponseModelToJSON,
-} from '../models/index';
 
 export interface ApiRoleDeleteRolePostRequest {
     id?: number;
@@ -57,9 +43,85 @@ export interface ApiRoleUpdateRolePostRequest {
 }
 
 /**
+ * RoleApi - interface
+ * 
+ * @export
+ * @interface RoleApiInterface
+ */
+export interface RoleApiInterface {
+    /**
+     * 
+     * @param {number} [id] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RoleApiInterface
+     */
+    apiRoleDeleteRolePostRaw(requestParameters: ApiRoleDeleteRolePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<BooleanBaseResponseModel>>;
+
+    /**
+     */
+    apiRoleDeleteRolePost(requestParameters: ApiRoleDeleteRolePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<BooleanBaseResponseModel>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RoleApiInterface
+     */
+    apiRoleRoleAllGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<RoleResponseModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiRoleRoleAllGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RoleResponseModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {string} [roleName] 
+     * @param {boolean} [activeFlag] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RoleApiInterface
+     */
+    apiRoleRoleAllListGetRaw(requestParameters: ApiRoleRoleAllListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<RoleResponseModelBaseResponsePagination>>;
+
+    /**
+     */
+    apiRoleRoleAllListGet(requestParameters: ApiRoleRoleAllListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RoleResponseModelBaseResponsePagination>;
+
+    /**
+     * 
+     * @param {number} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RoleApiInterface
+     */
+    apiRoleRoleDetailIdGetRaw(requestParameters: ApiRoleRoleDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<RoleResponseModelBaseResponseModel>>;
+
+    /**
+     */
+    apiRoleRoleDetailIdGet(requestParameters: ApiRoleRoleDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RoleResponseModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {RoleRequestModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RoleApiInterface
+     */
+    apiRoleUpdateRolePostRaw(requestParameters: ApiRoleUpdateRolePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<RoleRequestModelBaseResponseModel>>;
+
+    /**
+     */
+    apiRoleUpdateRolePost(requestParameters: ApiRoleUpdateRolePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RoleRequestModelBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class RoleApi extends runtime.BaseAPI {
+export class RoleApi extends runtime.BaseAPI implements RoleApiInterface {
 
     /**
      */
@@ -83,7 +145,7 @@ export class RoleApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => BooleanBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -111,7 +173,7 @@ export class RoleApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => RoleResponseModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -155,7 +217,7 @@ export class RoleApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => RoleResponseModelBaseResponsePaginationFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -190,7 +252,7 @@ export class RoleApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => RoleResponseModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -218,10 +280,10 @@ export class RoleApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: RoleRequestModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => RoleRequestModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

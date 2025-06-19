@@ -19,14 +19,6 @@ import type {
   ApprovalARCNClaimDetailModelBaseResponseModel,
   ApprovalARCNClaimResponseModel,
 } from '../models/index';
-import {
-    ApprovalARCNClaimDetailModelFromJSON,
-    ApprovalARCNClaimDetailModelToJSON,
-    ApprovalARCNClaimDetailModelBaseResponseModelFromJSON,
-    ApprovalARCNClaimDetailModelBaseResponseModelToJSON,
-    ApprovalARCNClaimResponseModelFromJSON,
-    ApprovalARCNClaimResponseModelToJSON,
-} from '../models/index';
 
 export interface ApiApprovalOMClaimDetailIdGetRequest {
     id: number;
@@ -35,8 +27,8 @@ export interface ApiApprovalOMClaimDetailIdGetRequest {
 export interface ApiApprovalOMClaimListGetRequest {
     claimCnNo?: string;
     customerName?: string;
-    claimCnStartDate?: Date;
-    claimCnEndDate?: Date;
+    claimCnStartDate?: string;
+    claimCnEndDate?: string;
     claimStatus?: any;
     claimType?: number;
     currentStepId?: number;
@@ -49,9 +41,65 @@ export interface ApiApprovalOMClaimUpdatePostRequest {
 }
 
 /**
+ * ApprovalOMClaimApi - interface
+ * 
+ * @export
+ * @interface ApprovalOMClaimApiInterface
+ */
+export interface ApprovalOMClaimApiInterface {
+    /**
+     * 
+     * @param {number} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ApprovalOMClaimApiInterface
+     */
+    apiApprovalOMClaimDetailIdGetRaw(requestParameters: ApiApprovalOMClaimDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApprovalARCNClaimDetailModelBaseResponseModel>>;
+
+    /**
+     */
+    apiApprovalOMClaimDetailIdGet(requestParameters: ApiApprovalOMClaimDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApprovalARCNClaimDetailModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {string} [claimCnNo] 
+     * @param {string} [customerName] 
+     * @param {string} [claimCnStartDate] 
+     * @param {string} [claimCnEndDate] 
+     * @param {any} [claimStatus] 
+     * @param {number} [claimType] 
+     * @param {number} [currentStepId] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ApprovalOMClaimApiInterface
+     */
+    apiApprovalOMClaimListGetRaw(requestParameters: ApiApprovalOMClaimListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApprovalARCNClaimResponseModel>>;
+
+    /**
+     */
+    apiApprovalOMClaimListGet(requestParameters: ApiApprovalOMClaimListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApprovalARCNClaimResponseModel>;
+
+    /**
+     * 
+     * @param {ApprovalARCNClaimDetailModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ApprovalOMClaimApiInterface
+     */
+    apiApprovalOMClaimUpdatePostRaw(requestParameters: ApiApprovalOMClaimUpdatePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApprovalARCNClaimDetailModelBaseResponseModel>>;
+
+    /**
+     */
+    apiApprovalOMClaimUpdatePost(requestParameters: ApiApprovalOMClaimUpdatePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApprovalARCNClaimDetailModelBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class ApprovalOMClaimApi extends runtime.BaseAPI {
+export class ApprovalOMClaimApi extends runtime.BaseAPI implements ApprovalOMClaimApiInterface {
 
     /**
      */
@@ -78,7 +126,7 @@ export class ApprovalOMClaimApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApprovalARCNClaimDetailModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -102,11 +150,11 @@ export class ApprovalOMClaimApi extends runtime.BaseAPI {
         }
 
         if (requestParameters['claimCnStartDate'] != null) {
-            queryParameters['claim_cn_start_date'] = (requestParameters['claimCnStartDate'] as any).toISOString();
+            queryParameters['claim_cn_start_date'] = requestParameters['claimCnStartDate'];
         }
 
         if (requestParameters['claimCnEndDate'] != null) {
-            queryParameters['claim_cn_end_date'] = (requestParameters['claimCnEndDate'] as any).toISOString();
+            queryParameters['claim_cn_end_date'] = requestParameters['claimCnEndDate'];
         }
 
         if (requestParameters['claimStatus'] != null) {
@@ -142,7 +190,7 @@ export class ApprovalOMClaimApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApprovalARCNClaimResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -170,10 +218,10 @@ export class ApprovalOMClaimApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApprovalARCNClaimDetailModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApprovalARCNClaimDetailModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

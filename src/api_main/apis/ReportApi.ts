@@ -18,19 +18,13 @@ import type {
   ReportBankReconcileModelBaseResponseModel,
   RequestReportBankReconcileModel,
 } from '../models/index';
-import {
-    ReportBankReconcileModelBaseResponseModelFromJSON,
-    ReportBankReconcileModelBaseResponseModelToJSON,
-    RequestReportBankReconcileModelFromJSON,
-    RequestReportBankReconcileModelToJSON,
-} from '../models/index';
 
 export interface ApiReportPrintReportBankReconcilePostRequest {
     body?: RequestReportBankReconcileModel;
 }
 
 export interface ApiReportReportBankReconcileGetRequest {
-    endDate?: Date;
+    endDate?: string;
     bankAccountId?: number;
     unit?: number;
     type?: number;
@@ -38,9 +32,48 @@ export interface ApiReportReportBankReconcileGetRequest {
 }
 
 /**
+ * ReportApi - interface
+ * 
+ * @export
+ * @interface ReportApiInterface
+ */
+export interface ReportApiInterface {
+    /**
+     * 
+     * @param {RequestReportBankReconcileModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ReportApiInterface
+     */
+    apiReportPrintReportBankReconcilePostRaw(requestParameters: ApiReportPrintReportBankReconcilePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<void>>;
+
+    /**
+     */
+    apiReportPrintReportBankReconcilePost(requestParameters: ApiReportPrintReportBankReconcilePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<void>;
+
+    /**
+     * 
+     * @param {string} [endDate] 
+     * @param {number} [bankAccountId] 
+     * @param {number} [unit] 
+     * @param {number} [type] 
+     * @param {string} [unitName] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ReportApiInterface
+     */
+    apiReportReportBankReconcileGetRaw(requestParameters: ApiReportReportBankReconcileGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ReportBankReconcileModelBaseResponseModel>>;
+
+    /**
+     */
+    apiReportReportBankReconcileGet(requestParameters: ApiReportReportBankReconcileGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ReportBankReconcileModelBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class ReportApi extends runtime.BaseAPI {
+export class ReportApi extends runtime.BaseAPI implements ReportApiInterface {
 
     /**
      */
@@ -60,7 +93,7 @@ export class ReportApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: RequestReportBankReconcileModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
         return new runtime.VoidApiResponse(response);
@@ -78,7 +111,7 @@ export class ReportApi extends runtime.BaseAPI {
         const queryParameters: any = {};
 
         if (requestParameters['endDate'] != null) {
-            queryParameters['end_date'] = (requestParameters['endDate'] as any).toISOString();
+            queryParameters['end_date'] = requestParameters['endDate'];
         }
 
         if (requestParameters['bankAccountId'] != null) {
@@ -110,7 +143,7 @@ export class ReportApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ReportBankReconcileModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

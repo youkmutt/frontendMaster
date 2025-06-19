@@ -20,16 +20,6 @@ import type {
   BillingPlanPatchModel,
   BillingPlanPatchModelBaseResponseModel,
 } from '../models/index';
-import {
-    BillingPlanGetSearchModelBaseResponsePaginationFromJSON,
-    BillingPlanGetSearchModelBaseResponsePaginationToJSON,
-    BillingPlanModelBaseResponseModelFromJSON,
-    BillingPlanModelBaseResponseModelToJSON,
-    BillingPlanPatchModelFromJSON,
-    BillingPlanPatchModelToJSON,
-    BillingPlanPatchModelBaseResponseModelFromJSON,
-    BillingPlanPatchModelBaseResponseModelToJSON,
-} from '../models/index';
 
 export interface ApiBillingPlanGetBillingPlanByIdBillingPlanIdGetRequest {
     billingPlanId: number;
@@ -38,8 +28,8 @@ export interface ApiBillingPlanGetBillingPlanByIdBillingPlanIdGetRequest {
 export interface ApiBillingPlanGetBillingPlanListGetRequest {
     customerName?: string;
     invoiceNo?: string;
-    planDateStart?: Date;
-    planDateEnd?: Date;
+    planDateStart?: string;
+    planDateEnd?: string;
     pageIndex?: number;
     pageSize?: number;
 }
@@ -49,9 +39,62 @@ export interface ApiBillingPlanUpdateBillingPlanPatchRequest {
 }
 
 /**
+ * BillingPlanApi - interface
+ * 
+ * @export
+ * @interface BillingPlanApiInterface
+ */
+export interface BillingPlanApiInterface {
+    /**
+     * 
+     * @param {number} billingPlanId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof BillingPlanApiInterface
+     */
+    apiBillingPlanGetBillingPlanByIdBillingPlanIdGetRaw(requestParameters: ApiBillingPlanGetBillingPlanByIdBillingPlanIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<BillingPlanModelBaseResponseModel>>;
+
+    /**
+     */
+    apiBillingPlanGetBillingPlanByIdBillingPlanIdGet(requestParameters: ApiBillingPlanGetBillingPlanByIdBillingPlanIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<BillingPlanModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {string} [customerName] 
+     * @param {string} [invoiceNo] 
+     * @param {string} [planDateStart] 
+     * @param {string} [planDateEnd] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof BillingPlanApiInterface
+     */
+    apiBillingPlanGetBillingPlanListGetRaw(requestParameters: ApiBillingPlanGetBillingPlanListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<BillingPlanGetSearchModelBaseResponsePagination>>;
+
+    /**
+     */
+    apiBillingPlanGetBillingPlanListGet(requestParameters: ApiBillingPlanGetBillingPlanListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<BillingPlanGetSearchModelBaseResponsePagination>;
+
+    /**
+     * 
+     * @param {BillingPlanPatchModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof BillingPlanApiInterface
+     */
+    apiBillingPlanUpdateBillingPlanPatchRaw(requestParameters: ApiBillingPlanUpdateBillingPlanPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<BillingPlanPatchModelBaseResponseModel>>;
+
+    /**
+     */
+    apiBillingPlanUpdateBillingPlanPatch(requestParameters: ApiBillingPlanUpdateBillingPlanPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<BillingPlanPatchModelBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class BillingPlanApi extends runtime.BaseAPI {
+export class BillingPlanApi extends runtime.BaseAPI implements BillingPlanApiInterface {
 
     /**
      */
@@ -78,7 +121,7 @@ export class BillingPlanApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => BillingPlanModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -102,11 +145,11 @@ export class BillingPlanApi extends runtime.BaseAPI {
         }
 
         if (requestParameters['planDateStart'] != null) {
-            queryParameters['plan_date_start'] = (requestParameters['planDateStart'] as any).toISOString();
+            queryParameters['plan_date_start'] = requestParameters['planDateStart'];
         }
 
         if (requestParameters['planDateEnd'] != null) {
-            queryParameters['plan_date_end'] = (requestParameters['planDateEnd'] as any).toISOString();
+            queryParameters['plan_date_end'] = requestParameters['planDateEnd'];
         }
 
         if (requestParameters['pageIndex'] != null) {
@@ -130,7 +173,7 @@ export class BillingPlanApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => BillingPlanGetSearchModelBaseResponsePaginationFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -158,10 +201,10 @@ export class BillingPlanApi extends runtime.BaseAPI {
             method: 'PATCH',
             headers: headerParameters,
             query: queryParameters,
-            body: BillingPlanPatchModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => BillingPlanPatchModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

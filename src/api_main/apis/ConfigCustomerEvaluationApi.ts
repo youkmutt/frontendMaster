@@ -35,46 +35,6 @@ import type {
   UpdateCustomerEvaluationActiveFlag,
   UpdateCustomerEvaluationActiveFlagBaseResponseModel,
 } from '../models/index';
-import {
-    ConfigEvaluationTopicGetSearchModelBaseResponsePaginationFromJSON,
-    ConfigEvaluationTopicGetSearchModelBaseResponsePaginationToJSON,
-    DuplicateConfigEvaluationTopicFromJSON,
-    DuplicateConfigEvaluationTopicToJSON,
-    MasterCustomerCreditScoreGetSearchModelBaseResponsePaginationFromJSON,
-    MasterCustomerCreditScoreGetSearchModelBaseResponsePaginationToJSON,
-    MasterCustomerCreditScoreModelFromJSON,
-    MasterCustomerCreditScoreModelToJSON,
-    MasterCustomerCreditScoreModelBaseResponseModelFromJSON,
-    MasterCustomerCreditScoreModelBaseResponseModelToJSON,
-    MasterCustomerEvaluationModelFromJSON,
-    MasterCustomerEvaluationModelToJSON,
-    MasterCustomerEvaluationModelBaseResponseModelFromJSON,
-    MasterCustomerEvaluationModelBaseResponseModelToJSON,
-    MasterCustomerGradeGetSearchModelBaseResponsePaginationFromJSON,
-    MasterCustomerGradeGetSearchModelBaseResponsePaginationToJSON,
-    MasterCustomerGradeModelFromJSON,
-    MasterCustomerGradeModelToJSON,
-    MasterCustomerGradeModelBaseResponseModelFromJSON,
-    MasterCustomerGradeModelBaseResponseModelToJSON,
-    SysCustomerEvaluationConfigGetSearchModelBaseResponsePaginationFromJSON,
-    SysCustomerEvaluationConfigGetSearchModelBaseResponsePaginationToJSON,
-    SysCustomerEvaluationConfigModelListBaseResponseModelFromJSON,
-    SysCustomerEvaluationConfigModelListBaseResponseModelToJSON,
-    SysEvaluationConfigIdFromJSON,
-    SysEvaluationConfigIdToJSON,
-    UpdateActiveFlagMasterCustomerCreditScoreModelFromJSON,
-    UpdateActiveFlagMasterCustomerCreditScoreModelToJSON,
-    UpdateActiveFlagMasterCustomerCreditScoreModelBaseResponseModelFromJSON,
-    UpdateActiveFlagMasterCustomerCreditScoreModelBaseResponseModelToJSON,
-    UpdateActiveFlagMasterCustomerGradeModelFromJSON,
-    UpdateActiveFlagMasterCustomerGradeModelToJSON,
-    UpdateActiveFlagMasterCustomerGradeModelBaseResponseModelFromJSON,
-    UpdateActiveFlagMasterCustomerGradeModelBaseResponseModelToJSON,
-    UpdateCustomerEvaluationActiveFlagFromJSON,
-    UpdateCustomerEvaluationActiveFlagToJSON,
-    UpdateCustomerEvaluationActiveFlagBaseResponseModelFromJSON,
-    UpdateCustomerEvaluationActiveFlagBaseResponseModelToJSON,
-} from '../models/index';
 
 export interface ApiConfigCustomerEvaluationCreateConfigEvaluationTopicPostRequest {
     body?: Omit<MasterCustomerEvaluationModel, 'evaluation_type_name'>;
@@ -98,8 +58,8 @@ export interface ApiConfigCustomerEvaluationGetConfigEvaluationTopicByIdIdGetReq
 
 export interface ApiConfigCustomerEvaluationGetConfigEvaluationTopicCreditScoreListGetRequest {
     evaluationName?: string;
-    dateStart?: Date;
-    dateEnd?: Date;
+    dateStart?: string;
+    dateEnd?: string;
     activeFlag?: boolean;
     pageIndex?: number;
     pageSize?: number;
@@ -107,8 +67,8 @@ export interface ApiConfigCustomerEvaluationGetConfigEvaluationTopicCreditScoreL
 
 export interface ApiConfigCustomerEvaluationGetConfigEvaluationTopicGradeListGetRequest {
     evaluationName?: string;
-    dateStart?: Date;
-    dateEnd?: Date;
+    dateStart?: string;
+    dateEnd?: string;
     activeFlag?: boolean;
     pageIndex?: number;
     pageSize?: number;
@@ -120,8 +80,8 @@ export interface ApiConfigCustomerEvaluationGetMasterCustomerCreditScoreByIdIdGe
 
 export interface ApiConfigCustomerEvaluationGetMasterCustomerCreditScoreListGetRequest {
     creditScoreName?: string;
-    updateDateStart?: Date;
-    updateDateEnd?: Date;
+    updateDateStart?: string;
+    updateDateEnd?: string;
     activeFlag?: boolean;
     pageIndex?: number;
     pageSize?: number;
@@ -133,8 +93,8 @@ export interface ApiConfigCustomerEvaluationGetMasterCustomerGradeByIdIdGetReque
 
 export interface ApiConfigCustomerEvaluationGetMasterCustomerGradeListGetRequest {
     gradeName?: string;
-    updateDateStart?: Date;
-    updateDateEnd?: Date;
+    updateDateStart?: string;
+    updateDateEnd?: string;
     activeFlag?: boolean;
     pageIndex?: number;
     pageSize?: number;
@@ -175,9 +135,287 @@ export interface ApiConfigCustomerEvaluationUpdateMasterCustomerGradePutRequest 
 }
 
 /**
+ * ConfigCustomerEvaluationApi - interface
+ * 
+ * @export
+ * @interface ConfigCustomerEvaluationApiInterface
+ */
+export interface ConfigCustomerEvaluationApiInterface {
+    /**
+     * 
+     * @param {MasterCustomerEvaluationModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigCustomerEvaluationApiInterface
+     */
+    apiConfigCustomerEvaluationCreateConfigEvaluationTopicPostRaw(requestParameters: ApiConfigCustomerEvaluationCreateConfigEvaluationTopicPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MasterCustomerEvaluationModelBaseResponseModel>>;
+
+    /**
+     */
+    apiConfigCustomerEvaluationCreateConfigEvaluationTopicPost(requestParameters: ApiConfigCustomerEvaluationCreateConfigEvaluationTopicPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MasterCustomerEvaluationModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {MasterCustomerCreditScoreModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigCustomerEvaluationApiInterface
+     */
+    apiConfigCustomerEvaluationCreateMasterCustomerCreditScorePostRaw(requestParameters: ApiConfigCustomerEvaluationCreateMasterCustomerCreditScorePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MasterCustomerCreditScoreModelBaseResponseModel>>;
+
+    /**
+     */
+    apiConfigCustomerEvaluationCreateMasterCustomerCreditScorePost(requestParameters: ApiConfigCustomerEvaluationCreateMasterCustomerCreditScorePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MasterCustomerCreditScoreModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {MasterCustomerGradeModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigCustomerEvaluationApiInterface
+     */
+    apiConfigCustomerEvaluationCreateMasterCustomerGradePostRaw(requestParameters: ApiConfigCustomerEvaluationCreateMasterCustomerGradePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MasterCustomerGradeModelBaseResponseModel>>;
+
+    /**
+     */
+    apiConfigCustomerEvaluationCreateMasterCustomerGradePost(requestParameters: ApiConfigCustomerEvaluationCreateMasterCustomerGradePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MasterCustomerGradeModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {DuplicateConfigEvaluationTopic} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigCustomerEvaluationApiInterface
+     */
+    apiConfigCustomerEvaluationDuplicateConfigEvaluationTopicPostRaw(requestParameters: ApiConfigCustomerEvaluationDuplicateConfigEvaluationTopicPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MasterCustomerEvaluationModelBaseResponseModel>>;
+
+    /**
+     */
+    apiConfigCustomerEvaluationDuplicateConfigEvaluationTopicPost(requestParameters: ApiConfigCustomerEvaluationDuplicateConfigEvaluationTopicPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MasterCustomerEvaluationModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {number} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigCustomerEvaluationApiInterface
+     */
+    apiConfigCustomerEvaluationGetConfigEvaluationTopicByIdIdGetRaw(requestParameters: ApiConfigCustomerEvaluationGetConfigEvaluationTopicByIdIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MasterCustomerEvaluationModelBaseResponseModel>>;
+
+    /**
+     */
+    apiConfigCustomerEvaluationGetConfigEvaluationTopicByIdIdGet(requestParameters: ApiConfigCustomerEvaluationGetConfigEvaluationTopicByIdIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MasterCustomerEvaluationModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {string} [evaluationName] 
+     * @param {string} [dateStart] 
+     * @param {string} [dateEnd] 
+     * @param {boolean} [activeFlag] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigCustomerEvaluationApiInterface
+     */
+    apiConfigCustomerEvaluationGetConfigEvaluationTopicCreditScoreListGetRaw(requestParameters: ApiConfigCustomerEvaluationGetConfigEvaluationTopicCreditScoreListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ConfigEvaluationTopicGetSearchModelBaseResponsePagination>>;
+
+    /**
+     */
+    apiConfigCustomerEvaluationGetConfigEvaluationTopicCreditScoreListGet(requestParameters: ApiConfigCustomerEvaluationGetConfigEvaluationTopicCreditScoreListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ConfigEvaluationTopicGetSearchModelBaseResponsePagination>;
+
+    /**
+     * 
+     * @param {string} [evaluationName] 
+     * @param {string} [dateStart] 
+     * @param {string} [dateEnd] 
+     * @param {boolean} [activeFlag] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigCustomerEvaluationApiInterface
+     */
+    apiConfigCustomerEvaluationGetConfigEvaluationTopicGradeListGetRaw(requestParameters: ApiConfigCustomerEvaluationGetConfigEvaluationTopicGradeListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ConfigEvaluationTopicGetSearchModelBaseResponsePagination>>;
+
+    /**
+     */
+    apiConfigCustomerEvaluationGetConfigEvaluationTopicGradeListGet(requestParameters: ApiConfigCustomerEvaluationGetConfigEvaluationTopicGradeListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ConfigEvaluationTopicGetSearchModelBaseResponsePagination>;
+
+    /**
+     * 
+     * @param {number} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigCustomerEvaluationApiInterface
+     */
+    apiConfigCustomerEvaluationGetMasterCustomerCreditScoreByIdIdGetRaw(requestParameters: ApiConfigCustomerEvaluationGetMasterCustomerCreditScoreByIdIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MasterCustomerCreditScoreModelBaseResponseModel>>;
+
+    /**
+     */
+    apiConfigCustomerEvaluationGetMasterCustomerCreditScoreByIdIdGet(requestParameters: ApiConfigCustomerEvaluationGetMasterCustomerCreditScoreByIdIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MasterCustomerCreditScoreModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {string} [creditScoreName] 
+     * @param {string} [updateDateStart] 
+     * @param {string} [updateDateEnd] 
+     * @param {boolean} [activeFlag] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigCustomerEvaluationApiInterface
+     */
+    apiConfigCustomerEvaluationGetMasterCustomerCreditScoreListGetRaw(requestParameters: ApiConfigCustomerEvaluationGetMasterCustomerCreditScoreListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MasterCustomerCreditScoreGetSearchModelBaseResponsePagination>>;
+
+    /**
+     */
+    apiConfigCustomerEvaluationGetMasterCustomerCreditScoreListGet(requestParameters: ApiConfigCustomerEvaluationGetMasterCustomerCreditScoreListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MasterCustomerCreditScoreGetSearchModelBaseResponsePagination>;
+
+    /**
+     * 
+     * @param {number} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigCustomerEvaluationApiInterface
+     */
+    apiConfigCustomerEvaluationGetMasterCustomerGradeByIdIdGetRaw(requestParameters: ApiConfigCustomerEvaluationGetMasterCustomerGradeByIdIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MasterCustomerGradeModelBaseResponseModel>>;
+
+    /**
+     */
+    apiConfigCustomerEvaluationGetMasterCustomerGradeByIdIdGet(requestParameters: ApiConfigCustomerEvaluationGetMasterCustomerGradeByIdIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MasterCustomerGradeModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {string} [gradeName] 
+     * @param {string} [updateDateStart] 
+     * @param {string} [updateDateEnd] 
+     * @param {boolean} [activeFlag] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigCustomerEvaluationApiInterface
+     */
+    apiConfigCustomerEvaluationGetMasterCustomerGradeListGetRaw(requestParameters: ApiConfigCustomerEvaluationGetMasterCustomerGradeListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MasterCustomerGradeGetSearchModelBaseResponsePagination>>;
+
+    /**
+     */
+    apiConfigCustomerEvaluationGetMasterCustomerGradeListGet(requestParameters: ApiConfigCustomerEvaluationGetMasterCustomerGradeListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MasterCustomerGradeGetSearchModelBaseResponsePagination>;
+
+    /**
+     * 
+     * @param {SysEvaluationConfigId} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigCustomerEvaluationApiInterface
+     */
+    apiConfigCustomerEvaluationGetSysCustomerEvaluationConfigByListIdPostRaw(requestParameters: ApiConfigCustomerEvaluationGetSysCustomerEvaluationConfigByListIdPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<SysCustomerEvaluationConfigModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiConfigCustomerEvaluationGetSysCustomerEvaluationConfigByListIdPost(requestParameters: ApiConfigCustomerEvaluationGetSysCustomerEvaluationConfigByListIdPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<SysCustomerEvaluationConfigModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {string} [evaluationName] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigCustomerEvaluationApiInterface
+     */
+    apiConfigCustomerEvaluationGetSysCustomerEvaluationConfigListGetRaw(requestParameters: ApiConfigCustomerEvaluationGetSysCustomerEvaluationConfigListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<SysCustomerEvaluationConfigGetSearchModelBaseResponsePagination>>;
+
+    /**
+     */
+    apiConfigCustomerEvaluationGetSysCustomerEvaluationConfigListGet(requestParameters: ApiConfigCustomerEvaluationGetSysCustomerEvaluationConfigListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<SysCustomerEvaluationConfigGetSearchModelBaseResponsePagination>;
+
+    /**
+     * 
+     * @param {UpdateCustomerEvaluationActiveFlag} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigCustomerEvaluationApiInterface
+     */
+    apiConfigCustomerEvaluationUpdateConfigEvaluationTopicActiveFlagPatchRaw(requestParameters: ApiConfigCustomerEvaluationUpdateConfigEvaluationTopicActiveFlagPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<UpdateCustomerEvaluationActiveFlagBaseResponseModel>>;
+
+    /**
+     */
+    apiConfigCustomerEvaluationUpdateConfigEvaluationTopicActiveFlagPatch(requestParameters: ApiConfigCustomerEvaluationUpdateConfigEvaluationTopicActiveFlagPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<UpdateCustomerEvaluationActiveFlagBaseResponseModel>;
+
+    /**
+     * 
+     * @param {MasterCustomerEvaluationModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigCustomerEvaluationApiInterface
+     */
+    apiConfigCustomerEvaluationUpdateConfigEvaluationTopicPutRaw(requestParameters: ApiConfigCustomerEvaluationUpdateConfigEvaluationTopicPutRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MasterCustomerEvaluationModelBaseResponseModel>>;
+
+    /**
+     */
+    apiConfigCustomerEvaluationUpdateConfigEvaluationTopicPut(requestParameters: ApiConfigCustomerEvaluationUpdateConfigEvaluationTopicPutRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MasterCustomerEvaluationModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {UpdateActiveFlagMasterCustomerCreditScoreModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigCustomerEvaluationApiInterface
+     */
+    apiConfigCustomerEvaluationUpdateMasterCustomerCreditScoreActiveFlagPatchRaw(requestParameters: ApiConfigCustomerEvaluationUpdateMasterCustomerCreditScoreActiveFlagPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<UpdateActiveFlagMasterCustomerCreditScoreModelBaseResponseModel>>;
+
+    /**
+     */
+    apiConfigCustomerEvaluationUpdateMasterCustomerCreditScoreActiveFlagPatch(requestParameters: ApiConfigCustomerEvaluationUpdateMasterCustomerCreditScoreActiveFlagPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<UpdateActiveFlagMasterCustomerCreditScoreModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {MasterCustomerCreditScoreModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigCustomerEvaluationApiInterface
+     */
+    apiConfigCustomerEvaluationUpdateMasterCustomerCreditScorePutRaw(requestParameters: ApiConfigCustomerEvaluationUpdateMasterCustomerCreditScorePutRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MasterCustomerCreditScoreModelBaseResponseModel>>;
+
+    /**
+     */
+    apiConfigCustomerEvaluationUpdateMasterCustomerCreditScorePut(requestParameters: ApiConfigCustomerEvaluationUpdateMasterCustomerCreditScorePutRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MasterCustomerCreditScoreModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {UpdateActiveFlagMasterCustomerGradeModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigCustomerEvaluationApiInterface
+     */
+    apiConfigCustomerEvaluationUpdateMasterCustomerGradeActiveFlagPatchRaw(requestParameters: ApiConfigCustomerEvaluationUpdateMasterCustomerGradeActiveFlagPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<UpdateActiveFlagMasterCustomerGradeModelBaseResponseModel>>;
+
+    /**
+     */
+    apiConfigCustomerEvaluationUpdateMasterCustomerGradeActiveFlagPatch(requestParameters: ApiConfigCustomerEvaluationUpdateMasterCustomerGradeActiveFlagPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<UpdateActiveFlagMasterCustomerGradeModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {MasterCustomerGradeModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ConfigCustomerEvaluationApiInterface
+     */
+    apiConfigCustomerEvaluationUpdateMasterCustomerGradePutRaw(requestParameters: ApiConfigCustomerEvaluationUpdateMasterCustomerGradePutRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MasterCustomerGradeModelBaseResponseModel>>;
+
+    /**
+     */
+    apiConfigCustomerEvaluationUpdateMasterCustomerGradePut(requestParameters: ApiConfigCustomerEvaluationUpdateMasterCustomerGradePutRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MasterCustomerGradeModelBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
+export class ConfigCustomerEvaluationApi extends runtime.BaseAPI implements ConfigCustomerEvaluationApiInterface {
 
     /**
      */
@@ -197,10 +435,10 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: MasterCustomerEvaluationModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MasterCustomerEvaluationModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -228,10 +466,10 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: MasterCustomerCreditScoreModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MasterCustomerCreditScoreModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -259,10 +497,10 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: MasterCustomerGradeModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MasterCustomerGradeModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -290,10 +528,10 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: DuplicateConfigEvaluationTopicToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MasterCustomerEvaluationModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -328,7 +566,7 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MasterCustomerEvaluationModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -348,11 +586,11 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
         }
 
         if (requestParameters['dateStart'] != null) {
-            queryParameters['date_start'] = (requestParameters['dateStart'] as any).toISOString();
+            queryParameters['date_start'] = requestParameters['dateStart'];
         }
 
         if (requestParameters['dateEnd'] != null) {
-            queryParameters['date_end'] = (requestParameters['dateEnd'] as any).toISOString();
+            queryParameters['date_end'] = requestParameters['dateEnd'];
         }
 
         if (requestParameters['activeFlag'] != null) {
@@ -380,7 +618,7 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ConfigEvaluationTopicGetSearchModelBaseResponsePaginationFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -400,11 +638,11 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
         }
 
         if (requestParameters['dateStart'] != null) {
-            queryParameters['date_start'] = (requestParameters['dateStart'] as any).toISOString();
+            queryParameters['date_start'] = requestParameters['dateStart'];
         }
 
         if (requestParameters['dateEnd'] != null) {
-            queryParameters['date_end'] = (requestParameters['dateEnd'] as any).toISOString();
+            queryParameters['date_end'] = requestParameters['dateEnd'];
         }
 
         if (requestParameters['activeFlag'] != null) {
@@ -432,7 +670,7 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ConfigEvaluationTopicGetSearchModelBaseResponsePaginationFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -467,7 +705,7 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MasterCustomerCreditScoreModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -487,11 +725,11 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
         }
 
         if (requestParameters['updateDateStart'] != null) {
-            queryParameters['update_date_start'] = (requestParameters['updateDateStart'] as any).toISOString();
+            queryParameters['update_date_start'] = requestParameters['updateDateStart'];
         }
 
         if (requestParameters['updateDateEnd'] != null) {
-            queryParameters['update_date_end'] = (requestParameters['updateDateEnd'] as any).toISOString();
+            queryParameters['update_date_end'] = requestParameters['updateDateEnd'];
         }
 
         if (requestParameters['activeFlag'] != null) {
@@ -519,7 +757,7 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MasterCustomerCreditScoreGetSearchModelBaseResponsePaginationFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -554,7 +792,7 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MasterCustomerGradeModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -574,11 +812,11 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
         }
 
         if (requestParameters['updateDateStart'] != null) {
-            queryParameters['update_date_start'] = (requestParameters['updateDateStart'] as any).toISOString();
+            queryParameters['update_date_start'] = requestParameters['updateDateStart'];
         }
 
         if (requestParameters['updateDateEnd'] != null) {
-            queryParameters['update_date_end'] = (requestParameters['updateDateEnd'] as any).toISOString();
+            queryParameters['update_date_end'] = requestParameters['updateDateEnd'];
         }
 
         if (requestParameters['activeFlag'] != null) {
@@ -606,7 +844,7 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MasterCustomerGradeGetSearchModelBaseResponsePaginationFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -634,10 +872,10 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: SysEvaluationConfigIdToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => SysCustomerEvaluationConfigModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -677,7 +915,7 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => SysCustomerEvaluationConfigGetSearchModelBaseResponsePaginationFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -705,10 +943,10 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
             method: 'PATCH',
             headers: headerParameters,
             query: queryParameters,
-            body: UpdateCustomerEvaluationActiveFlagToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => UpdateCustomerEvaluationActiveFlagBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -736,10 +974,10 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
-            body: MasterCustomerEvaluationModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MasterCustomerEvaluationModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -767,10 +1005,10 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
             method: 'PATCH',
             headers: headerParameters,
             query: queryParameters,
-            body: UpdateActiveFlagMasterCustomerCreditScoreModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => UpdateActiveFlagMasterCustomerCreditScoreModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -798,10 +1036,10 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
-            body: MasterCustomerCreditScoreModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MasterCustomerCreditScoreModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -829,10 +1067,10 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
             method: 'PATCH',
             headers: headerParameters,
             query: queryParameters,
-            body: UpdateActiveFlagMasterCustomerGradeModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => UpdateActiveFlagMasterCustomerGradeModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -860,10 +1098,10 @@ export class ConfigCustomerEvaluationApi extends runtime.BaseAPI {
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
-            body: MasterCustomerGradeModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MasterCustomerGradeModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

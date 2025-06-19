@@ -18,21 +18,37 @@ import type {
   CreateOMSopRequestModel,
   StringBaseResponseModel,
 } from '../models/index';
-import {
-    CreateOMSopRequestModelFromJSON,
-    CreateOMSopRequestModelToJSON,
-    StringBaseResponseModelFromJSON,
-    StringBaseResponseModelToJSON,
-} from '../models/index';
 
 export interface ApiOMSopCreateSopPostRequest {
     body?: Array<CreateOMSopRequestModel>;
 }
 
 /**
+ * OMSopApi - interface
+ * 
+ * @export
+ * @interface OMSopApiInterface
+ */
+export interface OMSopApiInterface {
+    /**
+     * 
+     * @param {Array<CreateOMSopRequestModel>} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof OMSopApiInterface
+     */
+    apiOMSopCreateSopPostRaw(requestParameters: ApiOMSopCreateSopPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<StringBaseResponseModel>>;
+
+    /**
+     */
+    apiOMSopCreateSopPost(requestParameters: ApiOMSopCreateSopPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<StringBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class OMSopApi extends runtime.BaseAPI {
+export class OMSopApi extends runtime.BaseAPI implements OMSopApiInterface {
 
     /**
      */
@@ -48,10 +64,10 @@ export class OMSopApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: requestParameters['body']!.map(CreateOMSopRequestModelToJSON),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => StringBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

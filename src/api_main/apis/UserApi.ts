@@ -33,42 +33,6 @@ import type {
   UserUpdateRequestModel,
   UserUpdateRequestModelBaseResponseModel,
 } from '../models/index';
-import {
-    BooleanBaseResponseModelFromJSON,
-    BooleanBaseResponseModelToJSON,
-    CustomerVerifyTokenResponseModelBaseResponseModelFromJSON,
-    CustomerVerifyTokenResponseModelBaseResponseModelToJSON,
-    MenuResponseModelListBaseResponseModelFromJSON,
-    MenuResponseModelListBaseResponseModelToJSON,
-    RefreshTokenModelFromJSON,
-    RefreshTokenModelToJSON,
-    SaleLoginRequestModelFromJSON,
-    SaleLoginRequestModelToJSON,
-    SaleTokenModelFromJSON,
-    SaleTokenModelToJSON,
-    StringBaseResponseModelFromJSON,
-    StringBaseResponseModelToJSON,
-    TokenModelBaseResponseModelFromJSON,
-    TokenModelBaseResponseModelToJSON,
-    UserChangePasswordByEmailModelFromJSON,
-    UserChangePasswordByEmailModelToJSON,
-    UserChangePasswordByUserIDModelFromJSON,
-    UserChangePasswordByUserIDModelToJSON,
-    UserCreateModelFromJSON,
-    UserCreateModelToJSON,
-    UserDetailModelBaseResponseModelFromJSON,
-    UserDetailModelBaseResponseModelToJSON,
-    UserLoginRequestModelFromJSON,
-    UserLoginRequestModelToJSON,
-    UserModelBaseResponsePaginationFromJSON,
-    UserModelBaseResponsePaginationToJSON,
-    UserResetPasswordRequestFromJSON,
-    UserResetPasswordRequestToJSON,
-    UserUpdateRequestModelFromJSON,
-    UserUpdateRequestModelToJSON,
-    UserUpdateRequestModelBaseResponseModelFromJSON,
-    UserUpdateRequestModelBaseResponseModelToJSON,
-} from '../models/index';
 
 export interface ApiUserChangePasswordPostRequest {
     body?: UserChangePasswordByUserIDModel;
@@ -141,9 +105,235 @@ export interface ApiUserUserIdGetRequest {
 }
 
 /**
+ * UserApi - interface
+ * 
+ * @export
+ * @interface UserApiInterface
+ */
+export interface UserApiInterface {
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserApiInterface
+     */
+    apiUserApprovalNotificationGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MenuResponseModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiUserApprovalNotificationGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MenuResponseModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {UserChangePasswordByUserIDModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserApiInterface
+     */
+    apiUserChangePasswordPostRaw(requestParameters: ApiUserChangePasswordPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<StringBaseResponseModel>>;
+
+    /**
+     */
+    apiUserChangePasswordPost(requestParameters: ApiUserChangePasswordPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<StringBaseResponseModel>;
+
+    /**
+     * 
+     * @param {UserChangePasswordByEmailModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserApiInterface
+     */
+    apiUserChangePasswordbyemailPostRaw(requestParameters: ApiUserChangePasswordbyemailPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<StringBaseResponseModel>>;
+
+    /**
+     */
+    apiUserChangePasswordbyemailPost(requestParameters: ApiUserChangePasswordbyemailPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<StringBaseResponseModel>;
+
+    /**
+     * 
+     * @param {UserLoginRequestModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserApiInterface
+     */
+    apiUserCreateTestUserPostRaw(requestParameters: ApiUserCreateTestUserPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<UserDetailModelBaseResponseModel>>;
+
+    /**
+     */
+    apiUserCreateTestUserPost(requestParameters: ApiUserCreateTestUserPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<UserDetailModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {UserCreateModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserApiInterface
+     */
+    apiUserCreateUserPostRaw(requestParameters: ApiUserCreateUserPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<BooleanBaseResponseModel>>;
+
+    /**
+     */
+    apiUserCreateUserPost(requestParameters: ApiUserCreateUserPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<BooleanBaseResponseModel>;
+
+    /**
+     * 
+     * @param {SaleTokenModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserApiInterface
+     */
+    apiUserCustomerVerifyTokenPostRaw(requestParameters: ApiUserCustomerVerifyTokenPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<CustomerVerifyTokenResponseModelBaseResponseModel>>;
+
+    /**
+     */
+    apiUserCustomerVerifyTokenPost(requestParameters: ApiUserCustomerVerifyTokenPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<CustomerVerifyTokenResponseModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {number} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserApiInterface
+     */
+    apiUserDeleteUserIdPatchRaw(requestParameters: ApiUserDeleteUserIdPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<BooleanBaseResponseModel>>;
+
+    /**
+     */
+    apiUserDeleteUserIdPatch(requestParameters: ApiUserDeleteUserIdPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<BooleanBaseResponseModel>;
+
+    /**
+     * 
+     * @param {UserLoginRequestModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserApiInterface
+     */
+    apiUserLoginADPostRaw(requestParameters: ApiUserLoginADPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<UserDetailModelBaseResponseModel>>;
+
+    /**
+     */
+    apiUserLoginADPost(requestParameters: ApiUserLoginADPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<UserDetailModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {RefreshTokenModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserApiInterface
+     */
+    apiUserRefreshtokenPostRaw(requestParameters: ApiUserRefreshtokenPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<TokenModelBaseResponseModel>>;
+
+    /**
+     */
+    apiUserRefreshtokenPost(requestParameters: ApiUserRefreshtokenPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<TokenModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {UserResetPasswordRequest} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserApiInterface
+     */
+    apiUserRequestResetPasswordPostRaw(requestParameters: ApiUserRequestResetPasswordPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<StringBaseResponseModel>>;
+
+    /**
+     */
+    apiUserRequestResetPasswordPost(requestParameters: ApiUserRequestResetPasswordPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<StringBaseResponseModel>;
+
+    /**
+     * 
+     * @param {SaleLoginRequestModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserApiInterface
+     */
+    apiUserSaleGenerateTokenPostRaw(requestParameters: ApiUserSaleGenerateTokenPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<TokenModelBaseResponseModel>>;
+
+    /**
+     */
+    apiUserSaleGenerateTokenPost(requestParameters: ApiUserSaleGenerateTokenPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<TokenModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {UserLoginRequestModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserApiInterface
+     */
+    apiUserSigninPostRaw(requestParameters: ApiUserSigninPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<UserDetailModelBaseResponseModel>>;
+
+    /**
+     */
+    apiUserSigninPost(requestParameters: ApiUserSigninPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<UserDetailModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {string} [token] 
+     * @param {string} [key] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserApiInterface
+     */
+    apiUserSsoCallbackGetRaw(requestParameters: ApiUserSsoCallbackGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<UserDetailModelBaseResponseModel>>;
+
+    /**
+     */
+    apiUserSsoCallbackGet(requestParameters: ApiUserSsoCallbackGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<UserDetailModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {UserUpdateRequestModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserApiInterface
+     */
+    apiUserUpdateUserPatchRaw(requestParameters: ApiUserUpdateUserPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<BooleanBaseResponseModel>>;
+
+    /**
+     */
+    apiUserUpdateUserPatch(requestParameters: ApiUserUpdateUserPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<BooleanBaseResponseModel>;
+
+    /**
+     * 
+     * @param {string} [firstname] 
+     * @param {string} [lastname] 
+     * @param {string} [email] 
+     * @param {number} [departmentId] 
+     * @param {string} [empcode] 
+     * @param {string} [username] 
+     * @param {number} [roleId] 
+     * @param {string} [name] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserApiInterface
+     */
+    apiUserUserAllGetRaw(requestParameters: ApiUserUserAllGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<UserModelBaseResponsePagination>>;
+
+    /**
+     */
+    apiUserUserAllGet(requestParameters: ApiUserUserAllGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<UserModelBaseResponsePagination>;
+
+    /**
+     * 
+     * @param {number} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserApiInterface
+     */
+    apiUserUserIdGetRaw(requestParameters: ApiUserUserIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<UserUpdateRequestModelBaseResponseModel>>;
+
+    /**
+     */
+    apiUserUserIdGet(requestParameters: ApiUserUserIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<UserUpdateRequestModelBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class UserApi extends runtime.BaseAPI {
+export class UserApi extends runtime.BaseAPI implements UserApiInterface {
 
     /**
      */
@@ -163,7 +353,7 @@ export class UserApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MenuResponseModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -191,10 +381,10 @@ export class UserApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: UserChangePasswordByUserIDModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => StringBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -218,10 +408,10 @@ export class UserApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: UserChangePasswordByEmailModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => StringBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -245,10 +435,10 @@ export class UserApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: UserLoginRequestModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => UserDetailModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -276,10 +466,10 @@ export class UserApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: UserCreateModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => BooleanBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -303,10 +493,10 @@ export class UserApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: SaleTokenModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => CustomerVerifyTokenResponseModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -341,7 +531,7 @@ export class UserApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => BooleanBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -365,10 +555,10 @@ export class UserApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: UserLoginRequestModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => UserDetailModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -392,10 +582,10 @@ export class UserApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: RefreshTokenModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => TokenModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -419,10 +609,10 @@ export class UserApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: UserResetPasswordRequestToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => StringBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -446,10 +636,10 @@ export class UserApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: SaleLoginRequestModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => TokenModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -473,10 +663,10 @@ export class UserApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: UserLoginRequestModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => UserDetailModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -508,7 +698,7 @@ export class UserApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => UserDetailModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -536,10 +726,10 @@ export class UserApi extends runtime.BaseAPI {
             method: 'PATCH',
             headers: headerParameters,
             query: queryParameters,
-            body: UserUpdateRequestModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => BooleanBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -607,7 +797,7 @@ export class UserApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => UserModelBaseResponsePaginationFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -642,7 +832,7 @@ export class UserApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => UserUpdateRequestModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

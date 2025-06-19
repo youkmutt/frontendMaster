@@ -24,24 +24,6 @@ import type {
   NotFoundMappingResponseModel,
   VoucherMappingStatementModel,
 } from '../models/index';
-import {
-    CancelImportModelFromJSON,
-    CancelImportModelToJSON,
-    ImportStatementDetailModelBaseResponseModelFromJSON,
-    ImportStatementDetailModelBaseResponseModelToJSON,
-    ImportStatementResponseModelFromJSON,
-    ImportStatementResponseModelToJSON,
-    LogImportStatementModelFromJSON,
-    LogImportStatementModelToJSON,
-    LogImportStatementResponseModelFromJSON,
-    LogImportStatementResponseModelToJSON,
-    NotFoundMappingDetailModelBaseResponseModelFromJSON,
-    NotFoundMappingDetailModelBaseResponseModelToJSON,
-    NotFoundMappingResponseModelFromJSON,
-    NotFoundMappingResponseModelToJSON,
-    VoucherMappingStatementModelFromJSON,
-    VoucherMappingStatementModelToJSON,
-} from '../models/index';
 
 export interface ApiBankReconcileCancelPostRequest {
     body?: CancelImportModel;
@@ -64,8 +46,8 @@ export interface ApiBankReconcileInactiveNotfoundVoucherPostRequest {
 }
 
 export interface ApiBankReconcileListGetRequest {
-    startCreateDate?: Date;
-    endCreateDate?: Date;
+    startCreateDate?: string;
+    endCreateDate?: string;
     accountId?: number;
     fileName?: string;
     dateStart?: any;
@@ -74,10 +56,10 @@ export interface ApiBankReconcileListGetRequest {
     toMoneyCumulative?: number;
     impId?: number;
     activeFlag?: boolean;
-    startCancelDate?: Date;
-    endCancelDate?: Date;
-    stmtDatetimeStart?: Date;
-    stmtDatetimeEnd?: Date;
+    startCancelDate?: string;
+    endCancelDate?: string;
+    stmtDatetimeStart?: string;
+    stmtDatetimeEnd?: string;
     canceller?: string;
     voucherNo?: string;
     descripttion?: string;
@@ -86,8 +68,8 @@ export interface ApiBankReconcileListGetRequest {
 }
 
 export interface ApiBankReconcileListStatementGetRequest {
-    startCreateDate?: Date;
-    endCreateDate?: Date;
+    startCreateDate?: string;
+    endCreateDate?: string;
     accountId?: number;
     fileName?: string;
     dateStart?: any;
@@ -96,10 +78,10 @@ export interface ApiBankReconcileListStatementGetRequest {
     toMoneyCumulative?: number;
     impId?: number;
     activeFlag?: boolean;
-    startCancelDate?: Date;
-    endCancelDate?: Date;
-    stmtDatetimeStart?: Date;
-    stmtDatetimeEnd?: Date;
+    startCancelDate?: string;
+    endCancelDate?: string;
+    stmtDatetimeStart?: string;
+    stmtDatetimeEnd?: string;
     canceller?: string;
     voucherNo?: string;
     descripttion?: string;
@@ -117,8 +99,8 @@ export interface ApiBankReconcileNotfoundStatementDetailIdGetRequest {
 }
 
 export interface ApiBankReconcileNotfoundStatementListGetRequest {
-    startCreateDate?: Date;
-    endCreateDate?: Date;
+    startCreateDate?: string;
+    endCreateDate?: string;
     accountId?: number;
     fileName?: string;
     dateStart?: any;
@@ -127,10 +109,10 @@ export interface ApiBankReconcileNotfoundStatementListGetRequest {
     toMoneyCumulative?: number;
     impId?: number;
     activeFlag?: boolean;
-    startCancelDate?: Date;
-    endCancelDate?: Date;
-    stmtDatetimeStart?: Date;
-    stmtDatetimeEnd?: Date;
+    startCancelDate?: string;
+    endCancelDate?: string;
+    stmtDatetimeStart?: string;
+    stmtDatetimeEnd?: string;
     canceller?: string;
     voucherNo?: string;
     descripttion?: string;
@@ -143,8 +125,8 @@ export interface ApiBankReconcileNotfoundVoucherDetailIdGetRequest {
 }
 
 export interface ApiBankReconcileNotfoundVoucherListGetRequest {
-    startCreateDate?: Date;
-    endCreateDate?: Date;
+    startCreateDate?: string;
+    endCreateDate?: string;
     accountId?: number;
     fileName?: string;
     dateStart?: any;
@@ -153,10 +135,10 @@ export interface ApiBankReconcileNotfoundVoucherListGetRequest {
     toMoneyCumulative?: number;
     impId?: number;
     activeFlag?: boolean;
-    startCancelDate?: Date;
-    endCancelDate?: Date;
-    stmtDatetimeStart?: Date;
-    stmtDatetimeEnd?: Date;
+    startCancelDate?: string;
+    endCancelDate?: string;
+    stmtDatetimeStart?: string;
+    stmtDatetimeEnd?: string;
     canceller?: string;
     voucherNo?: string;
     descripttion?: string;
@@ -170,9 +152,261 @@ export interface ApiBankReconcileUploadPostRequest {
 }
 
 /**
+ * BankReconcileApi - interface
+ * 
+ * @export
+ * @interface BankReconcileApiInterface
+ */
+export interface BankReconcileApiInterface {
+    /**
+     * 
+     * @param {CancelImportModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof BankReconcileApiInterface
+     */
+    apiBankReconcileCancelPostRaw(requestParameters: ApiBankReconcileCancelPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<boolean>>;
+
+    /**
+     */
+    apiBankReconcileCancelPost(requestParameters: ApiBankReconcileCancelPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<boolean>;
+
+    /**
+     * 
+     * @param {Array<VoucherMappingStatementModel>} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof BankReconcileApiInterface
+     */
+    apiBankReconcileCreateMappingListPostRaw(requestParameters: ApiBankReconcileCreateMappingListPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<boolean>>;
+
+    /**
+     */
+    apiBankReconcileCreateMappingListPost(requestParameters: ApiBankReconcileCreateMappingListPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<boolean>;
+
+    /**
+     * 
+     * @param {number} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof BankReconcileApiInterface
+     */
+    apiBankReconcileDetailIdGetRaw(requestParameters: ApiBankReconcileDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ImportStatementDetailModelBaseResponseModel>>;
+
+    /**
+     */
+    apiBankReconcileDetailIdGet(requestParameters: ApiBankReconcileDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ImportStatementDetailModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {number} [id] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof BankReconcileApiInterface
+     */
+    apiBankReconcileInactiveNotfoundStatementPostRaw(requestParameters: ApiBankReconcileInactiveNotfoundStatementPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<boolean>>;
+
+    /**
+     */
+    apiBankReconcileInactiveNotfoundStatementPost(requestParameters: ApiBankReconcileInactiveNotfoundStatementPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<boolean>;
+
+    /**
+     * 
+     * @param {number} [id] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof BankReconcileApiInterface
+     */
+    apiBankReconcileInactiveNotfoundVoucherPostRaw(requestParameters: ApiBankReconcileInactiveNotfoundVoucherPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<boolean>>;
+
+    /**
+     */
+    apiBankReconcileInactiveNotfoundVoucherPost(requestParameters: ApiBankReconcileInactiveNotfoundVoucherPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<boolean>;
+
+    /**
+     * 
+     * @param {string} [startCreateDate] 
+     * @param {string} [endCreateDate] 
+     * @param {number} [accountId] 
+     * @param {string} [fileName] 
+     * @param {any} [dateStart] 
+     * @param {any} [dateEnd] 
+     * @param {number} [fromMoneyCumulative] 
+     * @param {number} [toMoneyCumulative] 
+     * @param {number} [impId] 
+     * @param {boolean} [activeFlag] 
+     * @param {string} [startCancelDate] 
+     * @param {string} [endCancelDate] 
+     * @param {string} [stmtDatetimeStart] 
+     * @param {string} [stmtDatetimeEnd] 
+     * @param {string} [canceller] 
+     * @param {string} [voucherNo] 
+     * @param {string} [descripttion] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof BankReconcileApiInterface
+     */
+    apiBankReconcileListGetRaw(requestParameters: ApiBankReconcileListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<LogImportStatementResponseModel>>;
+
+    /**
+     */
+    apiBankReconcileListGet(requestParameters: ApiBankReconcileListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<LogImportStatementResponseModel>;
+
+    /**
+     * 
+     * @param {string} [startCreateDate] 
+     * @param {string} [endCreateDate] 
+     * @param {number} [accountId] 
+     * @param {string} [fileName] 
+     * @param {any} [dateStart] 
+     * @param {any} [dateEnd] 
+     * @param {number} [fromMoneyCumulative] 
+     * @param {number} [toMoneyCumulative] 
+     * @param {number} [impId] 
+     * @param {boolean} [activeFlag] 
+     * @param {string} [startCancelDate] 
+     * @param {string} [endCancelDate] 
+     * @param {string} [stmtDatetimeStart] 
+     * @param {string} [stmtDatetimeEnd] 
+     * @param {string} [canceller] 
+     * @param {string} [voucherNo] 
+     * @param {string} [descripttion] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof BankReconcileApiInterface
+     */
+    apiBankReconcileListStatementGetRaw(requestParameters: ApiBankReconcileListStatementGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ImportStatementResponseModel>>;
+
+    /**
+     */
+    apiBankReconcileListStatementGet(requestParameters: ApiBankReconcileListStatementGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ImportStatementResponseModel>;
+
+    /**
+     * 
+     * @param {string} [uuid] 
+     * @param {LogImportStatementModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof BankReconcileApiInterface
+     */
+    apiBankReconcileLogCreatePostRaw(requestParameters: ApiBankReconcileLogCreatePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<boolean>>;
+
+    /**
+     */
+    apiBankReconcileLogCreatePost(requestParameters: ApiBankReconcileLogCreatePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<boolean>;
+
+    /**
+     * 
+     * @param {number} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof BankReconcileApiInterface
+     */
+    apiBankReconcileNotfoundStatementDetailIdGetRaw(requestParameters: ApiBankReconcileNotfoundStatementDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<NotFoundMappingDetailModelBaseResponseModel>>;
+
+    /**
+     */
+    apiBankReconcileNotfoundStatementDetailIdGet(requestParameters: ApiBankReconcileNotfoundStatementDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<NotFoundMappingDetailModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {string} [startCreateDate] 
+     * @param {string} [endCreateDate] 
+     * @param {number} [accountId] 
+     * @param {string} [fileName] 
+     * @param {any} [dateStart] 
+     * @param {any} [dateEnd] 
+     * @param {number} [fromMoneyCumulative] 
+     * @param {number} [toMoneyCumulative] 
+     * @param {number} [impId] 
+     * @param {boolean} [activeFlag] 
+     * @param {string} [startCancelDate] 
+     * @param {string} [endCancelDate] 
+     * @param {string} [stmtDatetimeStart] 
+     * @param {string} [stmtDatetimeEnd] 
+     * @param {string} [canceller] 
+     * @param {string} [voucherNo] 
+     * @param {string} [descripttion] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof BankReconcileApiInterface
+     */
+    apiBankReconcileNotfoundStatementListGetRaw(requestParameters: ApiBankReconcileNotfoundStatementListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<NotFoundMappingResponseModel>>;
+
+    /**
+     */
+    apiBankReconcileNotfoundStatementListGet(requestParameters: ApiBankReconcileNotfoundStatementListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<NotFoundMappingResponseModel>;
+
+    /**
+     * 
+     * @param {number} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof BankReconcileApiInterface
+     */
+    apiBankReconcileNotfoundVoucherDetailIdGetRaw(requestParameters: ApiBankReconcileNotfoundVoucherDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<NotFoundMappingDetailModelBaseResponseModel>>;
+
+    /**
+     */
+    apiBankReconcileNotfoundVoucherDetailIdGet(requestParameters: ApiBankReconcileNotfoundVoucherDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<NotFoundMappingDetailModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {string} [startCreateDate] 
+     * @param {string} [endCreateDate] 
+     * @param {number} [accountId] 
+     * @param {string} [fileName] 
+     * @param {any} [dateStart] 
+     * @param {any} [dateEnd] 
+     * @param {number} [fromMoneyCumulative] 
+     * @param {number} [toMoneyCumulative] 
+     * @param {number} [impId] 
+     * @param {boolean} [activeFlag] 
+     * @param {string} [startCancelDate] 
+     * @param {string} [endCancelDate] 
+     * @param {string} [stmtDatetimeStart] 
+     * @param {string} [stmtDatetimeEnd] 
+     * @param {string} [canceller] 
+     * @param {string} [voucherNo] 
+     * @param {string} [descripttion] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof BankReconcileApiInterface
+     */
+    apiBankReconcileNotfoundVoucherListGetRaw(requestParameters: ApiBankReconcileNotfoundVoucherListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<NotFoundMappingResponseModel>>;
+
+    /**
+     */
+    apiBankReconcileNotfoundVoucherListGet(requestParameters: ApiBankReconcileNotfoundVoucherListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<NotFoundMappingResponseModel>;
+
+    /**
+     * 
+     * @param {number} [accountID] 
+     * @param {Blob} [file] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof BankReconcileApiInterface
+     */
+    apiBankReconcileUploadPostRaw(requestParameters: ApiBankReconcileUploadPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ImportStatementResponseModel>>;
+
+    /**
+     */
+    apiBankReconcileUploadPost(requestParameters: ApiBankReconcileUploadPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ImportStatementResponseModel>;
+
+}
+
+/**
  * 
  */
-export class BankReconcileApi extends runtime.BaseAPI {
+export class BankReconcileApi extends runtime.BaseAPI implements BankReconcileApiInterface {
 
     /**
      */
@@ -192,7 +426,7 @@ export class BankReconcileApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: CancelImportModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
         if (this.isJsonMime(response.headers.get('content-type'))) {
@@ -227,7 +461,7 @@ export class BankReconcileApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: requestParameters['body']!.map(VoucherMappingStatementModelToJSON),
+            body: requestParameters['body'],
         }, initOverrides);
 
         if (this.isJsonMime(response.headers.get('content-type'))) {
@@ -269,7 +503,7 @@ export class BankReconcileApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ImportStatementDetailModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -357,11 +591,11 @@ export class BankReconcileApi extends runtime.BaseAPI {
         const queryParameters: any = {};
 
         if (requestParameters['startCreateDate'] != null) {
-            queryParameters['start_create_date'] = (requestParameters['startCreateDate'] as any).toISOString();
+            queryParameters['start_create_date'] = requestParameters['startCreateDate'];
         }
 
         if (requestParameters['endCreateDate'] != null) {
-            queryParameters['end_create_date'] = (requestParameters['endCreateDate'] as any).toISOString();
+            queryParameters['end_create_date'] = requestParameters['endCreateDate'];
         }
 
         if (requestParameters['accountId'] != null) {
@@ -397,19 +631,19 @@ export class BankReconcileApi extends runtime.BaseAPI {
         }
 
         if (requestParameters['startCancelDate'] != null) {
-            queryParameters['start_cancel_date'] = (requestParameters['startCancelDate'] as any).toISOString();
+            queryParameters['start_cancel_date'] = requestParameters['startCancelDate'];
         }
 
         if (requestParameters['endCancelDate'] != null) {
-            queryParameters['end_cancel_date'] = (requestParameters['endCancelDate'] as any).toISOString();
+            queryParameters['end_cancel_date'] = requestParameters['endCancelDate'];
         }
 
         if (requestParameters['stmtDatetimeStart'] != null) {
-            queryParameters['stmt_datetime_start'] = (requestParameters['stmtDatetimeStart'] as any).toISOString();
+            queryParameters['stmt_datetime_start'] = requestParameters['stmtDatetimeStart'];
         }
 
         if (requestParameters['stmtDatetimeEnd'] != null) {
-            queryParameters['stmt_datetime_end'] = (requestParameters['stmtDatetimeEnd'] as any).toISOString();
+            queryParameters['stmt_datetime_end'] = requestParameters['stmtDatetimeEnd'];
         }
 
         if (requestParameters['canceller'] != null) {
@@ -445,7 +679,7 @@ export class BankReconcileApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => LogImportStatementResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -461,11 +695,11 @@ export class BankReconcileApi extends runtime.BaseAPI {
         const queryParameters: any = {};
 
         if (requestParameters['startCreateDate'] != null) {
-            queryParameters['start_create_date'] = (requestParameters['startCreateDate'] as any).toISOString();
+            queryParameters['start_create_date'] = requestParameters['startCreateDate'];
         }
 
         if (requestParameters['endCreateDate'] != null) {
-            queryParameters['end_create_date'] = (requestParameters['endCreateDate'] as any).toISOString();
+            queryParameters['end_create_date'] = requestParameters['endCreateDate'];
         }
 
         if (requestParameters['accountId'] != null) {
@@ -501,19 +735,19 @@ export class BankReconcileApi extends runtime.BaseAPI {
         }
 
         if (requestParameters['startCancelDate'] != null) {
-            queryParameters['start_cancel_date'] = (requestParameters['startCancelDate'] as any).toISOString();
+            queryParameters['start_cancel_date'] = requestParameters['startCancelDate'];
         }
 
         if (requestParameters['endCancelDate'] != null) {
-            queryParameters['end_cancel_date'] = (requestParameters['endCancelDate'] as any).toISOString();
+            queryParameters['end_cancel_date'] = requestParameters['endCancelDate'];
         }
 
         if (requestParameters['stmtDatetimeStart'] != null) {
-            queryParameters['stmt_datetime_start'] = (requestParameters['stmtDatetimeStart'] as any).toISOString();
+            queryParameters['stmt_datetime_start'] = requestParameters['stmtDatetimeStart'];
         }
 
         if (requestParameters['stmtDatetimeEnd'] != null) {
-            queryParameters['stmt_datetime_end'] = (requestParameters['stmtDatetimeEnd'] as any).toISOString();
+            queryParameters['stmt_datetime_end'] = requestParameters['stmtDatetimeEnd'];
         }
 
         if (requestParameters['canceller'] != null) {
@@ -549,7 +783,7 @@ export class BankReconcileApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ImportStatementResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -581,7 +815,7 @@ export class BankReconcileApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: LogImportStatementModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
         if (this.isJsonMime(response.headers.get('content-type'))) {
@@ -623,7 +857,7 @@ export class BankReconcileApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => NotFoundMappingDetailModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -639,11 +873,11 @@ export class BankReconcileApi extends runtime.BaseAPI {
         const queryParameters: any = {};
 
         if (requestParameters['startCreateDate'] != null) {
-            queryParameters['start_create_date'] = (requestParameters['startCreateDate'] as any).toISOString();
+            queryParameters['start_create_date'] = requestParameters['startCreateDate'];
         }
 
         if (requestParameters['endCreateDate'] != null) {
-            queryParameters['end_create_date'] = (requestParameters['endCreateDate'] as any).toISOString();
+            queryParameters['end_create_date'] = requestParameters['endCreateDate'];
         }
 
         if (requestParameters['accountId'] != null) {
@@ -679,19 +913,19 @@ export class BankReconcileApi extends runtime.BaseAPI {
         }
 
         if (requestParameters['startCancelDate'] != null) {
-            queryParameters['start_cancel_date'] = (requestParameters['startCancelDate'] as any).toISOString();
+            queryParameters['start_cancel_date'] = requestParameters['startCancelDate'];
         }
 
         if (requestParameters['endCancelDate'] != null) {
-            queryParameters['end_cancel_date'] = (requestParameters['endCancelDate'] as any).toISOString();
+            queryParameters['end_cancel_date'] = requestParameters['endCancelDate'];
         }
 
         if (requestParameters['stmtDatetimeStart'] != null) {
-            queryParameters['stmt_datetime_start'] = (requestParameters['stmtDatetimeStart'] as any).toISOString();
+            queryParameters['stmt_datetime_start'] = requestParameters['stmtDatetimeStart'];
         }
 
         if (requestParameters['stmtDatetimeEnd'] != null) {
-            queryParameters['stmt_datetime_end'] = (requestParameters['stmtDatetimeEnd'] as any).toISOString();
+            queryParameters['stmt_datetime_end'] = requestParameters['stmtDatetimeEnd'];
         }
 
         if (requestParameters['canceller'] != null) {
@@ -727,7 +961,7 @@ export class BankReconcileApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => NotFoundMappingResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -762,7 +996,7 @@ export class BankReconcileApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => NotFoundMappingDetailModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -778,11 +1012,11 @@ export class BankReconcileApi extends runtime.BaseAPI {
         const queryParameters: any = {};
 
         if (requestParameters['startCreateDate'] != null) {
-            queryParameters['start_create_date'] = (requestParameters['startCreateDate'] as any).toISOString();
+            queryParameters['start_create_date'] = requestParameters['startCreateDate'];
         }
 
         if (requestParameters['endCreateDate'] != null) {
-            queryParameters['end_create_date'] = (requestParameters['endCreateDate'] as any).toISOString();
+            queryParameters['end_create_date'] = requestParameters['endCreateDate'];
         }
 
         if (requestParameters['accountId'] != null) {
@@ -818,19 +1052,19 @@ export class BankReconcileApi extends runtime.BaseAPI {
         }
 
         if (requestParameters['startCancelDate'] != null) {
-            queryParameters['start_cancel_date'] = (requestParameters['startCancelDate'] as any).toISOString();
+            queryParameters['start_cancel_date'] = requestParameters['startCancelDate'];
         }
 
         if (requestParameters['endCancelDate'] != null) {
-            queryParameters['end_cancel_date'] = (requestParameters['endCancelDate'] as any).toISOString();
+            queryParameters['end_cancel_date'] = requestParameters['endCancelDate'];
         }
 
         if (requestParameters['stmtDatetimeStart'] != null) {
-            queryParameters['stmt_datetime_start'] = (requestParameters['stmtDatetimeStart'] as any).toISOString();
+            queryParameters['stmt_datetime_start'] = requestParameters['stmtDatetimeStart'];
         }
 
         if (requestParameters['stmtDatetimeEnd'] != null) {
-            queryParameters['stmt_datetime_end'] = (requestParameters['stmtDatetimeEnd'] as any).toISOString();
+            queryParameters['stmt_datetime_end'] = requestParameters['stmtDatetimeEnd'];
         }
 
         if (requestParameters['canceller'] != null) {
@@ -866,7 +1100,7 @@ export class BankReconcileApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => NotFoundMappingResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -919,7 +1153,7 @@ export class BankReconcileApi extends runtime.BaseAPI {
             body: formParams,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ImportStatementResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

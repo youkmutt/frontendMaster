@@ -21,18 +21,6 @@ import type {
   MasterCustomerOwnerModelBaseResponseModel,
   MasterEmployeeModelBaseResponsePagination,
 } from '../models/index';
-import {
-    MasterCustomerGetSearchModelBaseResponsePaginationFromJSON,
-    MasterCustomerGetSearchModelBaseResponsePaginationToJSON,
-    MasterCustomerModelBaseResponseModelFromJSON,
-    MasterCustomerModelBaseResponseModelToJSON,
-    MasterCustomerOwnerModelFromJSON,
-    MasterCustomerOwnerModelToJSON,
-    MasterCustomerOwnerModelBaseResponseModelFromJSON,
-    MasterCustomerOwnerModelBaseResponseModelToJSON,
-    MasterEmployeeModelBaseResponsePaginationFromJSON,
-    MasterEmployeeModelBaseResponsePaginationToJSON,
-} from '../models/index';
 
 export interface ApiMasterCustomerAddMasterCustomerOwnerPutRequest {
     body?: MasterCustomerOwnerModel;
@@ -47,10 +35,10 @@ export interface ApiMasterCustomerGetMasterCustomerListGetRequest {
     customerCreditType?: any;
     salesOwner?: string;
     holdStatus?: boolean;
-    startUpdateDate?: Date;
-    endUpdateDate?: Date;
-    startLastCalculateDate?: Date;
-    endLastCalculateDate?: Date;
+    startUpdateDate?: string;
+    endUpdateDate?: string;
+    startLastCalculateDate?: string;
+    endLastCalculateDate?: string;
     pageIndex?: number;
     pageSize?: number;
 }
@@ -62,9 +50,81 @@ export interface ApiMasterCustomerGetMasterEmployeeGetRequest {
 }
 
 /**
+ * MasterCustomerApi - interface
+ * 
+ * @export
+ * @interface MasterCustomerApiInterface
+ */
+export interface MasterCustomerApiInterface {
+    /**
+     * 
+     * @param {MasterCustomerOwnerModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MasterCustomerApiInterface
+     */
+    apiMasterCustomerAddMasterCustomerOwnerPutRaw(requestParameters: ApiMasterCustomerAddMasterCustomerOwnerPutRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MasterCustomerOwnerModelBaseResponseModel>>;
+
+    /**
+     */
+    apiMasterCustomerAddMasterCustomerOwnerPut(requestParameters: ApiMasterCustomerAddMasterCustomerOwnerPutRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MasterCustomerOwnerModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {number} customerId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MasterCustomerApiInterface
+     */
+    apiMasterCustomerGetMasterCustomerByIdCustomerIdGetRaw(requestParameters: ApiMasterCustomerGetMasterCustomerByIdCustomerIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MasterCustomerModelBaseResponseModel>>;
+
+    /**
+     */
+    apiMasterCustomerGetMasterCustomerByIdCustomerIdGet(requestParameters: ApiMasterCustomerGetMasterCustomerByIdCustomerIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MasterCustomerModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {string} [customerName] 
+     * @param {any} [customerCreditType] 
+     * @param {string} [salesOwner] 
+     * @param {boolean} [holdStatus] 
+     * @param {string} [startUpdateDate] 
+     * @param {string} [endUpdateDate] 
+     * @param {string} [startLastCalculateDate] 
+     * @param {string} [endLastCalculateDate] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MasterCustomerApiInterface
+     */
+    apiMasterCustomerGetMasterCustomerListGetRaw(requestParameters: ApiMasterCustomerGetMasterCustomerListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MasterCustomerGetSearchModelBaseResponsePagination>>;
+
+    /**
+     */
+    apiMasterCustomerGetMasterCustomerListGet(requestParameters: ApiMasterCustomerGetMasterCustomerListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MasterCustomerGetSearchModelBaseResponsePagination>;
+
+    /**
+     * 
+     * @param {string} [employeeName] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MasterCustomerApiInterface
+     */
+    apiMasterCustomerGetMasterEmployeeGetRaw(requestParameters: ApiMasterCustomerGetMasterEmployeeGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MasterEmployeeModelBaseResponsePagination>>;
+
+    /**
+     */
+    apiMasterCustomerGetMasterEmployeeGet(requestParameters: ApiMasterCustomerGetMasterEmployeeGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MasterEmployeeModelBaseResponsePagination>;
+
+}
+
+/**
  * 
  */
-export class MasterCustomerApi extends runtime.BaseAPI {
+export class MasterCustomerApi extends runtime.BaseAPI implements MasterCustomerApiInterface {
 
     /**
      */
@@ -84,10 +144,10 @@ export class MasterCustomerApi extends runtime.BaseAPI {
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
-            body: MasterCustomerOwnerModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MasterCustomerOwnerModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -122,7 +182,7 @@ export class MasterCustomerApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MasterCustomerModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -154,19 +214,19 @@ export class MasterCustomerApi extends runtime.BaseAPI {
         }
 
         if (requestParameters['startUpdateDate'] != null) {
-            queryParameters['start_update_date'] = (requestParameters['startUpdateDate'] as any).toISOString();
+            queryParameters['start_update_date'] = requestParameters['startUpdateDate'];
         }
 
         if (requestParameters['endUpdateDate'] != null) {
-            queryParameters['end_update_date'] = (requestParameters['endUpdateDate'] as any).toISOString();
+            queryParameters['end_update_date'] = requestParameters['endUpdateDate'];
         }
 
         if (requestParameters['startLastCalculateDate'] != null) {
-            queryParameters['start_last_calculate_date'] = (requestParameters['startLastCalculateDate'] as any).toISOString();
+            queryParameters['start_last_calculate_date'] = requestParameters['startLastCalculateDate'];
         }
 
         if (requestParameters['endLastCalculateDate'] != null) {
-            queryParameters['end_last_calculate_date'] = (requestParameters['endLastCalculateDate'] as any).toISOString();
+            queryParameters['end_last_calculate_date'] = requestParameters['endLastCalculateDate'];
         }
 
         if (requestParameters['pageIndex'] != null) {
@@ -190,7 +250,7 @@ export class MasterCustomerApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MasterCustomerGetSearchModelBaseResponsePaginationFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -230,7 +290,7 @@ export class MasterCustomerApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MasterEmployeeModelBaseResponsePaginationFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

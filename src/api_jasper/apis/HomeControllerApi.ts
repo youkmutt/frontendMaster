@@ -16,9 +16,42 @@
 import * as runtime from '../runtime';
 
 /**
+ * HomeControllerApi - interface
+ * 
+ * @export
+ * @interface HomeControllerApiInterface
+ */
+export interface HomeControllerApiInterface {
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HomeControllerApiInterface
+     */
+    checkRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<string>>;
+
+    /**
+     */
+    check(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<string>;
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HomeControllerApiInterface
+     */
+    homeRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<string>>;
+
+    /**
+     */
+    home(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<string>;
+
+}
+
+/**
  * 
  */
-export class HomeControllerApi extends runtime.BaseAPI {
+export class HomeControllerApi extends runtime.BaseAPI implements HomeControllerApiInterface {
 
     /**
      */

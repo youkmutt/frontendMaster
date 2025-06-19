@@ -21,18 +21,6 @@ import type {
   WorkflowTransitionRequest,
   WorkflowTransitionResultBaseResponseModel,
 } from '../models/index';
-import {
-    NotiStepIdModelBaseResponseModelFromJSON,
-    NotiStepIdModelBaseResponseModelToJSON,
-    WorkflowStepStatusModelListBaseResponseModelFromJSON,
-    WorkflowStepStatusModelListBaseResponseModelToJSON,
-    WorkflowTransitionInfoModelListBaseResponseModelFromJSON,
-    WorkflowTransitionInfoModelListBaseResponseModelToJSON,
-    WorkflowTransitionRequestFromJSON,
-    WorkflowTransitionRequestToJSON,
-    WorkflowTransitionResultBaseResponseModelFromJSON,
-    WorkflowTransitionResultBaseResponseModelToJSON,
-} from '../models/index';
 
 export interface ApiWorkflowStepStatusGetRequest {
     workflowId?: number;
@@ -48,9 +36,70 @@ export interface ApiWorkflowTransitionPostRequest {
 }
 
 /**
+ * WorkflowApi - interface
+ * 
+ * @export
+ * @interface WorkflowApiInterface
+ */
+export interface WorkflowApiInterface {
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WorkflowApiInterface
+     */
+    apiWorkflowGetApprovalNotiGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<NotiStepIdModelBaseResponseModel>>;
+
+    /**
+     */
+    apiWorkflowGetApprovalNotiGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<NotiStepIdModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {number} [workflowId] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WorkflowApiInterface
+     */
+    apiWorkflowStepStatusGetRaw(requestParameters: ApiWorkflowStepStatusGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<WorkflowStepStatusModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiWorkflowStepStatusGet(requestParameters: ApiWorkflowStepStatusGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<WorkflowStepStatusModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {number} [workflowId] 
+     * @param {number} [currentStepId] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WorkflowApiInterface
+     */
+    apiWorkflowTransitionGetRaw(requestParameters: ApiWorkflowTransitionGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<WorkflowTransitionInfoModelListBaseResponseModel>>;
+
+    /**
+     */
+    apiWorkflowTransitionGet(requestParameters: ApiWorkflowTransitionGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<WorkflowTransitionInfoModelListBaseResponseModel>;
+
+    /**
+     * 
+     * @param {WorkflowTransitionRequest} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WorkflowApiInterface
+     */
+    apiWorkflowTransitionPostRaw(requestParameters: ApiWorkflowTransitionPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<WorkflowTransitionResultBaseResponseModel>>;
+
+    /**
+     */
+    apiWorkflowTransitionPost(requestParameters: ApiWorkflowTransitionPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<WorkflowTransitionResultBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class WorkflowApi extends runtime.BaseAPI {
+export class WorkflowApi extends runtime.BaseAPI implements WorkflowApiInterface {
 
     /**
      */
@@ -70,7 +119,7 @@ export class WorkflowApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => NotiStepIdModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -102,7 +151,7 @@ export class WorkflowApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => WorkflowStepStatusModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -138,7 +187,7 @@ export class WorkflowApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => WorkflowTransitionInfoModelListBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -166,10 +215,10 @@ export class WorkflowApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: WorkflowTransitionRequestToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => WorkflowTransitionResultBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

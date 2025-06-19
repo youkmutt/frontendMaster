@@ -5,6 +5,8 @@ import { AlertProvider } from "./context/AlertContext";
 import ClientLayout from "./client_layout";
 import PrimeReactProviders from "./context/PrimeReactProvider";
 import "primeicons/primeicons.css";
+import { LoadingProvider } from "./context/LoadingContext";
+import LoadingOverlay from "./components/LoadingOverlay";
 
 export const metadata: Metadata = {
   title: "Frontend App",
@@ -22,7 +24,12 @@ export default function RootLayout({
         <AuthGuard>
           <AlertProvider>
             <ClientLayout>
-              <PrimeReactProviders>{children}</PrimeReactProviders>
+              <PrimeReactProviders>
+                <LoadingProvider>
+                  <LoadingOverlay />
+                  {children}
+                </LoadingProvider>
+              </PrimeReactProviders>
               {/* {children} */}
             </ClientLayout>
           </AlertProvider>

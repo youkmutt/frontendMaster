@@ -1,6 +1,5 @@
 import { useRouter, usePathname } from "next/navigation";
 import React, { useState, useEffect, useRef } from "react";
-import { UsersRound, LogOut, ChevronDown, House } from "lucide-react";
 import ThailandFlag from "@/app/assets/images/flags/th.svg";
 import USFlag from "@/app/assets/images/flags/us.svg";
 import {
@@ -12,7 +11,7 @@ import Link from "next/link";
 export default function Menu({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const pathname = usePathname();
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openMenuId, setOpenMenuId] = useState<number | null>(null);
   const [openSubMenuId, setOpenSubMenuId] = useState<number | null>(null);
   const [nowMenuId, setNowMenuId] = useState<number | null>(null);
@@ -25,9 +24,10 @@ export default function Menu({ children }: { children: React.ReactNode }) {
     message: "",
   });
 
+  const [width, setWidth] = useState(0);
   useEffect(() => {
     const storedUserDetail = sessionStorage.getItem("userDetail");
-    const storedMenu = sessionStorage.getItem("menu"); // Assuming you also store 'menu'
+    const storedMenu = sessionStorage.getItem("menu");
     if (storedUserDetail) {
       const parsedUserDetail: UserDetailModel = JSON.parse(storedUserDetail);
       setUserDetail(parsedUserDetail);
@@ -41,7 +41,7 @@ export default function Menu({ children }: { children: React.ReactNode }) {
       };
       setMenu(menuResponse);
 
-      if (pathname === "/dashboard") {
+      if (pathname === "/pages/dashboard") {
         handleMenuToggle(0);
         setOpenMenuId(0);
         setOpenSubMenuId(0);
@@ -51,7 +51,7 @@ export default function Menu({ children }: { children: React.ReactNode }) {
         for (const item of menuResponse.data) {
           if (item.subMenu) {
             for (const subItem of item.subMenu) {
-              if ("/" + subItem.menuRoute === pathname) {
+              if ("/pages/" + subItem.menuRoute === pathname) {
                 handleMenuToggle(item.menuId ?? 0);
                 setOpenMenuId(item.menuId ?? 0);
                 setOpenSubMenuId(subItem.menuId ?? 0);
@@ -65,6 +65,20 @@ export default function Menu({ children }: { children: React.ReactNode }) {
       }
     }
   }, [pathname]);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    if (width > 1024) {
+      setIsMenuOpen(true);
+    } else {
+      setIsMenuOpen(false);
+    }
+  }, [width]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -99,7 +113,7 @@ export default function Menu({ children }: { children: React.ReactNode }) {
             <button
               className="text-xl p-2 font-semibold text-fa-primary tracking-wide rounded-md transition-colors duration-200 hover:bg-fa-primary hover:text-white"
               onClick={() => {
-                handleClick("/dashboard", 0);
+                handleClick("/pages/dashboard", 0);
               }}
             >
               FA BACKOFFICE
@@ -151,7 +165,7 @@ export default function Menu({ children }: { children: React.ReactNode }) {
                 <span className="hidden md:block text-sm">
                   {userDetail?.firstName} {userDetail?.lastName}
                 </span>
-                <UsersRound></UsersRound>
+                <i className="pi pi-user-round"></i>
               </button>
               <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible transition-all duration-300 transform scale-95 group-hover:opacity-100 group-hover:visible group-hover:scale-100">
                 <a
@@ -179,12 +193,13 @@ export default function Menu({ children }: { children: React.ReactNode }) {
               className="text-gray-600 hover:text-red-500 p-1 rounded-full focus:outline-none transition-colors duration-200"
               onClick={handleLogout}
             >
-              <LogOut className="w-6 h-6" />
+              {/* <LogOut className="w-6 h-6" /> */}
+              <i className="w-6 h-6 pi pi-sign-out"></i>
             </button>
           </div>
         </nav>
 
-        <div className="flex pt-16">
+        <div className="flex pt-16 mt-1">
           <aside
             className={`
             fixed top-0 left-0 h-full shadow-lg w-64 transform transition-transform duration-300 ease-in-out z-40 pt-16
@@ -196,8 +211,8 @@ export default function Menu({ children }: { children: React.ReactNode }) {
             
           `}
           >
-            <div className="p-2 overflow-y-auto h-screen min-w-max w-auto bg-white">
-              <ul className="space-y-1">
+            <div className="p-0 mb-2 overflow-y-auto h-screen min-w-max w-auto bg-white border border-gray-300 rounded-xl">
+              <ul className={`space-y-1 ${isMenuOpen ? "p-2" : "px-0"}`}>
                 {menu.data?.map((item) => (
                   <li key={item.menuId}>
                     {item.subMenu && item.subMenu.length > 0 ? (
@@ -211,9 +226,9 @@ export default function Menu({ children }: { children: React.ReactNode }) {
                           </div>
 
                           {openMenuId === item.menuId ? (
-                            <ChevronDown className="transform rotate-180 text-fa-primary group-hover:text-gray-50 transition-transform duration-300" />
+                            <i className="pi pi-chevron-down transform rotate-180 text-fa-primary group-hover:text-gray-50 transition-transform duration-300"></i>
                           ) : (
-                            <ChevronDown className="text-fa-primary group-hover:text-gray-50 transition-transform duration-300" />
+                            <i className="pi pi-chevron-down text-fa-primary group-hover:text-gray-50 transition-transform duration-300"></i>
                           )}
                         </button>
 
@@ -233,7 +248,7 @@ export default function Menu({ children }: { children: React.ReactNode }) {
                                 <button
                                   onClick={() =>
                                     handleClick(
-                                      "/" + (subItem.menuRoute ?? "#"),
+                                      "/pages/" + (subItem.menuRoute ?? "#"),
                                       subItem.menuId ?? 0
                                     )
                                   }
@@ -266,14 +281,15 @@ export default function Menu({ children }: { children: React.ReactNode }) {
             </div>
           </aside>
 
-          <main className="flex-1 bg-gray-100 p-6 mt-4 lg:ml-0 lg:mt-0 w-fit">
-            <div className="flex text-sm text-gray-500 mb-4">
+          <main className="flex-1 bg-gray-100 mt-4 lg:ml-0 lg:mt-0 w-fit">
+            <div className="flex text-sm text-gray-500 px-6 py-2">
               <button
                 aria-label="Home"
-                className="mt-0 pr-1 pb-0.5 rounded-md transition-colors duration-200 hover:bg-gray-200 hover:text-gray-900 text-gray-500"
-                onClick={() => handleClick("/dashboard", 0)}
+                className="mt-0 pr-1 pb-0.5 rounded-md transition-colors duration-200 hover:bg-gray-200 hover:text-fa-primary text-gray-500"
+                onClick={() => handleClick("/pages/dashboard", 0)}
               >
-                <House className="w-4 h-4" />
+                {/* <House className="w-4 h-4" /> */}
+                <i className="pi pi-home w-4 h-4"></i>
               </button>{" "}
               {menu.data?.map((item) =>
                 item.menuId === nowMenuId ? " / " + item.menuName : null
@@ -288,7 +304,7 @@ export default function Menu({ children }: { children: React.ReactNode }) {
                   : null
               )}
             </div>
-            {children}
+            <div className="px-6">{children}</div>
           </main>
         </div>
       </div>

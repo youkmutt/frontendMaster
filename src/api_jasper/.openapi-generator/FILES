@@ -3,7 +3,5 @@ apis/ExporterControllerApi.ts
 apis/HomeControllerApi.ts
 apis/index.ts
 index.ts
-models/BaseRequestModel.ts
-models/BaseResponseModel.ts
 models/index.ts
 runtime.ts

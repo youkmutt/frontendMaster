@@ -19,14 +19,6 @@ import type {
   ApprovalAPCNDetailModelBaseResponseModel,
   ApprovalAPCNResponseModel,
 } from '../models/index';
-import {
-    ApprovalAPCNDetailModelFromJSON,
-    ApprovalAPCNDetailModelToJSON,
-    ApprovalAPCNDetailModelBaseResponseModelFromJSON,
-    ApprovalAPCNDetailModelBaseResponseModelToJSON,
-    ApprovalAPCNResponseModelFromJSON,
-    ApprovalAPCNResponseModelToJSON,
-} from '../models/index';
 
 export interface ApiApprovalAPCNDetailIdGetRequest {
     id: number;
@@ -36,8 +28,8 @@ export interface ApiApprovalAPCNListGetRequest {
     rebateCode?: string;
     supplierCode?: string;
     brandId?: number;
-    startDate?: Date;
-    endDate?: Date;
+    startDate?: string;
+    endDate?: string;
     currentStepId?: number;
     pageIndex?: number;
     pageSize?: number;
@@ -48,9 +40,64 @@ export interface ApiApprovalAPCNUpdatePostRequest {
 }
 
 /**
+ * ApprovalAPCNApi - interface
+ * 
+ * @export
+ * @interface ApprovalAPCNApiInterface
+ */
+export interface ApprovalAPCNApiInterface {
+    /**
+     * 
+     * @param {number} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ApprovalAPCNApiInterface
+     */
+    apiApprovalAPCNDetailIdGetRaw(requestParameters: ApiApprovalAPCNDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApprovalAPCNDetailModelBaseResponseModel>>;
+
+    /**
+     */
+    apiApprovalAPCNDetailIdGet(requestParameters: ApiApprovalAPCNDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApprovalAPCNDetailModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {string} [rebateCode] 
+     * @param {string} [supplierCode] 
+     * @param {number} [brandId] 
+     * @param {string} [startDate] 
+     * @param {string} [endDate] 
+     * @param {number} [currentStepId] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ApprovalAPCNApiInterface
+     */
+    apiApprovalAPCNListGetRaw(requestParameters: ApiApprovalAPCNListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApprovalAPCNResponseModel>>;
+
+    /**
+     */
+    apiApprovalAPCNListGet(requestParameters: ApiApprovalAPCNListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApprovalAPCNResponseModel>;
+
+    /**
+     * 
+     * @param {ApprovalAPCNDetailModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ApprovalAPCNApiInterface
+     */
+    apiApprovalAPCNUpdatePostRaw(requestParameters: ApiApprovalAPCNUpdatePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApprovalAPCNDetailModelBaseResponseModel>>;
+
+    /**
+     */
+    apiApprovalAPCNUpdatePost(requestParameters: ApiApprovalAPCNUpdatePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApprovalAPCNDetailModelBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class ApprovalAPCNApi extends runtime.BaseAPI {
+export class ApprovalAPCNApi extends runtime.BaseAPI implements ApprovalAPCNApiInterface {
 
     /**
      */
@@ -77,7 +124,7 @@ export class ApprovalAPCNApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApprovalAPCNDetailModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -105,11 +152,11 @@ export class ApprovalAPCNApi extends runtime.BaseAPI {
         }
 
         if (requestParameters['startDate'] != null) {
-            queryParameters['start_date'] = (requestParameters['startDate'] as any).toISOString();
+            queryParameters['start_date'] = requestParameters['startDate'];
         }
 
         if (requestParameters['endDate'] != null) {
-            queryParameters['end_date'] = (requestParameters['endDate'] as any).toISOString();
+            queryParameters['end_date'] = requestParameters['endDate'];
         }
 
         if (requestParameters['currentStepId'] != null) {
@@ -137,7 +184,7 @@ export class ApprovalAPCNApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApprovalAPCNResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -165,10 +212,10 @@ export class ApprovalAPCNApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApprovalAPCNDetailModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApprovalAPCNDetailModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

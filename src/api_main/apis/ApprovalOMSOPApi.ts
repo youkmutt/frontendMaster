@@ -19,14 +19,6 @@ import type {
   ApprovalOMSOPDetailModelBaseResponseModel,
   ApprovalOMSOPResponseModel,
 } from '../models/index';
-import {
-    ApprovalOMSOPDetailModelFromJSON,
-    ApprovalOMSOPDetailModelToJSON,
-    ApprovalOMSOPDetailModelBaseResponseModelFromJSON,
-    ApprovalOMSOPDetailModelBaseResponseModelToJSON,
-    ApprovalOMSOPResponseModelFromJSON,
-    ApprovalOMSOPResponseModelToJSON,
-} from '../models/index';
 
 export interface ApiApprovalOMSOPListGetRequest {
     round?: string;
@@ -49,9 +41,65 @@ export interface ApiApprovalOMSOPUpdatePostRequest {
 }
 
 /**
+ * ApprovalOMSOPApi - interface
+ * 
+ * @export
+ * @interface ApprovalOMSOPApiInterface
+ */
+export interface ApprovalOMSOPApiInterface {
+    /**
+     * 
+     * @param {string} [round] 
+     * @param {string} [projectCode] 
+     * @param {string} [sopName] 
+     * @param {string} [invoiceNo] 
+     * @param {number} [refType] 
+     * @param {number} [currentStepId] 
+     * @param {number} [paymentType] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ApprovalOMSOPApiInterface
+     */
+    apiApprovalOMSOPListGetRaw(requestParameters: ApiApprovalOMSOPListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApprovalOMSOPResponseModel>>;
+
+    /**
+     */
+    apiApprovalOMSOPListGet(requestParameters: ApiApprovalOMSOPListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApprovalOMSOPResponseModel>;
+
+    /**
+     * 
+     * @param {number} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ApprovalOMSOPApiInterface
+     */
+    apiApprovalOMSOPOmPaymentDetailIdGetRaw(requestParameters: ApiApprovalOMSOPOmPaymentDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApprovalOMSOPDetailModelBaseResponseModel>>;
+
+    /**
+     */
+    apiApprovalOMSOPOmPaymentDetailIdGet(requestParameters: ApiApprovalOMSOPOmPaymentDetailIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApprovalOMSOPDetailModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {ApprovalOMSOPDetailModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ApprovalOMSOPApiInterface
+     */
+    apiApprovalOMSOPUpdatePostRaw(requestParameters: ApiApprovalOMSOPUpdatePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApprovalOMSOPDetailModelBaseResponseModel>>;
+
+    /**
+     */
+    apiApprovalOMSOPUpdatePost(requestParameters: ApiApprovalOMSOPUpdatePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApprovalOMSOPDetailModelBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class ApprovalOMSOPApi extends runtime.BaseAPI {
+export class ApprovalOMSOPApi extends runtime.BaseAPI implements ApprovalOMSOPApiInterface {
 
     /**
      */
@@ -107,7 +155,7 @@ export class ApprovalOMSOPApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApprovalOMSOPResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -142,7 +190,7 @@ export class ApprovalOMSOPApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApprovalOMSOPDetailModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -170,10 +218,10 @@ export class ApprovalOMSOPApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApprovalOMSOPDetailModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApprovalOMSOPDetailModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

@@ -22,20 +22,6 @@ import type {
   UpdateAmountRegistterCustomerModel,
   UpdateAmountRegistterCustomerModelBaseResponseModel,
 } from '../models/index';
-import {
-    BooleanBaseResponseModelFromJSON,
-    BooleanBaseResponseModelToJSON,
-    RegisterCustomerGetSearchModelBaseResponsePaginationFromJSON,
-    RegisterCustomerGetSearchModelBaseResponsePaginationToJSON,
-    RegisterCustomerUpdateModelFromJSON,
-    RegisterCustomerUpdateModelToJSON,
-    RegisterCustomerUpdateModelBaseResponseModelFromJSON,
-    RegisterCustomerUpdateModelBaseResponseModelToJSON,
-    UpdateAmountRegistterCustomerModelFromJSON,
-    UpdateAmountRegistterCustomerModelToJSON,
-    UpdateAmountRegistterCustomerModelBaseResponseModelFromJSON,
-    UpdateAmountRegistterCustomerModelBaseResponseModelToJSON,
-} from '../models/index';
 
 export interface ApiRegisterAddRegisterPostRequest {
     body?: Omit<RegisterCustomerUpdateModel, 'customer_type_name'|'customer_credit_type_name'|'regis_status_name'>;
@@ -54,8 +40,8 @@ export interface ApiRegisterGetRegisterListGetRequest {
     customerCreditType?: any;
     salesOwner?: string;
     regisStatus?: any;
-    regisStartDate?: Date;
-    regisEndDate?: Date;
+    regisStartDate?: string;
+    regisEndDate?: string;
     isApprove?: boolean;
     pageIndex?: number;
     pageSize?: number;
@@ -70,9 +56,104 @@ export interface ApiRegisterUpdateRegisterPutRequest {
 }
 
 /**
+ * RegisterApi - interface
+ * 
+ * @export
+ * @interface RegisterApiInterface
+ */
+export interface RegisterApiInterface {
+    /**
+     * 
+     * @param {RegisterCustomerUpdateModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RegisterApiInterface
+     */
+    apiRegisterAddRegisterPostRaw(requestParameters: ApiRegisterAddRegisterPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<RegisterCustomerUpdateModelBaseResponseModel>>;
+
+    /**
+     */
+    apiRegisterAddRegisterPost(requestParameters: ApiRegisterAddRegisterPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RegisterCustomerUpdateModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {number} [regisId] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RegisterApiInterface
+     */
+    apiRegisterDeleteRegisterPatchRaw(requestParameters: ApiRegisterDeleteRegisterPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<BooleanBaseResponseModel>>;
+
+    /**
+     */
+    apiRegisterDeleteRegisterPatch(requestParameters: ApiRegisterDeleteRegisterPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<BooleanBaseResponseModel>;
+
+    /**
+     * 
+     * @param {number} regisId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RegisterApiInterface
+     */
+    apiRegisterGetRegisterByIdRegisIdGetRaw(requestParameters: ApiRegisterGetRegisterByIdRegisIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<RegisterCustomerUpdateModelBaseResponseModel>>;
+
+    /**
+     */
+    apiRegisterGetRegisterByIdRegisIdGet(requestParameters: ApiRegisterGetRegisterByIdRegisIdGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RegisterCustomerUpdateModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {string} [customerName] 
+     * @param {any} [customerCreditType] 
+     * @param {string} [salesOwner] 
+     * @param {any} [regisStatus] 
+     * @param {string} [regisStartDate] 
+     * @param {string} [regisEndDate] 
+     * @param {boolean} [isApprove] 
+     * @param {number} [pageIndex] 
+     * @param {number} [pageSize] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RegisterApiInterface
+     */
+    apiRegisterGetRegisterListGetRaw(requestParameters: ApiRegisterGetRegisterListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<RegisterCustomerGetSearchModelBaseResponsePagination>>;
+
+    /**
+     */
+    apiRegisterGetRegisterListGet(requestParameters: ApiRegisterGetRegisterListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RegisterCustomerGetSearchModelBaseResponsePagination>;
+
+    /**
+     * 
+     * @param {UpdateAmountRegistterCustomerModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RegisterApiInterface
+     */
+    apiRegisterUpdateRegisterAmountPatchRaw(requestParameters: ApiRegisterUpdateRegisterAmountPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<UpdateAmountRegistterCustomerModelBaseResponseModel>>;
+
+    /**
+     */
+    apiRegisterUpdateRegisterAmountPatch(requestParameters: ApiRegisterUpdateRegisterAmountPatchRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<UpdateAmountRegistterCustomerModelBaseResponseModel>;
+
+    /**
+     * 
+     * @param {RegisterCustomerUpdateModel} [body] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RegisterApiInterface
+     */
+    apiRegisterUpdateRegisterPutRaw(requestParameters: ApiRegisterUpdateRegisterPutRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<RegisterCustomerUpdateModelBaseResponseModel>>;
+
+    /**
+     */
+    apiRegisterUpdateRegisterPut(requestParameters: ApiRegisterUpdateRegisterPutRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RegisterCustomerUpdateModelBaseResponseModel>;
+
+}
+
+/**
  * 
  */
-export class RegisterApi extends runtime.BaseAPI {
+export class RegisterApi extends runtime.BaseAPI implements RegisterApiInterface {
 
     /**
      */
@@ -92,10 +173,10 @@ export class RegisterApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: RegisterCustomerUpdateModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => RegisterCustomerUpdateModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -127,7 +208,7 @@ export class RegisterApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => BooleanBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -162,7 +243,7 @@ export class RegisterApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => RegisterCustomerUpdateModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -194,11 +275,11 @@ export class RegisterApi extends runtime.BaseAPI {
         }
 
         if (requestParameters['regisStartDate'] != null) {
-            queryParameters['regis_start_date'] = (requestParameters['regisStartDate'] as any).toISOString();
+            queryParameters['regis_start_date'] = requestParameters['regisStartDate'];
         }
 
         if (requestParameters['regisEndDate'] != null) {
-            queryParameters['regis_end_date'] = (requestParameters['regisEndDate'] as any).toISOString();
+            queryParameters['regis_end_date'] = requestParameters['regisEndDate'];
         }
 
         if (requestParameters['isApprove'] != null) {
@@ -226,7 +307,7 @@ export class RegisterApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => RegisterCustomerGetSearchModelBaseResponsePaginationFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -254,10 +335,10 @@ export class RegisterApi extends runtime.BaseAPI {
             method: 'PATCH',
             headers: headerParameters,
             query: queryParameters,
-            body: UpdateAmountRegistterCustomerModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => UpdateAmountRegistterCustomerModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
@@ -285,10 +366,10 @@ export class RegisterApi extends runtime.BaseAPI {
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
-            body: RegisterCustomerUpdateModelToJSON(requestParameters['body']),
+            body: requestParameters['body'],
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => RegisterCustomerUpdateModelBaseResponseModelFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response);
     }
 
     /**

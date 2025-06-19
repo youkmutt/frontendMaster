@@ -1,0 +1,11 @@
+.ddl-search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+span[data-pc-section="input"] {
+  font-family:
+    Bai Jamjuree,
+    sans-serif;
+}

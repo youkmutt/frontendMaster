@@ -18,7 +18,7 @@ const SampleButton: React.FC<SampleButtonProps> = ({
       className={`
          // เมื่อเอาเมาส์ชี้ สีพื้นหลังจะเข้มขึ้น
         ${additional_class || ""}
-        text-white       // สีข้อความเป็นสีขาว
+        ${additional_class?.includes("text-") == true ? "" : " text-white "}
         font-bold          // ตัวหนา
         py-2               // Padding ด้านบนและล่าง 2 หน่วย
         px-4               // Padding ด้านซ้ายและขวา 4 หน่วย
