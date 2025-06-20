@@ -1,18 +1,23 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface TextSearchProps {
   label?: string;
   placeholder?: string;
-  onChange: (value: string) => void;
+  onChange: (value: string | undefined) => void;
+  clearTrigger: number;
 }
 
 const TextSearch: React.FC<TextSearchProps> = ({
   label,
   placeholder,
   onChange,
+  clearTrigger,
 }) => {
   const [value, setValue] = useState("");
+  useEffect(() => {
+    setValue("");
+  }, [clearTrigger]);
 
   return (
     <>
@@ -25,9 +30,9 @@ const TextSearch: React.FC<TextSearchProps> = ({
         placeholder={placeholder}
         onChange={(e) => {
           setValue(e.target.value);
-          onChange(e.target.value);
+          onChange(e.target.value == "" ? undefined : e.target.value);
         }}
-        className="p-2 border border-gray-300 rounded-xl"
+        className="h-10 p-2 border border-gray-300 rounded-xl"
       />
     </>
   );

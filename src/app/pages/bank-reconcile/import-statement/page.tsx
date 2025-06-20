@@ -16,11 +16,7 @@ function ImportStatement() {
         <SampleButton
           text="ไฟล์นำเข้า"
           onClick={() => {
-            setLoading(true);
             setActiveTab("tab1");
-            setTimeout(() => {
-              setLoading(false);
-            }, 1000);
           }}
           additional_class={`mr-2 font-semibold ${
             activeTab === "tab1"

@@ -49,14 +49,14 @@ export default function Menu({ children }: { children: React.ReactNode }) {
         setNowSubMenuId(0);
       } else if (menuResponse.data) {
         for (const item of menuResponse.data) {
-          if (item.subMenu) {
-            for (const subItem of item.subMenu) {
-              if ("/pages/" + subItem.menuRoute === pathname) {
-                handleMenuToggle(item.menuId ?? 0);
-                setOpenMenuId(item.menuId ?? 0);
-                setOpenSubMenuId(subItem.menuId ?? 0);
-                setNowMenuId(item.menuId ?? 0);
-                setNowSubMenuId(subItem.menuId ?? 0);
+          if (item.sub_menu) {
+            for (const subItem of item.sub_menu) {
+              if ("/pages/" + subItem.menu_route === pathname) {
+                handleMenuToggle(item.menu_id ?? 0);
+                setOpenMenuId(item.menu_id ?? 0);
+                setOpenSubMenuId(subItem.menu_id ?? 0);
+                setNowMenuId(item.menu_id ?? 0);
+                setNowSubMenuId(subItem.menu_id ?? 0);
                 break;
               }
             }
@@ -160,7 +160,7 @@ export default function Menu({ children }: { children: React.ReactNode }) {
             <div className="relative group">
               <button className="flex items-center space-x-2 text-gray-700 hover:text-gray-900 focus:outline-none">
                 <div className="w-fit px-2 h-8 rounded-md bg-fa-primary flex items-center justify-center text-white font-bold text-sm">
-                  {userDetail?.employeeCode}
+                  {userDetail?.employee_code}
                 </div>
                 <span className="hidden md:block text-sm">
                   {userDetail?.firstName} {userDetail?.lastName}
@@ -202,7 +202,7 @@ export default function Menu({ children }: { children: React.ReactNode }) {
         <div className="flex pt-16 mt-1">
           <aside
             className={`
-            fixed top-0 left-0 h-full shadow-lg w-64 transform transition-transform duration-300 ease-in-out z-40 pt-16
+            fixed top-0 left-0 h-max shadow-lg w-64 transform transition-transform duration-300 ease-in-out z-40 pt-16
             ${
               isMenuOpen
                 ? "translate-x-0 lg:relative lg:translate-x-0 lg:pt-0 lg:shadow-none lg:bg-transparent lg:border-r lg:border-gray-200"
@@ -211,21 +211,21 @@ export default function Menu({ children }: { children: React.ReactNode }) {
             
           `}
           >
-            <div className="p-0 mb-2 overflow-y-auto h-screen min-w-max w-auto bg-white border border-gray-300 rounded-xl">
+            <div className="p-0 mb-2 overflow-y-auto h-max min-w-max w-auto bg-white border border-gray-300 rounded-xl">
               <ul className={`space-y-1 ${isMenuOpen ? "p-2" : "px-0"}`}>
                 {menu.data?.map((item) => (
-                  <li key={item.menuId}>
-                    {item.subMenu && item.subMenu.length > 0 ? (
+                  <li key={item.menu_id}>
+                    {item.sub_menu && item.sub_menu.length > 0 ? (
                       <>
                         <button
                           className="group flex items-center justify-between w-full p-3 text-gray-700 rounded-lg hover:bg-fa-primary hover:text-white transition-colors duration-200 focus:outline-none"
-                          onClick={() => handleMenuToggle(item.menuId ?? 0)}
+                          onClick={() => handleMenuToggle(item.menu_id ?? 0)}
                         >
                           <div className="flex items-center">
-                            {item.menuName}
+                            {item.menu_name}
                           </div>
 
-                          {openMenuId === item.menuId ? (
+                          {openMenuId === item.menu_id ? (
                             <i className="pi pi-chevron-down transform rotate-180 text-fa-primary group-hover:text-gray-50 transition-transform duration-300"></i>
                           ) : (
                             <i className="pi pi-chevron-down text-fa-primary group-hover:text-gray-50 transition-transform duration-300"></i>
@@ -234,32 +234,32 @@ export default function Menu({ children }: { children: React.ReactNode }) {
 
                         <div
                           className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                            openMenuId === item.menuId
+                            openMenuId === item.menu_id
                               ? "max-h-screen opacity-100 pt-1"
                               : "max-h-0 opacity-0 pt-0"
                           }`}
                         >
                           <ul
-                            key={item.menuId + "-sub"}
+                            key={item.menu_id + "-sub"}
                             className="pl-8 space-y-1"
                           >
-                            {item.subMenu.map((subItem) => (
-                              <li key={subItem.menuId}>
+                            {item.sub_menu.map((subItem) => (
+                              <li key={subItem.menu_id}>
                                 <button
                                   onClick={() =>
                                     handleClick(
-                                      "/pages/" + (subItem.menuRoute ?? "#"),
-                                      subItem.menuId ?? 0
+                                      "/pages/" + (subItem.menu_route ?? "#"),
+                                      subItem.menu_id ?? 0
                                     )
                                   }
                                   className={`flex items-center justify-between w-full p-3 ${
-                                    openSubMenuId === subItem.menuId
+                                    openSubMenuId === subItem.menu_id
                                       ? "text-fa-primary"
                                       : "text-gray-700 "
                                   } rounded-lg transition-colors duration-200 focus:outline-none hover:bg-fa-primary hover:text-white`}
                                 >
                                   <div className="flex items-center">
-                                    {subItem.menuName}
+                                    {subItem.menu_name}
                                   </div>
                                 </button>
                               </li>
@@ -269,10 +269,10 @@ export default function Menu({ children }: { children: React.ReactNode }) {
                       </>
                     ) : (
                       <Link
-                        href={item.menuRoute || "#"}
+                        href={item.menu_route || "#"}
                         className="flex items-center w-full p-3 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200 focus:outline-none"
                       >
-                        {item.menuName}
+                        {item.menu_name}
                       </Link>
                     )}
                   </li>
@@ -292,13 +292,13 @@ export default function Menu({ children }: { children: React.ReactNode }) {
                 <i className="pi pi-home w-4 h-4"></i>
               </button>{" "}
               {menu.data?.map((item) =>
-                item.menuId === nowMenuId ? " / " + item.menuName : null
+                item.menu_id === nowMenuId ? " / " + item.menu_name : null
               )}
               {menu.data?.map((item) =>
-                item.menuId == nowMenuId
-                  ? item.subMenu?.map((subitem) =>
-                      subitem.menuId === nowSubMenuId
-                        ? " / " + subitem.menuName
+                item.menu_id == nowMenuId
+                  ? item.sub_menu?.map((subitem) =>
+                      subitem.menu_id === nowSubMenuId
+                        ? " / " + subitem.menu_name
                         : null
                     )
                   : null

@@ -11,37 +11,37 @@ export interface APCNRebateDetail {
      * @type {number}
      * @memberof APCNRebateDetail
      */
-    brandId?: number;
+    brand_id?: number;
     /**
      * 
      * @type {string}
      * @memberof APCNRebateDetail
      */
-    brandName?: string;
+    brand_name?: string;
     /**
      * 
      * @type {number}
      * @memberof APCNRebateDetail
      */
-    rebateAmount?: number;
+    rebate_amount?: number;
     /**
      * 
      * @type {string}
      * @memberof APCNRebateDetail
      */
-    rebateDetail?: string;
+    rebate_detail?: string;
     /**
      * 
      * @type {string}
      * @memberof APCNRebateDetail
      */
-    cnNo?: string;
+    cn_no?: string;
     /**
      * 
      * @type {string}
      * @memberof APCNRebateDetail
      */
-    cnDate?: string;
+    cn_date?: string;
 }
 /**
  * 
@@ -54,73 +54,73 @@ export interface APCNSupplierDetail {
      * @type {string}
      * @memberof APCNSupplierDetail
      */
-    createDate?: string;
+    create_date?: string;
     /**
      * 
      * @type {string}
      * @memberof APCNSupplierDetail
      */
-    rebateCode?: string;
+    rebate_code?: string;
     /**
      * 
      * @type {string}
      * @memberof APCNSupplierDetail
      */
-    supplierId?: string;
+    supplier_id?: string;
     /**
      * 
      * @type {string}
      * @memberof APCNSupplierDetail
      */
-    supplierCode?: string;
+    supplier_code?: string;
     /**
      * 
      * @type {string}
      * @memberof APCNSupplierDetail
      */
-    taxPayerId?: string;
+    tax_payer_id?: string;
     /**
      * 
      * @type {string}
      * @memberof APCNSupplierDetail
      */
-    revenueBranchCode?: string;
+    revenue_branch_code?: string;
     /**
      * 
      * @type {string}
      * @memberof APCNSupplierDetail
      */
-    supplierName?: string;
+    supplier_name?: string;
     /**
      * 
      * @type {string}
      * @memberof APCNSupplierDetail
      */
-    fullAddress?: string;
+    full_address?: string;
     /**
      * 
      * @type {number}
      * @memberof APCNSupplierDetail
      */
-    provinceId?: number;
+    province_id?: number;
     /**
      * 
      * @type {number}
      * @memberof APCNSupplierDetail
      */
-    districtId?: number;
+    district_id?: number;
     /**
      * 
      * @type {number}
      * @memberof APCNSupplierDetail
      */
-    subDistrictId?: number;
+    sub_district_id?: number;
     /**
      * 
      * @type {string}
      * @memberof APCNSupplierDetail
      */
-    zipCode?: string;
+    zip_code?: string;
     /**
      * 
      * @type {string}
@@ -184,61 +184,61 @@ export interface ARCNCustomerDetail {
      * @type {string}
      * @memberof ARCNCustomerDetail
      */
-    rebateCode?: string;
+    rebate_code?: string;
     /**
      * 
      * @type {string}
      * @memberof ARCNCustomerDetail
      */
-    rebateDetail?: string;
+    rebate_detail?: string;
     /**
      * 
      * @type {string}
      * @memberof ARCNCustomerDetail
      */
-    taxPayerId?: string;
+    tax_payer_id?: string;
     /**
      * 
      * @type {string}
      * @memberof ARCNCustomerDetail
      */
-    revenueBranchCode?: string;
+    revenue_branch_code?: string;
     /**
      * 
      * @type {string}
      * @memberof ARCNCustomerDetail
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {string}
      * @memberof ARCNCustomerDetail
      */
-    fullAddress?: string;
+    full_address?: string;
     /**
      * 
      * @type {number}
      * @memberof ARCNCustomerDetail
      */
-    provinceId?: number;
+    province_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ARCNCustomerDetail
      */
-    districtId?: number;
+    district_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ARCNCustomerDetail
      */
-    subDistrictId?: number;
+    sub_district_id?: number;
     /**
      * 
      * @type {string}
      * @memberof ARCNCustomerDetail
      */
-    zipCode?: string;
+    zip_code?: string;
     /**
      * 
      * @type {string}
@@ -263,25 +263,25 @@ export interface ARCNInHouseCampaignDetail {
      * @type {string}
      * @memberof ARCNInHouseCampaignDetail
      */
-    campaignName?: string;
+    campaign_name?: string;
     /**
      * 
      * @type {number}
      * @memberof ARCNInHouseCampaignDetail
      */
-    supConSale?: number;
+    sup_con_sale?: number;
     /**
      * 
      * @type {string}
      * @memberof ARCNInHouseCampaignDetail
      */
-    startDate?: string;
+    start_date?: string;
     /**
      * 
      * @type {string}
      * @memberof ARCNInHouseCampaignDetail
      */
-    endDate?: string;
+    end_date?: string;
 }
 /**
  * 
@@ -294,55 +294,55 @@ export interface ARCNInHouseCustomerDetail {
      * @type {string}
      * @memberof ARCNInHouseCustomerDetail
      */
-    rebateCode?: string;
+    rebate_code?: string;
     /**
      * 
      * @type {string}
      * @memberof ARCNInHouseCustomerDetail
      */
-    taxPayerId?: string;
+    tax_payer_id?: string;
     /**
      * 
      * @type {string}
      * @memberof ARCNInHouseCustomerDetail
      */
-    revenueBranchCode?: string;
+    revenue_branch_code?: string;
     /**
      * 
      * @type {string}
      * @memberof ARCNInHouseCustomerDetail
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {string}
      * @memberof ARCNInHouseCustomerDetail
      */
-    fullAddress?: string;
+    full_address?: string;
     /**
      * 
      * @type {number}
      * @memberof ARCNInHouseCustomerDetail
      */
-    provinceId?: number;
+    province_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ARCNInHouseCustomerDetail
      */
-    districtId?: number;
+    district_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ARCNInHouseCustomerDetail
      */
-    subDistrictId?: number;
+    sub_district_id?: number;
     /**
      * 
      * @type {string}
      * @memberof ARCNInHouseCustomerDetail
      */
-    zipCode?: string;
+    zip_code?: string;
     /**
      * 
      * @type {string}
@@ -367,7 +367,7 @@ export interface ARCNInHousePeriodSale {
      * @type {number}
      * @memberof ARCNInHousePeriodSale
      */
-    rowNumber?: number;
+    row_number?: number;
 }
 /**
  * 
@@ -380,43 +380,43 @@ export interface ARCNRebateDetail {
      * @type {string}
      * @memberof ARCNRebateDetail
      */
-    supplierName?: string;
+    supplier_name?: string;
     /**
      * 
      * @type {number}
      * @memberof ARCNRebateDetail
      */
-    rebateAmount?: number;
+    rebate_amount?: number;
     /**
      * 
      * @type {number}
      * @memberof ARCNRebateDetail
      */
-    brandId?: number;
+    brand_id?: number;
     /**
      * 
      * @type {string}
      * @memberof ARCNRebateDetail
      */
-    brandName?: string;
+    brand_name?: string;
     /**
      * 
      * @type {string}
      * @memberof ARCNRebateDetail
      */
-    rebateDetail?: string;
+    rebate_detail?: string;
     /**
      * 
      * @type {string}
      * @memberof ARCNRebateDetail
      */
-    cnNo?: string;
+    cn_no?: string;
     /**
      * 
      * @type {string}
      * @memberof ARCNRebateDetail
      */
-    cnDate?: string;
+    cn_date?: string;
 }
 /**
  * 
@@ -468,19 +468,19 @@ export interface ApprovalAPCNDetailModel {
      * @type {number}
      * @memberof ApprovalAPCNDetailModel
      */
-    rbtCnapId?: number;
+    rbt_cnap_id?: number;
     /**
      * 
      * @type {APCNSupplierDetail}
      * @memberof ApprovalAPCNDetailModel
      */
-    supplierDetail?: APCNSupplierDetail;
+    supplier_detail?: APCNSupplierDetail;
     /**
      * 
      * @type {APCNRebateDetail}
      * @memberof ApprovalAPCNDetailModel
      */
-    rebateDetail?: APCNRebateDetail;
+    rebate_detail?: APCNRebateDetail;
     /**
      * 
      * @type {string}
@@ -492,7 +492,7 @@ export interface ApprovalAPCNDetailModel {
      * @type {APCNTotal}
      * @memberof ApprovalAPCNDetailModel
      */
-    cnTotal?: APCNTotal;
+    cn_total?: APCNTotal;
     /**
      * 
      * @type {Array<AttachmentModel>}
@@ -522,13 +522,13 @@ export interface ApprovalAPCNDetailModel {
      * @type {number}
      * @memberof ApprovalAPCNDetailModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalAPCNDetailModel
      */
-    currentStepId?: number;
+    current_step_id?: number;
 }
 /**
  * 
@@ -572,67 +572,67 @@ export interface ApprovalAPCNModel {
      * @type {number}
      * @memberof ApprovalAPCNModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalAPCNModel
      */
-    companyId?: number;
+    company_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalAPCNModel
      */
-    organizationId?: number;
+    organization_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalAPCNModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalAPCNModel
      */
-    rbtCnapId?: number;
+    rbt_cnap_id?: number;
     /**
      * 
      * @type {string}
      * @memberof ApprovalAPCNModel
      */
-    rebateCode?: string;
+    rebate_code?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalAPCNModel
      */
-    cnDate?: string;
+    cn_date?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalAPCNModel
      */
-    brandName?: string;
+    brand_name?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalAPCNModel
      */
-    cnNo?: string;
+    cn_no?: string;
     /**
      * 
      * @type {number}
      * @memberof ApprovalAPCNModel
      */
-    rebateAmount?: number;
+    rebate_amount?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalAPCNModel
      */
-    cnAmount?: number;
+    cn_amount?: number;
     /**
      * 
      * @type {number}
@@ -644,25 +644,25 @@ export interface ApprovalAPCNModel {
      * @type {number}
      * @memberof ApprovalAPCNModel
      */
-    amountIncludeVat?: number;
+    amount_include_vat?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalAPCNModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalAPCNModel
      */
-    currentStepId?: number;
+    current_step_id?: number;
     /**
      * 
      * @type {APCNstatus}
      * @memberof ApprovalAPCNModel
      */
-    trnStatus?: APCNstatus;
+    trn_status?: APCNstatus;
 }
 
 
@@ -725,25 +725,25 @@ export interface ApprovalAPCNResponseModel {
      * @type {number}
      * @memberof ApprovalAPCNResponseModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalAPCNResponseModel
      */
-    approvalTotal?: number;
+    approval_total?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalAPCNResponseModel
      */
-    approvalConfirmed?: number;
+    approval_confirmed?: number;
     /**
      * 
      * @type {Array<BaseCountStatusModel>}
      * @memberof ApprovalAPCNResponseModel
      */
-    countStatusList?: Array<BaseCountStatusModel>;
+    count_status_list?: Array<BaseCountStatusModel>;
 }
 /**
  * 
@@ -756,31 +756,31 @@ export interface ApprovalARCNClaimDetailModel {
      * @type {number}
      * @memberof ApprovalARCNClaimDetailModel
      */
-    trnClaimId?: number;
+    trn_claim_id?: number;
     /**
      * 
      * @type {CNSendStatus}
      * @memberof ApprovalARCNClaimDetailModel
      */
-    trnStatus?: CNSendStatus;
+    trn_status?: CNSendStatus;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNClaimDetailModel
      */
-    trnStatusName?: string;
+    trn_status_name?: string;
     /**
      * 
      * @type {ApprovalARCNCustomerDetailModel}
      * @memberof ApprovalARCNClaimDetailModel
      */
-    customerDetail?: ApprovalARCNCustomerDetailModel;
+    customer_detail?: ApprovalARCNCustomerDetailModel;
     /**
      * 
      * @type {Array<ApprovalARCNClaimProductModel>}
      * @memberof ApprovalARCNClaimDetailModel
      */
-    productList?: Array<ApprovalARCNClaimProductModel>;
+    product_list?: Array<ApprovalARCNClaimProductModel>;
     /**
      * 
      * @type {Array<VoucherModel>}
@@ -798,49 +798,49 @@ export interface ApprovalARCNClaimDetailModel {
      * @type {number}
      * @memberof ApprovalARCNClaimDetailModel
      */
-    claimPrice?: number;
+    claim_price?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNClaimDetailModel
      */
-    claimVatPrice?: number;
+    claim_vat_price?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNClaimDetailModel
      */
-    claimTotalPrice?: number;
+    claim_total_price?: number;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNClaimDetailModel
      */
-    claimSqmRemark?: string;
+    claim_sqm_remark?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNClaimDetailModel
      */
-    claimFaRemark?: string;
+    claim_fa_remark?: string;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNClaimDetailModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNClaimDetailModel
      */
-    currentStepId?: number;
+    current_step_id?: number;
     /**
      * 
      * @type {boolean}
      * @memberof ApprovalARCNClaimDetailModel
      */
-    isWorkflowDone?: boolean;
+    is_workflow_done?: boolean;
 }
 
 
@@ -886,91 +886,91 @@ export interface ApprovalARCNClaimModel {
      * @type {number}
      * @memberof ApprovalARCNClaimModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNClaimModel
      */
-    trnClaimId?: number;
+    trn_claim_id?: number;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNClaimModel
      */
-    claimCnNo?: string;
+    claim_cn_no?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNClaimModel
      */
-    claimCnDate?: string;
+    claim_cn_date?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNClaimModel
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {ClaimPriority}
      * @memberof ApprovalARCNClaimModel
      */
-    claimPriority?: ClaimPriority;
+    claim_priority?: ClaimPriority;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNClaimModel
      */
-    claimPriorityName?: string;
+    claim_priority_name?: string;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNClaimModel
      */
-    claimPrice?: number;
+    claim_price?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNClaimModel
      */
-    claimVatPrice?: number;
+    claim_vat_price?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNClaimModel
      */
-    claimTotalPrice?: number;
+    claim_total_price?: number;
     /**
      * 
      * @type {CNSendStatus}
      * @memberof ApprovalARCNClaimModel
      */
-    trnStatus?: CNSendStatus;
+    trn_status?: CNSendStatus;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNClaimModel
      */
-    trnStatusName?: string;
+    trn_status_name?: string;
     /**
      * 
      * @type {Array<ClaimDetailModel>}
      * @memberof ApprovalARCNClaimModel
      */
-    claimDetail?: Array<ClaimDetailModel>;
+    claim_detail?: Array<ClaimDetailModel>;
     /**
      * 
      * @type {Array<string>}
      * @memberof ApprovalARCNClaimModel
      */
-    invoiceList?: Array<string>;
+    invoice_list?: Array<string>;
     /**
      * 
      * @type {Array<string>}
      * @memberof ApprovalARCNClaimModel
      */
-    itemCodeList?: Array<string>;
+    item_code_list?: Array<string>;
 }
 
 
@@ -985,97 +985,97 @@ export interface ApprovalARCNClaimProductModel {
      * @type {number}
      * @memberof ApprovalARCNClaimProductModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNClaimProductModel
      */
-    serviceDate?: string;
+    service_date?: string;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNClaimProductModel
      */
-    warrantyLeft?: number;
+    warranty_left?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNClaimProductModel
      */
-    warrantyMonth?: number;
+    warranty_month?: number;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNClaimProductModel
      */
-    tagBarcode?: string;
+    tag_barcode?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNClaimProductModel
      */
-    jobClaimNo?: string;
+    job_claim_no?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNClaimProductModel
      */
-    jobClaimType?: string;
+    job_claim_type?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNClaimProductModel
      */
-    jobClaimTypeName?: string;
+    job_claim_type_name?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNClaimProductModel
      */
-    invoiceNo?: string;
+    invoice_no?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNClaimProductModel
      */
-    brandDescription?: string;
+    brand_description?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNClaimProductModel
      */
-    itemCode?: string;
+    item_code?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNClaimProductModel
      */
-    itemDescription?: string;
+    item_description?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNClaimProductModel
      */
-    serialNo?: string;
+    serial_no?: string;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNClaimProductModel
      */
-    itemPrice?: number;
+    item_price?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNClaimProductModel
      */
-    itemDepreciation?: number;
+    item_depreciation?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNClaimProductModel
      */
-    itemTotalPrice?: number;
+    item_total_price?: number;
 }
 /**
  * 
@@ -1136,25 +1136,25 @@ export interface ApprovalARCNClaimResponseModel {
      * @type {number}
      * @memberof ApprovalARCNClaimResponseModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNClaimResponseModel
      */
-    approvalTotal?: number;
+    approval_total?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNClaimResponseModel
      */
-    approvalConfirmed?: number;
+    approval_confirmed?: number;
     /**
      * 
      * @type {Array<BaseCountStatusModel>}
      * @memberof ApprovalARCNClaimResponseModel
      */
-    countStatusList?: Array<BaseCountStatusModel>;
+    count_status_list?: Array<BaseCountStatusModel>;
 }
 /**
  * 
@@ -1167,25 +1167,25 @@ export interface ApprovalARCNCustomerDetailModel {
      * @type {number}
      * @memberof ApprovalARCNCustomerDetailModel
      */
-    customerId?: number;
+    customer_id?: number;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNCustomerDetailModel
      */
-    customerTaxId?: string;
+    customer_tax_id?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNCustomerDetailModel
      */
-    customerBranch?: string;
+    customer_branch?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNCustomerDetailModel
      */
-    supplierName?: string;
+    supplier_name?: string;
     /**
      * 
      * @type {string}
@@ -1197,61 +1197,61 @@ export interface ApprovalARCNCustomerDetailModel {
      * @type {number}
      * @memberof ApprovalARCNCustomerDetailModel
      */
-    provinceId?: number;
+    province_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNCustomerDetailModel
      */
-    districtId?: number;
+    district_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNCustomerDetailModel
      */
-    subDistrictId?: number;
+    sub_district_id?: number;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNCustomerDetailModel
      */
-    zipCode?: string;
+    zip_code?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNCustomerDetailModel
      */
-    customerTel?: string;
+    customer_tel?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNCustomerDetailModel
      */
-    customerEmail?: string;
+    customer_email?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNCustomerDetailModel
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNCustomerDetailModel
      */
-    claimCnNo?: string;
+    claim_cn_no?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNCustomerDetailModel
      */
-    claimCnDate?: string;
+    claim_cn_date?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNCustomerDetailModel
      */
-    claimPriorityName?: string;
+    claim_priority_name?: string;
 }
 /**
  * 
@@ -1264,25 +1264,25 @@ export interface ApprovalARCNInHouseDetail {
      * @type {number}
      * @memberof ApprovalARCNInHouseDetail
      */
-    rbtCnarInhouseId?: number;
+    rbt_cnar_inhouse_id?: number;
     /**
      * 
      * @type {ARCNInHouseCustomerDetail}
      * @memberof ApprovalARCNInHouseDetail
      */
-    customerDetail?: ARCNInHouseCustomerDetail;
+    customer_detail?: ARCNInHouseCustomerDetail;
     /**
      * 
      * @type {ARCNInHouseCampaignDetail}
      * @memberof ApprovalARCNInHouseDetail
      */
-    campaignDetail?: ARCNInHouseCampaignDetail;
+    campaign_detail?: ARCNInHouseCampaignDetail;
     /**
      * 
      * @type {Array<ARCNInHousePeriodSale>}
      * @memberof ApprovalARCNInHouseDetail
      */
-    periodSale?: Array<ARCNInHousePeriodSale>;
+    period_sale?: Array<ARCNInHousePeriodSale>;
     /**
      * 
      * @type {string}
@@ -1294,7 +1294,7 @@ export interface ApprovalARCNInHouseDetail {
      * @type {ARCNTotal}
      * @memberof ApprovalARCNInHouseDetail
      */
-    cnTotal?: ARCNTotal;
+    cn_total?: ARCNTotal;
     /**
      * 
      * @type {Array<AttachmentModel>}
@@ -1324,13 +1324,13 @@ export interface ApprovalARCNInHouseDetail {
      * @type {number}
      * @memberof ApprovalARCNInHouseDetail
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNInHouseDetail
      */
-    currentStepId?: number;
+    current_step_id?: number;
 }
 /**
  * 
@@ -1374,61 +1374,61 @@ export interface ApprovalARCNInHouseModel {
      * @type {number}
      * @memberof ApprovalARCNInHouseModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNInHouseModel
      */
-    companyId?: number;
+    company_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNInHouseModel
      */
-    organizationId?: number;
+    organization_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNInHouseModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNInHouseModel
      */
-    rbtCnarInhouseId?: number;
+    rbt_cnar_inhouse_id?: number;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNInHouseModel
      */
-    cnDate?: string;
+    cn_date?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNInHouseModel
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNInHouseModel
      */
-    cnNo?: string;
+    cn_no?: string;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNInHouseModel
      */
-    actualSale?: number;
+    actual_sale?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNInHouseModel
      */
-    cnAmount?: number;
+    cn_amount?: number;
     /**
      * 
      * @type {number}
@@ -1440,25 +1440,25 @@ export interface ApprovalARCNInHouseModel {
      * @type {number}
      * @memberof ApprovalARCNInHouseModel
      */
-    amountIncludeVat?: number;
+    amount_include_vat?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNInHouseModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNInHouseModel
      */
-    currentStepId?: number;
+    current_step_id?: number;
     /**
      * 
      * @type {ARCNstatus}
      * @memberof ApprovalARCNInHouseModel
      */
-    trnStatus?: ARCNstatus;
+    trn_status?: ARCNstatus;
 }
 
 
@@ -1521,25 +1521,25 @@ export interface ApprovalARCNInHouseResponseModel {
      * @type {number}
      * @memberof ApprovalARCNInHouseResponseModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNInHouseResponseModel
      */
-    approvalTotal?: number;
+    approval_total?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNInHouseResponseModel
      */
-    approvalConfirmed?: number;
+    approval_confirmed?: number;
     /**
      * 
      * @type {Array<BaseCountStatusModel>}
      * @memberof ApprovalARCNInHouseResponseModel
      */
-    countStatusList?: Array<BaseCountStatusModel>;
+    count_status_list?: Array<BaseCountStatusModel>;
 }
 /**
  * 
@@ -1552,19 +1552,19 @@ export interface ApprovalARCNRebateDetailModel {
      * @type {number}
      * @memberof ApprovalARCNRebateDetailModel
      */
-    rbtCnarBrandId?: number;
+    rbt_cnar_brand_id?: number;
     /**
      * 
      * @type {ARCNCustomerDetail}
      * @memberof ApprovalARCNRebateDetailModel
      */
-    customerDetail?: ARCNCustomerDetail;
+    customer_detail?: ARCNCustomerDetail;
     /**
      * 
      * @type {ARCNRebateDetail}
      * @memberof ApprovalARCNRebateDetailModel
      */
-    rebateDetail?: ARCNRebateDetail;
+    rebate_detail?: ARCNRebateDetail;
     /**
      * 
      * @type {string}
@@ -1576,7 +1576,7 @@ export interface ApprovalARCNRebateDetailModel {
      * @type {ARCNTotal}
      * @memberof ApprovalARCNRebateDetailModel
      */
-    cnTotal?: ARCNTotal;
+    cn_total?: ARCNTotal;
     /**
      * 
      * @type {Array<AttachmentModel>}
@@ -1606,13 +1606,13 @@ export interface ApprovalARCNRebateDetailModel {
      * @type {number}
      * @memberof ApprovalARCNRebateDetailModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNRebateDetailModel
      */
-    currentStepId?: number;
+    current_step_id?: number;
 }
 /**
  * 
@@ -1656,73 +1656,73 @@ export interface ApprovalARCNRebateModel {
      * @type {number}
      * @memberof ApprovalARCNRebateModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNRebateModel
      */
-    companyId?: number;
+    company_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNRebateModel
      */
-    organizationId?: number;
+    organization_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNRebateModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNRebateModel
      */
-    rbtCnarBrandId?: number;
+    rbt_cnar_brand_id?: number;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNRebateModel
      */
-    rebateCode?: string;
+    rebate_code?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNRebateModel
      */
-    cnDate?: string;
+    cn_date?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNRebateModel
      */
-    brandName?: string;
+    brand_name?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNRebateModel
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalARCNRebateModel
      */
-    cnNo?: string;
+    cn_no?: string;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNRebateModel
      */
-    rebateAmount?: number;
+    rebate_amount?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNRebateModel
      */
-    cnAmount?: number;
+    cn_amount?: number;
     /**
      * 
      * @type {number}
@@ -1734,25 +1734,25 @@ export interface ApprovalARCNRebateModel {
      * @type {number}
      * @memberof ApprovalARCNRebateModel
      */
-    amountIncludeVat?: number;
+    amount_include_vat?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNRebateModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNRebateModel
      */
-    currentStepId?: number;
+    current_step_id?: number;
     /**
      * 
      * @type {ARCNstatus}
      * @memberof ApprovalARCNRebateModel
      */
-    trnStatus?: ARCNstatus;
+    trn_status?: ARCNstatus;
 }
 
 
@@ -1815,25 +1815,25 @@ export interface ApprovalARCNRebateResponseModel {
      * @type {number}
      * @memberof ApprovalARCNRebateResponseModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNRebateResponseModel
      */
-    approvalTotal?: number;
+    approval_total?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalARCNRebateResponseModel
      */
-    approvalConfirmed?: number;
+    approval_confirmed?: number;
     /**
      * 
      * @type {Array<BaseCountStatusModel>}
      * @memberof ApprovalARCNRebateResponseModel
      */
-    countStatusList?: Array<BaseCountStatusModel>;
+    count_status_list?: Array<BaseCountStatusModel>;
 }
 /**
  * 
@@ -1846,73 +1846,73 @@ export interface ApprovalOMSOPDetailModel {
      * @type {number}
      * @memberof ApprovalOMSOPDetailModel
      */
-    trnSopPaymentId?: number;
+    trn_sop_payment_id?: number;
     /**
      * 
      * @type {PaymentSOPStatus}
      * @memberof ApprovalOMSOPDetailModel
      */
-    paymentSopStatus?: PaymentSOPStatus;
+    payment_sop_status?: PaymentSOPStatus;
     /**
      * 
      * @type {string}
      * @memberof ApprovalOMSOPDetailModel
      */
-    paymentSopStatusName?: string;
+    payment_sop_status_name?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalOMSOPDetailModel
      */
-    projectCode?: string;
+    project_code?: string;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPDetailModel
      */
-    paymentSopMonth?: number;
+    payment_sop_month?: number;
     /**
      * 
      * @type {string}
      * @memberof ApprovalOMSOPDetailModel
      */
-    paymentSopMonthName?: string;
+    payment_sop_month_name?: string;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPDetailModel
      */
-    paymentSopYear?: number;
+    payment_sop_year?: number;
     /**
      * 
      * @type {string}
      * @memberof ApprovalOMSOPDetailModel
      */
-    partnerName?: string;
+    partner_name?: string;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPDetailModel
      */
-    paymentType?: number;
+    payment_type?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPDetailModel
      */
-    jobType?: number;
+    job_type?: number;
     /**
      * 
      * @type {string}
      * @memberof ApprovalOMSOPDetailModel
      */
-    jobTypeName?: string;
+    job_type_name?: string;
     /**
      * 
      * @type {ApprovalARCNCustomerDetailModel}
      * @memberof ApprovalOMSOPDetailModel
      */
-    partnerDetail?: ApprovalARCNCustomerDetailModel;
+    partner_detail?: ApprovalARCNCustomerDetailModel;
     /**
      * 
      * @type {Array<ApprovalOMSOPInvoiceModel>}
@@ -1942,43 +1942,43 @@ export interface ApprovalOMSOPDetailModel {
      * @type {number}
      * @memberof ApprovalOMSOPDetailModel
      */
-    sopPaymentPrice?: number;
+    sop_payment_price?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPDetailModel
      */
-    sopPaymentVatPrice?: number;
+    sop_payment_vat_price?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPDetailModel
      */
-    sopPaymentTotalPrice?: number;
+    sop_payment_total_price?: number;
     /**
      * 
      * @type {string}
      * @memberof ApprovalOMSOPDetailModel
      */
-    createDate?: string;
+    create_date?: string;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPDetailModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPDetailModel
      */
-    currentStepId?: number;
+    current_step_id?: number;
     /**
      * 
      * @type {string}
      * @memberof ApprovalOMSOPDetailModel
      */
-    paymentSopRemark?: string;
+    payment_sop_remark?: string;
     /**
      * 
      * @type {Array<AttachmentModel>}
@@ -2030,73 +2030,73 @@ export interface ApprovalOMSOPInvoiceModel {
      * @type {number}
      * @memberof ApprovalOMSOPInvoiceModel
      */
-    trnSopPaymentInvoiceId?: number;
+    trn_sop_payment_invoice_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPInvoiceModel
      */
-    trnSopPaymentId?: number;
+    trn_sop_payment_id?: number;
     /**
      * 
      * @type {string}
      * @memberof ApprovalOMSOPInvoiceModel
      */
-    invoiceNo?: string;
+    invoice_no?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalOMSOPInvoiceModel
      */
-    invoiceDate?: string;
+    invoice_date?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalOMSOPInvoiceModel
      */
-    poNo?: string;
+    po_no?: string;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPInvoiceModel
      */
-    wagesCost?: number;
+    wages_cost?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPInvoiceModel
      */
-    travelExpenses?: number;
+    travel_expenses?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPInvoiceModel
      */
-    amountOfMoney?: number;
+    amount_of_money?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPInvoiceModel
      */
-    amountOfVat?: number;
+    amount_of_vat?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPInvoiceModel
      */
-    amountTotal?: number;
+    amount_total?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPInvoiceModel
      */
-    fileAttachId?: number;
+    file_attach_id?: number;
     /**
      * 
      * @type {string}
      * @memberof ApprovalOMSOPInvoiceModel
      */
-    filePath?: string;
+    file_path?: string;
 }
 /**
  * 
@@ -2109,103 +2109,103 @@ export interface ApprovalOMSOPModel {
      * @type {number}
      * @memberof ApprovalOMSOPModel
      */
-    trnSopPaymentId?: number;
+    trn_sop_payment_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPModel
      */
-    paymentSopMonth?: number;
+    payment_sop_month?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPModel
      */
-    paymentSopYear?: number;
+    payment_sop_year?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPModel
      */
-    jobType?: number;
+    job_type?: number;
     /**
      * 
      * @type {string}
      * @memberof ApprovalOMSOPModel
      */
-    createDate?: string;
+    create_date?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalOMSOPModel
      */
-    projectCode?: string;
+    project_code?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalOMSOPModel
      */
-    partnerName?: string;
+    partner_name?: string;
     /**
      * 
      * @type {string}
      * @memberof ApprovalOMSOPModel
      */
-    invoiceNo?: string;
+    invoice_no?: string;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPModel
      */
-    numberOfJob?: number;
+    number_of_job?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPModel
      */
-    amountOfMoney?: number;
+    amount_of_money?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPModel
      */
-    amountOfVat?: number;
+    amount_of_vat?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPModel
      */
-    amountTotal?: number;
+    amount_total?: number;
     /**
      * 
      * @type {PaymentSOPStatus}
      * @memberof ApprovalOMSOPModel
      */
-    paymentSopStatus?: PaymentSOPStatus;
+    payment_sop_status?: PaymentSOPStatus;
     /**
      * 
      * @type {string}
      * @memberof ApprovalOMSOPModel
      */
-    paymentSopStatusName?: string;
+    payment_sop_status_name?: string;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPModel
      */
-    currentStepId?: number;
+    current_step_id?: number;
 }
 
 
@@ -2268,25 +2268,25 @@ export interface ApprovalOMSOPResponseModel {
      * @type {number}
      * @memberof ApprovalOMSOPResponseModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPResponseModel
      */
-    approvalTotal?: number;
+    approval_total?: number;
     /**
      * 
      * @type {number}
      * @memberof ApprovalOMSOPResponseModel
      */
-    approvalConfirmed?: number;
+    approval_confirmed?: number;
     /**
      * 
      * @type {Array<BaseCountStatusModel>}
      * @memberof ApprovalOMSOPResponseModel
      */
-    countStatusList?: Array<BaseCountStatusModel>;
+    count_status_list?: Array<BaseCountStatusModel>;
 }
 /**
  * 
@@ -2299,25 +2299,25 @@ export interface AttachmentModel {
      * @type {number}
      * @memberof AttachmentModel
      */
-    fileAttachId?: number;
+    file_attach_id?: number;
     /**
      * 
      * @type {string}
      * @memberof AttachmentModel
      */
-    fileName?: string;
+    file_name?: string;
     /**
      * 
      * @type {string}
      * @memberof AttachmentModel
      */
-    filePath?: string;
+    file_path?: string;
     /**
      * 
      * @type {boolean}
      * @memberof AttachmentModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
 }
 /**
  * 
@@ -2330,37 +2330,37 @@ export interface AverageDelayPayModel {
      * @type {number}
      * @memberof AverageDelayPayModel
      */
-    averageDelayPay?: number;
+    average_delay_pay?: number;
     /**
      * 
      * @type {number}
      * @memberof AverageDelayPayModel
      */
-    averageDelayPayScore?: number;
+    average_delay_pay_score?: number;
     /**
      * 
      * @type {number}
      * @memberof AverageDelayPayModel
      */
-    maxscoreAverage?: number;
+    maxscore_average?: number;
     /**
      * 
      * @type {number}
      * @memberof AverageDelayPayModel
      */
-    actualScoreAverage?: number;
+    actual_score_average?: number;
     /**
      * 
      * @type {number}
      * @memberof AverageDelayPayModel
      */
-    percentAverage?: number;
+    percent_average?: number;
     /**
      * 
      * @type {number}
      * @memberof AverageDelayPayModel
      */
-    percentWeightAverage?: number;
+    percent_weight_average?: number;
 }
 /**
  * 
@@ -2373,19 +2373,19 @@ export interface Bankremain {
      * @type {string}
      * @memberof Bankremain
      */
-    tranDate?: string;
+    tran_date?: string;
     /**
      * 
      * @type {string}
      * @memberof Bankremain
      */
-    tranCode?: string;
+    tran_code?: string;
     /**
      * 
      * @type {number}
      * @memberof Bankremain
      */
-    tranAmount?: number;
+    tran_amount?: number;
 }
 /**
  * 
@@ -2398,13 +2398,13 @@ export interface BaseCountStatusModel {
      * @type {number}
      * @memberof BaseCountStatusModel
      */
-    currentStepId?: number;
+    current_step_id?: number;
     /**
      * 
      * @type {number}
      * @memberof BaseCountStatusModel
      */
-    approvalStep?: number;
+    approval_step?: number;
 }
 /**
  * 
@@ -2417,67 +2417,67 @@ export interface BillingPlanGetSearchModel {
      * @type {number}
      * @memberof BillingPlanGetSearchModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof BillingPlanGetSearchModel
      */
-    billingPlanId?: number;
+    billing_plan_id?: number;
     /**
      * 
      * @type {string}
      * @memberof BillingPlanGetSearchModel
      */
-    customerCode?: string;
+    customer_code?: string;
     /**
      * 
      * @type {string}
      * @memberof BillingPlanGetSearchModel
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {string}
      * @memberof BillingPlanGetSearchModel
      */
-    invoiceNo?: string;
+    invoice_no?: string;
     /**
      * 
      * @type {string}
      * @memberof BillingPlanGetSearchModel
      */
-    invoiceDate?: string;
+    invoice_date?: string;
     /**
      * 
      * @type {string}
      * @memberof BillingPlanGetSearchModel
      */
-    soNo?: string;
+    so_no?: string;
     /**
      * 
      * @type {string}
      * @memberof BillingPlanGetSearchModel
      */
-    soDate?: string;
+    so_date?: string;
     /**
      * 
      * @type {number}
      * @memberof BillingPlanGetSearchModel
      */
-    invoiceAmount?: number;
+    invoice_amount?: number;
     /**
      * 
      * @type {string}
      * @memberof BillingPlanGetSearchModel
      */
-    paymentDue?: string;
+    payment_due?: string;
     /**
      * 
      * @type {number}
      * @memberof BillingPlanGetSearchModel
      */
-    overDue?: number;
+    over_due?: number;
     /**
      * 
      * @type {number}
@@ -2489,25 +2489,25 @@ export interface BillingPlanGetSearchModel {
      * @type {number}
      * @memberof BillingPlanGetSearchModel
      */
-    planAmountArgo?: number;
+    plan_amount_argo?: number;
     /**
      * 
      * @type {string}
      * @memberof BillingPlanGetSearchModel
      */
-    planDateArgo?: string;
+    plan_date_argo?: string;
     /**
      * 
      * @type {number}
      * @memberof BillingPlanGetSearchModel
      */
-    planAmount?: number;
+    plan_amount?: number;
     /**
      * 
      * @type {string}
      * @memberof BillingPlanGetSearchModel
      */
-    planDate?: string;
+    plan_date?: string;
 }
 /**
  * 
@@ -2575,55 +2575,55 @@ export interface BillingPlanModel {
      * @type {number}
      * @memberof BillingPlanModel
      */
-    billingPlanId?: number;
+    billing_plan_id?: number;
     /**
      * 
      * @type {string}
      * @memberof BillingPlanModel
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {string}
      * @memberof BillingPlanModel
      */
-    invoiceNo?: string;
+    invoice_no?: string;
     /**
      * 
      * @type {string}
      * @memberof BillingPlanModel
      */
-    invoiceDate?: string;
+    invoice_date?: string;
     /**
      * 
      * @type {string}
      * @memberof BillingPlanModel
      */
-    soNo?: string;
+    so_no?: string;
     /**
      * 
      * @type {string}
      * @memberof BillingPlanModel
      */
-    soDate?: string;
+    so_date?: string;
     /**
      * 
      * @type {number}
      * @memberof BillingPlanModel
      */
-    invoiceAmount?: number;
+    invoice_amount?: number;
     /**
      * 
      * @type {string}
      * @memberof BillingPlanModel
      */
-    paymentDue?: string;
+    payment_due?: string;
     /**
      * 
      * @type {number}
      * @memberof BillingPlanModel
      */
-    overDue?: number;
+    over_due?: number;
     /**
      * 
      * @type {number}
@@ -2635,25 +2635,25 @@ export interface BillingPlanModel {
      * @type {number}
      * @memberof BillingPlanModel
      */
-    planAmountArgo?: number;
+    plan_amount_argo?: number;
     /**
      * 
      * @type {string}
      * @memberof BillingPlanModel
      */
-    planDateArgo?: string;
+    plan_date_argo?: string;
     /**
      * 
      * @type {number}
      * @memberof BillingPlanModel
      */
-    planAmount?: number;
+    plan_amount?: number;
     /**
      * 
      * @type {string}
      * @memberof BillingPlanModel
      */
-    planDate?: string;
+    plan_date?: string;
 }
 /**
  * 
@@ -2697,19 +2697,19 @@ export interface BillingPlanPatchModel {
      * @type {number}
      * @memberof BillingPlanPatchModel
      */
-    billingPlanId?: number;
+    billing_plan_id?: number;
     /**
      * 
      * @type {number}
      * @memberof BillingPlanPatchModel
      */
-    planAmount?: number;
+    plan_amount?: number;
     /**
      * 
      * @type {string}
      * @memberof BillingPlanPatchModel
      */
-    planDate?: string;
+    plan_date?: string;
 }
 /**
  * 
@@ -2796,13 +2796,13 @@ export interface CancelImportModel {
      * @type {number}
      * @memberof CancelImportModel
      */
-    impId?: number;
+    imp_id?: number;
     /**
      * 
      * @type {string}
      * @memberof CancelImportModel
      */
-    cancelRemark?: string;
+    cancel_remark?: string;
 }
 /**
  * 
@@ -2966,49 +2966,49 @@ export interface ClaimCNPaymentModel {
      * @type {string}
      * @memberof ClaimCNPaymentModel
      */
-    jobClaimNo?: string;
+    job_claim_no?: string;
     /**
      * 
      * @type {TypeOfPayment}
      * @memberof ClaimCNPaymentModel
      */
-    typeOfPayment?: TypeOfPayment;
+    type_of_payment?: TypeOfPayment;
     /**
      * 
      * @type {string}
      * @memberof ClaimCNPaymentModel
      */
-    transferPaymentNo?: string;
+    transfer_payment_no?: string;
     /**
      * 
      * @type {string}
      * @memberof ClaimCNPaymentModel
      */
-    transferPaymentDate?: string;
+    transfer_payment_date?: string;
     /**
      * 
      * @type {string}
      * @memberof ClaimCNPaymentModel
      */
-    chequeNo?: string;
+    cheque_no?: string;
     /**
      * 
      * @type {string}
      * @memberof ClaimCNPaymentModel
      */
-    chequeDate?: string;
+    cheque_date?: string;
     /**
      * 
      * @type {string}
      * @memberof ClaimCNPaymentModel
      */
-    cnNo?: string;
+    cn_no?: string;
     /**
      * 
      * @type {string}
      * @memberof ClaimCNPaymentModel
      */
-    cnDate?: string;
+    cn_date?: string;
 }
 
 
@@ -3187,19 +3187,19 @@ export interface ClaimDetailModel {
      * @type {string}
      * @memberof ClaimDetailModel
      */
-    itemCode?: string;
+    item_code?: string;
     /**
      * 
      * @type {string}
      * @memberof ClaimDetailModel
      */
-    itemDescription?: string;
+    item_description?: string;
     /**
      * 
      * @type {string}
      * @memberof ClaimDetailModel
      */
-    invoiceList?: string;
+    invoice_list?: string;
 }
 
 /**
@@ -3223,43 +3223,43 @@ export interface ConfigDetailModel {
      * @type {number}
      * @memberof ConfigDetailModel
      */
-    configId?: number;
+    config_id?: number;
     /**
      * 
      * @type {string}
      * @memberof ConfigDetailModel
      */
-    configKey?: string;
+    config_key?: string;
     /**
      * 
      * @type {string}
      * @memberof ConfigDetailModel
      */
-    configValue?: string;
+    config_value?: string;
     /**
      * 
      * @type {string}
      * @memberof ConfigDetailModel
      */
-    configType?: string;
+    config_type?: string;
     /**
      * 
      * @type {string}
      * @memberof ConfigDetailModel
      */
-    configDataType?: string;
+    config_data_type?: string;
     /**
      * 
      * @type {string}
      * @memberof ConfigDetailModel
      */
-    configDescription?: string;
+    config_description?: string;
     /**
      * 
      * @type {boolean}
      * @memberof ConfigDetailModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
 }
 /**
  * 
@@ -3303,31 +3303,31 @@ export interface ConfigEvaluationTopicGetSearchModel {
      * @type {number}
      * @memberof ConfigEvaluationTopicGetSearchModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof ConfigEvaluationTopicGetSearchModel
      */
-    customerEvaluationId?: number;
+    customer_evaluation_id?: number;
     /**
      * 
      * @type {string}
      * @memberof ConfigEvaluationTopicGetSearchModel
      */
-    evaluationName?: string;
+    evaluation_name?: string;
     /**
      * 
      * @type {string}
      * @memberof ConfigEvaluationTopicGetSearchModel
      */
-    createDate?: string;
+    create_date?: string;
     /**
      * 
      * @type {boolean}
      * @memberof ConfigEvaluationTopicGetSearchModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
 }
 /**
  * 
@@ -3395,49 +3395,49 @@ export interface ConfigModel {
      * @type {number}
      * @memberof ConfigModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof ConfigModel
      */
-    configId?: number;
+    config_id?: number;
     /**
      * 
      * @type {string}
      * @memberof ConfigModel
      */
-    configKey?: string;
+    config_key?: string;
     /**
      * 
      * @type {string}
      * @memberof ConfigModel
      */
-    configValue?: string;
+    config_value?: string;
     /**
      * 
      * @type {string}
      * @memberof ConfigModel
      */
-    configType?: string;
+    config_type?: string;
     /**
      * 
      * @type {string}
      * @memberof ConfigModel
      */
-    configDataType?: string;
+    config_data_type?: string;
     /**
      * 
      * @type {string}
      * @memberof ConfigModel
      */
-    configDescription?: string;
+    config_description?: string;
     /**
      * 
      * @type {boolean}
      * @memberof ConfigModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
 }
 /**
  * 
@@ -3578,7 +3578,7 @@ export interface CreateOMSopRequestModel {
      * @type {number}
      * @memberof CreateOMSopRequestModel
      */
-    parterId?: number;
+    parter_id?: number;
     /**
      * 
      * @type {number}
@@ -3633,25 +3633,25 @@ export interface CreditworthinessModel {
      * @type {number}
      * @memberof CreditworthinessModel
      */
-    fsClass?: number;
+    fs_class?: number;
     /**
      * 
      * @type {number}
      * @memberof CreditworthinessModel
      */
-    fsClassScore?: number;
+    fs_class_score?: number;
     /**
      * 
      * @type {string}
      * @memberof CreditworthinessModel
      */
-    fsGrade?: string;
+    fs_grade?: string;
     /**
      * 
      * @type {number}
      * @memberof CreditworthinessModel
      */
-    fsGradeScore?: number;
+    fs_grade_score?: number;
     /**
      * 
      * @type {string}
@@ -3663,7 +3663,7 @@ export interface CreditworthinessModel {
      * @type {number}
      * @memberof CreditworthinessModel
      */
-    directorScore?: number;
+    director_score?: number;
     /**
      * 
      * @type {string}
@@ -3675,55 +3675,55 @@ export interface CreditworthinessModel {
      * @type {number}
      * @memberof CreditworthinessModel
      */
-    shareholderScore?: number;
+    shareholder_score?: number;
     /**
      * 
      * @type {number}
      * @memberof CreditworthinessModel
      */
-    creditLimit?: number;
+    credit_limit?: number;
     /**
      * 
      * @type {number}
      * @memberof CreditworthinessModel
      */
-    creditLimitScore?: number;
+    credit_limit_score?: number;
     /**
      * 
      * @type {number}
      * @memberof CreditworthinessModel
      */
-    creditTerm?: number;
+    credit_term?: number;
     /**
      * 
      * @type {number}
      * @memberof CreditworthinessModel
      */
-    creditTermScore?: number;
+    credit_term_score?: number;
     /**
      * 
      * @type {number}
      * @memberof CreditworthinessModel
      */
-    maxscoreG2?: number;
+    maxscore_g2?: number;
     /**
      * 
      * @type {number}
      * @memberof CreditworthinessModel
      */
-    actualScoreG2?: number;
+    actual_score_g2?: number;
     /**
      * 
      * @type {number}
      * @memberof CreditworthinessModel
      */
-    percentG2?: number;
+    percent_g2?: number;
     /**
      * 
      * @type {number}
      * @memberof CreditworthinessModel
      */
-    percentWeightG2?: number;
+    percent_weight_g2?: number;
 }
 
 /**
@@ -3899,49 +3899,49 @@ export interface DebtLetterBookInvoiceGetInterfaceModel {
      * @type {number}
      * @memberof DebtLetterBookInvoiceGetInterfaceModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof DebtLetterBookInvoiceGetInterfaceModel
      */
-    invoiceListId?: number;
+    invoice_list_id?: number;
     /**
      * 
      * @type {string}
      * @memberof DebtLetterBookInvoiceGetInterfaceModel
      */
-    invoiceNo?: string;
+    invoice_no?: string;
     /**
      * 
      * @type {string}
      * @memberof DebtLetterBookInvoiceGetInterfaceModel
      */
-    invoiceDate?: string;
+    invoice_date?: string;
     /**
      * 
      * @type {number}
      * @memberof DebtLetterBookInvoiceGetInterfaceModel
      */
-    invoiceTotal?: number;
+    invoice_total?: number;
     /**
      * 
      * @type {string}
      * @memberof DebtLetterBookInvoiceGetInterfaceModel
      */
-    paymentDue?: string;
+    payment_due?: string;
     /**
      * 
      * @type {number}
      * @memberof DebtLetterBookInvoiceGetInterfaceModel
      */
-    overDue?: number;
+    over_due?: number;
     /**
      * 
      * @type {boolean}
      * @memberof DebtLetterBookInvoiceGetInterfaceModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
 }
 /**
  * 
@@ -3954,79 +3954,79 @@ export interface DebtLetterBookInvoiceGetModel {
      * @type {number}
      * @memberof DebtLetterBookInvoiceGetModel
      */
-    bookId?: number;
+    book_id?: number;
     /**
      * 
      * @type {string}
      * @memberof DebtLetterBookInvoiceGetModel
      */
-    bookNumber?: string;
+    book_number?: string;
     /**
      * 
      * @type {string}
      * @memberof DebtLetterBookInvoiceGetModel
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {string}
      * @memberof DebtLetterBookInvoiceGetModel
      */
-    addressDetail?: string;
+    address_detail?: string;
     /**
      * 
      * @type {string}
      * @memberof DebtLetterBookInvoiceGetModel
      */
-    subDistrictName?: string;
+    sub_district_name?: string;
     /**
      * 
      * @type {string}
      * @memberof DebtLetterBookInvoiceGetModel
      */
-    districtName?: string;
+    district_name?: string;
     /**
      * 
      * @type {string}
      * @memberof DebtLetterBookInvoiceGetModel
      */
-    provinceName?: string;
+    province_name?: string;
     /**
      * 
      * @type {string}
      * @memberof DebtLetterBookInvoiceGetModel
      */
-    zipCode?: string;
+    zip_code?: string;
     /**
      * 
      * @type {string}
      * @memberof DebtLetterBookInvoiceGetModel
      */
-    contactTel?: string;
+    contact_tel?: string;
     /**
      * 
      * @type {string}
      * @memberof DebtLetterBookInvoiceGetModel
      */
-    contactEmail?: string;
+    contact_email?: string;
     /**
      * 
      * @type {number}
      * @memberof DebtLetterBookInvoiceGetModel
      */
-    bookNo?: number;
+    book_no?: number;
     /**
      * 
      * @type {number}
      * @memberof DebtLetterBookInvoiceGetModel
      */
-    bookAmount?: number;
+    book_amount?: number;
     /**
      * 
      * @type {Array<DebtLetterBookInvoiceGetInterfaceModel>}
      * @memberof DebtLetterBookInvoiceGetModel
      */
-    invoiceList?: Array<DebtLetterBookInvoiceGetInterfaceModel>;
+    invoice_list?: Array<DebtLetterBookInvoiceGetInterfaceModel>;
 }
 /**
  * 
@@ -4094,49 +4094,49 @@ export interface DebtLetterBookInvoiceGetSearchInterfaceModel {
      * @type {number}
      * @memberof DebtLetterBookInvoiceGetSearchInterfaceModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof DebtLetterBookInvoiceGetSearchInterfaceModel
      */
-    invoiceListId?: number;
+    invoice_list_id?: number;
     /**
      * 
      * @type {string}
      * @memberof DebtLetterBookInvoiceGetSearchInterfaceModel
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {string}
      * @memberof DebtLetterBookInvoiceGetSearchInterfaceModel
      */
-    invoiceNo?: string;
+    invoice_no?: string;
     /**
      * 
      * @type {string}
      * @memberof DebtLetterBookInvoiceGetSearchInterfaceModel
      */
-    invoiceDate?: string;
+    invoice_date?: string;
     /**
      * 
      * @type {number}
      * @memberof DebtLetterBookInvoiceGetSearchInterfaceModel
      */
-    invoiceTotal?: number;
+    invoice_total?: number;
     /**
      * 
      * @type {string}
      * @memberof DebtLetterBookInvoiceGetSearchInterfaceModel
      */
-    paymentDue?: string;
+    payment_due?: string;
     /**
      * 
      * @type {number}
      * @memberof DebtLetterBookInvoiceGetSearchInterfaceModel
      */
-    overDue?: number;
+    over_due?: number;
 }
 /**
  * 
@@ -4204,49 +4204,49 @@ export interface DebtLetterBookInvoiceGetSearchModel {
      * @type {number}
      * @memberof DebtLetterBookInvoiceGetSearchModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof DebtLetterBookInvoiceGetSearchModel
      */
-    bookId?: number;
+    book_id?: number;
     /**
      * 
      * @type {string}
      * @memberof DebtLetterBookInvoiceGetSearchModel
      */
-    bookNumber?: string;
+    book_number?: string;
     /**
      * 
      * @type {string}
      * @memberof DebtLetterBookInvoiceGetSearchModel
      */
-    custermerCode?: string;
+    custermer_code?: string;
     /**
      * 
      * @type {string}
      * @memberof DebtLetterBookInvoiceGetSearchModel
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {number}
      * @memberof DebtLetterBookInvoiceGetSearchModel
      */
-    bookAmount?: number;
+    book_amount?: number;
     /**
      * 
      * @type {string}
      * @memberof DebtLetterBookInvoiceGetSearchModel
      */
-    bookDate?: string;
+    book_date?: string;
     /**
      * 
      * @type {number}
      * @memberof DebtLetterBookInvoiceGetSearchModel
      */
-    bookNo?: number;
+    book_no?: number;
 }
 /**
  * 
@@ -4314,13 +4314,13 @@ export interface DebtLetterBookInvoiceInterfaceListModel {
      * @type {number}
      * @memberof DebtLetterBookInvoiceInterfaceListModel
      */
-    invoiceListId?: number;
+    invoice_list_id?: number;
     /**
      * 
      * @type {boolean}
      * @memberof DebtLetterBookInvoiceInterfaceListModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
 }
 /**
  * 
@@ -4333,13 +4333,13 @@ export interface DebtLetterBookInvoiceInterfaceModel {
      * @type {number}
      * @memberof DebtLetterBookInvoiceInterfaceModel
      */
-    bookId?: number;
+    book_id?: number;
     /**
      * 
      * @type {Array<DebtLetterBookInvoiceInterfaceListModel>}
      * @memberof DebtLetterBookInvoiceInterfaceModel
      */
-    invoiceList?: Array<DebtLetterBookInvoiceInterfaceListModel>;
+    invoice_list?: Array<DebtLetterBookInvoiceInterfaceListModel>;
 }
 /**
  * 
@@ -4414,13 +4414,13 @@ export interface DebtLetterFormModel {
      * @type {number}
      * @memberof DebtLetterFormModel
      */
-    bookId?: number;
+    book_id?: number;
     /**
      * 
      * @type {number}
      * @memberof DebtLetterFormModel
      */
-    userId?: number;
+    user_id?: number;
 }
 /**
  * 
@@ -4433,49 +4433,49 @@ export interface DebtLetterInvoiceGetSearchModel {
      * @type {number}
      * @memberof DebtLetterInvoiceGetSearchModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof DebtLetterInvoiceGetSearchModel
      */
-    customerId?: number;
+    customer_id?: number;
     /**
      * 
      * @type {number}
      * @memberof DebtLetterInvoiceGetSearchModel
      */
-    organizationId?: number;
+    organization_id?: number;
     /**
      * 
      * @type {number}
      * @memberof DebtLetterInvoiceGetSearchModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {string}
      * @memberof DebtLetterInvoiceGetSearchModel
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {number}
      * @memberof DebtLetterInvoiceGetSearchModel
      */
-    invoiceAmountCount?: number;
+    invoice_amount_count?: number;
     /**
      * 
      * @type {number}
      * @memberof DebtLetterInvoiceGetSearchModel
      */
-    amountOfMoney?: number;
+    amount_of_money?: number;
     /**
      * 
      * @type {Array<DebtLetterBookInvoiceInterfaceListModel>}
      * @memberof DebtLetterInvoiceGetSearchModel
      */
-    invoiceList?: Array<DebtLetterBookInvoiceInterfaceListModel>;
+    invoice_list?: Array<DebtLetterBookInvoiceInterfaceListModel>;
 }
 /**
  * 
@@ -4561,43 +4561,43 @@ export interface DropdownEmployeeModel {
      * @type {number}
      * @memberof DropdownEmployeeModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {string}
      * @memberof DropdownEmployeeModel
      */
-    employeeCode?: string;
+    employee_code?: string;
     /**
      * 
      * @type {string}
      * @memberof DropdownEmployeeModel
      */
-    firstnameTh?: string;
+    firstname_th?: string;
     /**
      * 
      * @type {string}
      * @memberof DropdownEmployeeModel
      */
-    lastnameTh?: string;
+    lastname_th?: string;
     /**
      * 
      * @type {string}
      * @memberof DropdownEmployeeModel
      */
-    firstnameEn?: string;
+    firstname_en?: string;
     /**
      * 
      * @type {string}
      * @memberof DropdownEmployeeModel
      */
-    lastnameEn?: string;
+    lastname_en?: string;
     /**
      * 
      * @type {number}
      * @memberof DropdownEmployeeModel
      */
-    organizationId?: number;
+    organization_id?: number;
 }
 /**
  * 
@@ -4739,7 +4739,7 @@ export interface DropdownRoleModel {
      * @type {DataAccessType}
      * @memberof DropdownRoleModel
      */
-    dataAccessType?: DataAccessType;
+    data_access_type?: DataAccessType;
 }
 
 
@@ -4803,7 +4803,7 @@ export interface DropdownSubDistrictModel {
      * @type {string}
      * @memberof DropdownSubDistrictModel
      */
-    zipCode?: string;
+    zip_code?: string;
 }
 /**
  * 
@@ -4915,7 +4915,7 @@ export interface DuplicateConfigEvaluationTopic {
      * @type {number}
      * @memberof DuplicateConfigEvaluationTopic
      */
-    customerEvaluationId?: number;
+    customer_evaluation_id?: number;
 }
 /**
  * 
@@ -4928,7 +4928,7 @@ export interface EmployeeOwnerModel {
      * @type {number}
      * @memberof EmployeeOwnerModel
      */
-    employeeId?: number;
+    employee_id?: number;
 }
 /**
  * 
@@ -5000,7 +5000,7 @@ export interface FinancialStrengthModel {
      * @type {string}
      * @memberof FinancialStrengthModel
      */
-    accountsNotesRecvnet?: string;
+    accounts_notes_recvnet?: string;
     /**
      * 
      * @type {number}
@@ -5042,13 +5042,13 @@ export interface FinancialStrengthModel {
      * @type {number}
      * @memberof FinancialStrengthModel
      */
-    totalAssets?: number;
+    total_assets?: number;
     /**
      * 
      * @type {number}
      * @memberof FinancialStrengthModel
      */
-    totalAssetsScore?: number;
+    total_assets_score?: number;
     /**
      * 
      * @type {number}
@@ -5090,13 +5090,13 @@ export interface FinancialStrengthModel {
      * @type {string}
      * @memberof FinancialStrengthModel
      */
-    totalLiabilities?: string;
+    total_liabilities?: string;
     /**
      * 
      * @type {number}
      * @memberof FinancialStrengthModel
      */
-    totalLiabilitiesScore?: number;
+    total_liabilities_score?: number;
     /**
      * 
      * @type {string}
@@ -5138,13 +5138,13 @@ export interface FinancialStrengthModel {
      * @type {number}
      * @memberof FinancialStrengthModel
      */
-    netSales?: number;
+    net_sales?: number;
     /**
      * 
      * @type {number}
      * @memberof FinancialStrengthModel
      */
-    netSalesScore?: number;
+    net_sales_score?: number;
     /**
      * 
      * @type {string}
@@ -5186,13 +5186,13 @@ export interface FinancialStrengthModel {
      * @type {string}
      * @memberof FinancialStrengthModel
      */
-    netIncome?: string;
+    net_income?: string;
     /**
      * 
      * @type {number}
      * @memberof FinancialStrengthModel
      */
-    netIncomeScore?: number;
+    net_income_score?: number;
     /**
      * 
      * @type {string}
@@ -5210,25 +5210,25 @@ export interface FinancialStrengthModel {
      * @type {number}
      * @memberof FinancialStrengthModel
      */
-    maxscoreG3?: number;
+    maxscore_g3?: number;
     /**
      * 
      * @type {number}
      * @memberof FinancialStrengthModel
      */
-    actualScoreG3?: number;
+    actual_score_g3?: number;
     /**
      * 
      * @type {number}
      * @memberof FinancialStrengthModel
      */
-    percentG3?: number;
+    percent_g3?: number;
     /**
      * 
      * @type {number}
      * @memberof FinancialStrengthModel
      */
-    percentWeightG3?: number;
+    percent_weight_g3?: number;
 }
 /**
  * 
@@ -5241,13 +5241,13 @@ export interface GrowthPotentialModel {
      * @type {number}
      * @memberof GrowthPotentialModel
      */
-    netSalesGrowth?: number;
+    net_sales_growth?: number;
     /**
      * 
      * @type {number}
      * @memberof GrowthPotentialModel
      */
-    netSalesGrowthScore?: number;
+    net_sales_growth_score?: number;
     /**
      * 
      * @type {string}
@@ -5265,37 +5265,37 @@ export interface GrowthPotentialModel {
      * @type {number}
      * @memberof GrowthPotentialModel
      */
-    netProfitGrowth?: number;
+    net_profit_growth?: number;
     /**
      * 
      * @type {number}
      * @memberof GrowthPotentialModel
      */
-    netProfitGrowthScore?: number;
+    net_profit_growth_score?: number;
     /**
      * 
      * @type {number}
      * @memberof GrowthPotentialModel
      */
-    maxscoreG5?: number;
+    maxscore_g5?: number;
     /**
      * 
      * @type {number}
      * @memberof GrowthPotentialModel
      */
-    actualScoreG5?: number;
+    actual_score_g5?: number;
     /**
      * 
      * @type {number}
      * @memberof GrowthPotentialModel
      */
-    percentG5?: number;
+    percent_g5?: number;
     /**
      * 
      * @type {number}
      * @memberof GrowthPotentialModel
      */
-    percentWeightG5?: number;
+    percent_weight_g5?: number;
 }
 /**
  * 
@@ -5358,55 +5358,55 @@ export interface ImportStatementModel {
      * @type {number}
      * @memberof ImportStatementModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof ImportStatementModel
      */
-    stmtId?: number;
+    stmt_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ImportStatementModel
      */
-    bankAccountId?: number;
+    bank_account_id?: number;
     /**
      * 
      * @type {number}
      * @memberof ImportStatementModel
      */
-    stmtTypeId?: number;
+    stmt_type_id?: number;
     /**
      * 
      * @type {string}
      * @memberof ImportStatementModel
      */
-    bankAccountNo?: string;
+    bank_account_no?: string;
     /**
      * 
      * @type {string}
      * @memberof ImportStatementModel
      */
-    bankAccountName?: string;
+    bank_account_name?: string;
     /**
      * 
      * @type {string}
      * @memberof ImportStatementModel
      */
-    bankAccountType?: string;
+    bank_account_type?: string;
     /**
      * 
      * @type {string}
      * @memberof ImportStatementModel
      */
-    bankBranchCode?: string;
+    bank_branch_code?: string;
     /**
      * 
      * @type {string}
      * @memberof ImportStatementModel
      */
-    stmtTypeCode?: string;
+    stmt_type_code?: string;
     /**
      * 
      * @type {string}
@@ -5418,37 +5418,37 @@ export interface ImportStatementModel {
      * @type {string}
      * @memberof ImportStatementModel
      */
-    stmtDatetime?: string;
+    stmt_datetime?: string;
     /**
      * 
      * @type {string}
      * @memberof ImportStatementModel
      */
-    stmtDescription?: string;
+    stmt_description?: string;
     /**
      * 
      * @type {number}
      * @memberof ImportStatementModel
      */
-    stmtMoneyMovement?: number;
+    stmt_money_movement?: number;
     /**
      * 
      * @type {number}
      * @memberof ImportStatementModel
      */
-    stmtMoneyCumulative?: number;
+    stmt_money_cumulative?: number;
     /**
      * 
      * @type {string}
      * @memberof ImportStatementModel
      */
-    chequeNo?: string;
+    cheque_no?: string;
     /**
      * 
      * @type {string}
      * @memberof ImportStatementModel
      */
-    sequenceNo?: string;
+    sequence_no?: string;
     /**
      * 
      * @type {string}
@@ -5472,7 +5472,7 @@ export interface ImportStatementModel {
      * @type {string}
      * @memberof ImportStatementModel
      */
-    terminalId?: string;
+    terminal_id?: string;
     /**
      * 
      * @type {string}
@@ -5490,7 +5490,7 @@ export interface ImportStatementModel {
      * @type {number}
      * @memberof ImportStatementModel
      */
-    companyId?: number;
+    company_id?: number;
     /**
      * 
      * @type {Array<VoucherMappingStatementModel>}
@@ -5502,13 +5502,13 @@ export interface ImportStatementModel {
      * @type {number}
      * @memberof ImportStatementModel
      */
-    rootOrganizationId?: number;
+    root_organization_id?: number;
     /**
      * 
      * @type {boolean}
      * @memberof ImportStatementModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
 }
 /**
  * 
@@ -5637,25 +5637,25 @@ export interface LiquidityModel {
      * @type {number}
      * @memberof LiquidityModel
      */
-    currentRatio?: number;
+    current_ratio?: number;
     /**
      * 
      * @type {number}
      * @memberof LiquidityModel
      */
-    currentRatioScore?: number;
+    current_ratio_score?: number;
     /**
      * 
      * @type {number}
      * @memberof LiquidityModel
      */
-    quickRatio?: number;
+    quick_ratio?: number;
     /**
      * 
      * @type {number}
      * @memberof LiquidityModel
      */
-    quickRatioScore?: number;
+    quick_ratio_score?: number;
     /**
      * 
      * @type {string}
@@ -5721,19 +5721,19 @@ export interface LiquidityModel {
      * @type {number}
      * @memberof LiquidityModel
      */
-    roeScore?: number;
+    roe_score?: number;
     /**
      * 
      * @type {number}
      * @memberof LiquidityModel
      */
-    debtRatio?: number;
+    debt_ratio?: number;
     /**
      * 
      * @type {number}
      * @memberof LiquidityModel
      */
-    debtRatioScore?: number;
+    debt_ratio_score?: number;
     /**
      * 
      * @type {string}
@@ -5751,25 +5751,25 @@ export interface LiquidityModel {
      * @type {number}
      * @memberof LiquidityModel
      */
-    maxscoreG4?: number;
+    maxscore_g4?: number;
     /**
      * 
      * @type {number}
      * @memberof LiquidityModel
      */
-    actualScoreG4?: number;
+    actual_score_g4?: number;
     /**
      * 
      * @type {number}
      * @memberof LiquidityModel
      */
-    percentG4?: number;
+    percent_g4?: number;
     /**
      * 
      * @type {number}
      * @memberof LiquidityModel
      */
-    percentWeightG4?: number;
+    percent_weight_g4?: number;
 }
 /**
  * 
@@ -5782,121 +5782,121 @@ export interface LogImportStatementModel {
      * @type {number}
      * @memberof LogImportStatementModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof LogImportStatementModel
      */
-    importStmtId?: number;
+    import_stmt_id?: number;
     /**
      * 
      * @type {number}
      * @memberof LogImportStatementModel
      */
-    bankAccountId?: number;
+    bank_account_id?: number;
     /**
      * 
      * @type {string}
      * @memberof LogImportStatementModel
      */
-    bankAccountName?: string;
+    bank_account_name?: string;
     /**
      * 
      * @type {string}
      * @memberof LogImportStatementModel
      */
-    bankAccountNo?: string;
+    bank_account_no?: string;
     /**
      * 
      * @type {string}
      * @memberof LogImportStatementModel
      */
-    bankAccountType?: string;
+    bank_account_type?: string;
     /**
      * 
      * @type {string}
      * @memberof LogImportStatementModel
      */
-    impFileName?: string;
+    imp_file_name?: string;
     /**
      * 
      * @type {string}
      * @memberof LogImportStatementModel
      */
-    impFilePath?: string;
+    imp_file_path?: string;
     /**
      * 
      * @type {string}
      * @memberof LogImportStatementModel
      */
-    impFileType?: string;
+    imp_file_type?: string;
     /**
      * 
      * @type {number}
      * @memberof LogImportStatementModel
      */
-    impFileSizes?: number;
+    imp_file_sizes?: number;
     /**
      * 
      * @type {number}
      * @memberof LogImportStatementModel
      */
-    impFileRows?: number;
+    imp_file_rows?: number;
     /**
      * 
      * @type {number}
      * @memberof LogImportStatementModel
      */
-    moneyMovement?: number;
+    money_movement?: number;
     /**
      * 
      * @type {number}
      * @memberof LogImportStatementModel
      */
-    moneyCumulative?: number;
+    money_cumulative?: number;
     /**
      * 
      * @type {DateOnly}
      * @memberof LogImportStatementModel
      */
-    dateStart?: DateOnly;
+    date_start?: DateOnly;
     /**
      * 
      * @type {DateOnly}
      * @memberof LogImportStatementModel
      */
-    dateEnd?: DateOnly;
+    date_end?: DateOnly;
     /**
      * 
      * @type {string}
      * @memberof LogImportStatementModel
      */
-    cancelRemark?: string;
+    cancel_remark?: string;
     /**
      * 
      * @type {string}
      * @memberof LogImportStatementModel
      */
-    createDate?: string;
+    create_date?: string;
     /**
      * 
      * @type {boolean}
      * @memberof LogImportStatementModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
     /**
      * 
      * @type {string}
      * @memberof LogImportStatementModel
      */
-    updateDate?: string;
+    update_date?: string;
     /**
      * 
      * @type {string}
      * @memberof LogImportStatementModel
      */
-    updateBy?: string;
+    update_by?: string;
 }
 /**
  * 
@@ -5976,37 +5976,37 @@ export interface MasterCustomerAddressModel {
      * @type {number}
      * @memberof MasterCustomerAddressModel
      */
-    companyId?: number;
+    company_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerAddressModel
      */
-    organizationId?: number;
+    organization_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerAddressModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerAddressModel
      */
-    customerId?: number;
+    customer_id?: number;
     /**
      * 
      * @type {CustomerAddressType}
      * @memberof MasterCustomerAddressModel
      */
-    addressType?: CustomerAddressType;
+    address_type?: CustomerAddressType;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerAddressModel
      */
-    readonly addressTypeName?: string;
+    readonly address_type_name?: string;
     /**
      * 
      * @type {string}
@@ -6018,37 +6018,37 @@ export interface MasterCustomerAddressModel {
      * @type {number}
      * @memberof MasterCustomerAddressModel
      */
-    provinceId?: number;
+    province_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerAddressModel
      */
-    districtId?: number;
+    district_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerAddressModel
      */
-    subDistrictId?: number;
+    sub_district_id?: number;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerAddressModel
      */
-    zipCode?: string;
+    zip_code?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerAddressModel
      */
-    addressDetail?: string;
+    address_detail?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerAddressModel
      */
-    addressRemark?: string;
+    address_remark?: string;
 }
 
 
@@ -6063,49 +6063,49 @@ export interface MasterCustomerAttachModel {
      * @type {number}
      * @memberof MasterCustomerAttachModel
      */
-    companyId?: number;
+    company_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerAttachModel
      */
-    organizationId?: number;
+    organization_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerAttachModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerAttachModel
      */
-    customerId?: number;
+    customer_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerAttachModel
      */
-    fileNameId?: number;
+    file_name_id?: number;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerAttachModel
      */
-    fileName?: string;
+    file_name?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerAttachModel
      */
-    filePath?: string;
+    file_path?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerAttachModel
      */
-    fileRemark?: string;
+    file_remark?: string;
 }
 /**
  * 
@@ -6118,61 +6118,61 @@ export interface MasterCustomerBankModel {
      * @type {number}
      * @memberof MasterCustomerBankModel
      */
-    companyId?: number;
+    company_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerBankModel
      */
-    organizationId?: number;
+    organization_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerBankModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerBankModel
      */
-    customerId?: number;
+    customer_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerBankModel
      */
-    bankId?: number;
+    bank_id?: number;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerBankModel
      */
-    bankName?: string;
+    bank_name?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerBankModel
      */
-    bankBranch?: string;
+    bank_branch?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerBankModel
      */
-    bankAccountNo?: string;
+    bank_account_no?: string;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerBankModel
      */
-    depositTypeId?: number;
+    deposit_type_id?: number;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerBankModel
      */
-    depositTypeName?: string;
+    deposit_type_name?: string;
 }
 /**
  * 
@@ -6185,85 +6185,85 @@ export interface MasterCustomerCompanyModel {
      * @type {number}
      * @memberof MasterCustomerCompanyModel
      */
-    customerCompanyId?: number;
+    customer_company_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerCompanyModel
      */
-    companyId?: number;
+    company_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerCompanyModel
      */
-    organizationId?: number;
+    organization_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerCompanyModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerCompanyModel
      */
-    customerId?: number;
+    customer_id?: number;
     /**
      * 
      * @type {CustomerCreditType}
      * @memberof MasterCustomerCompanyModel
      */
-    customerCreditType?: CustomerCreditType;
+    customer_credit_type?: CustomerCreditType;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerCompanyModel
      */
-    readonly customerCreditTypeName?: string;
+    readonly customer_credit_type_name?: string;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerCompanyModel
      */
-    amountRequest?: number;
+    amount_request?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerCompanyModel
      */
-    amountApprove?: number;
+    amount_approve?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerCompanyModel
      */
-    amountInsuranceApprove?: number;
+    amount_insurance_approve?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerCompanyModel
      */
-    creditDays?: number;
+    credit_days?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerCompanyModel
      */
-    amountOld?: number;
+    amount_old?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerCompanyModel
      */
-    creditDaysOld?: number;
+    credit_days_old?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerCompanyModel
      */
-    dayOfBilling?: number;
+    day_of_billing?: number;
 }
 
 
@@ -6278,67 +6278,67 @@ export interface MasterCustomerContactModel {
      * @type {number}
      * @memberof MasterCustomerContactModel
      */
-    companyId?: number;
+    company_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerContactModel
      */
-    organizationId?: number;
+    organization_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerContactModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerContactModel
      */
-    customerId?: number;
+    customer_id?: number;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerContactModel
      */
-    contactName?: string;
+    contact_name?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerContactModel
      */
-    contactDept?: string;
+    contact_dept?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerContactModel
      */
-    contactTel?: string;
+    contact_tel?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerContactModel
      */
-    contactFax?: string;
+    contact_fax?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerContactModel
      */
-    contactEmail?: string;
+    contact_email?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerContactModel
      */
-    contactLineId?: string;
+    contact_line_id?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerContactModel
      */
-    contactRemark?: string;
+    contact_remark?: string;
 }
 /**
  * 
@@ -6351,55 +6351,55 @@ export interface MasterCustomerCreditScoreGetSearchModel {
      * @type {number}
      * @memberof MasterCustomerCreditScoreGetSearchModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerCreditScoreGetSearchModel
      */
-    customerCreditScoreId?: number;
+    customer_credit_score_id?: number;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerCreditScoreGetSearchModel
      */
-    creditScoreName?: string;
+    credit_score_name?: string;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerCreditScoreGetSearchModel
      */
-    scoreMin?: number;
+    score_min?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerCreditScoreGetSearchModel
      */
-    scoreMax?: number;
+    score_max?: number;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerCreditScoreGetSearchModel
      */
-    colorCode?: string;
+    color_code?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerCreditScoreGetSearchModel
      */
-    updateBy?: string;
+    update_by?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerCreditScoreGetSearchModel
      */
-    updateDate?: string;
+    update_date?: string;
     /**
      * 
      * @type {boolean}
      * @memberof MasterCustomerCreditScoreGetSearchModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
 }
 /**
  * 
@@ -6467,37 +6467,37 @@ export interface MasterCustomerCreditScoreModel {
      * @type {number}
      * @memberof MasterCustomerCreditScoreModel
      */
-    customerCreditScoreId?: number;
+    customer_credit_score_id?: number;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerCreditScoreModel
      */
-    creditScoreName?: string;
+    credit_score_name?: string;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerCreditScoreModel
      */
-    scoreMin?: number;
+    score_min?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerCreditScoreModel
      */
-    scoreMax?: number;
+    score_max?: number;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerCreditScoreModel
      */
-    colorCode?: string;
+    color_code?: string;
     /**
      * 
      * @type {boolean}
      * @memberof MasterCustomerCreditScoreModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
 }
 /**
  * 
@@ -6541,37 +6541,37 @@ export interface MasterCustomerEvaluationGroupDetailModel {
      * @type {number}
      * @memberof MasterCustomerEvaluationGroupDetailModel
      */
-    customerEvaluationGroupDetailId?: number;
+    customer_evaluation_group_detail_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerEvaluationGroupDetailModel
      */
-    customerEvaluationGroupId?: number;
+    customer_evaluation_group_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerEvaluationGroupDetailModel
      */
-    customerEvaluationConfigId?: number;
+    customer_evaluation_config_id?: number;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerEvaluationGroupDetailModel
      */
-    evaluationName?: string;
+    evaluation_name?: string;
     /**
      * 
      * @type {EvaluationConfigType}
      * @memberof MasterCustomerEvaluationGroupDetailModel
      */
-    evaluationConfigType?: EvaluationConfigType;
+    evaluation_config_type?: EvaluationConfigType;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerEvaluationGroupDetailModel
      */
-    readonly evaluationConfigTypeName?: string;
+    readonly evaluation_config_type_name?: string;
     /**
      * 
      * @type {Array<MasterCustomerEvaluationGroupDetailValueModel>}
@@ -6592,31 +6592,31 @@ export interface MasterCustomerEvaluationGroupDetailValueModel {
      * @type {number}
      * @memberof MasterCustomerEvaluationGroupDetailValueModel
      */
-    customerEvaluationGroupDetailValueId?: number;
+    customer_evaluation_group_detail_value_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerEvaluationGroupDetailValueModel
      */
-    customerEvaluationGroupDetailId?: number;
+    customer_evaluation_group_detail_id?: number;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerEvaluationGroupDetailValueModel
      */
-    textValue?: string;
+    text_value?: string;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerEvaluationGroupDetailValueModel
      */
-    rangeMinValue?: number;
+    range_min_value?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerEvaluationGroupDetailValueModel
      */
-    rangeMaxValue?: number;
+    range_max_value?: number;
     /**
      * 
      * @type {number}
@@ -6635,31 +6635,31 @@ export interface MasterCustomerEvaluationGroupModel {
      * @type {number}
      * @memberof MasterCustomerEvaluationGroupModel
      */
-    customerEvaluationGroupId?: number;
+    customer_evaluation_group_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerEvaluationGroupModel
      */
-    customerEvaluationId?: number;
+    customer_evaluation_id?: number;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerEvaluationGroupModel
      */
-    evaluationGroupName?: string;
+    evaluation_group_name?: string;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerEvaluationGroupModel
      */
-    evaluationPercentWeight?: number;
+    evaluation_percent_weight?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerEvaluationGroupModel
      */
-    evaluationMaxScore?: number;
+    evaluation_max_score?: number;
     /**
      * 
      * @type {Array<MasterCustomerEvaluationGroupDetailModel>}
@@ -6678,31 +6678,31 @@ export interface MasterCustomerEvaluationModel {
      * @type {number}
      * @memberof MasterCustomerEvaluationModel
      */
-    customerEvaluationId?: number;
+    customer_evaluation_id?: number;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerEvaluationModel
      */
-    evaluationName?: string;
+    evaluation_name?: string;
     /**
      * 
      * @type {EvaluationType}
      * @memberof MasterCustomerEvaluationModel
      */
-    evaluationType?: EvaluationType;
+    evaluation_type?: EvaluationType;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerEvaluationModel
      */
-    readonly evaluationTypeName?: string;
+    readonly evaluation_type_name?: string;
     /**
      * 
      * @type {boolean}
      * @memberof MasterCustomerEvaluationModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
     /**
      * 
      * @type {Array<MasterCustomerEvaluationGroupModel>}
@@ -6754,61 +6754,61 @@ export interface MasterCustomerGetSearchModel {
      * @type {number}
      * @memberof MasterCustomerGetSearchModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerGetSearchModel
      */
-    customerId?: number;
+    customer_id?: number;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerGetSearchModel
      */
-    customerCode?: string;
+    customer_code?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerGetSearchModel
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {CustomerCreditType}
      * @memberof MasterCustomerGetSearchModel
      */
-    customerCreditType?: CustomerCreditType;
+    customer_credit_type?: CustomerCreditType;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerGetSearchModel
      */
-    readonly customerCreditTypeName?: string;
+    readonly customer_credit_type_name?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerGetSearchModel
      */
-    salesOwner?: string;
+    sales_owner?: string;
     /**
      * 
      * @type {boolean}
      * @memberof MasterCustomerGetSearchModel
      */
-    holdStatus?: boolean;
+    hold_status?: boolean;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerGetSearchModel
      */
-    updateDate?: string;
+    update_date?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerGetSearchModel
      */
-    lastCalculateDate?: string;
+    last_calculate_date?: string;
 }
 
 
@@ -6878,55 +6878,55 @@ export interface MasterCustomerGradeGetSearchModel {
      * @type {number}
      * @memberof MasterCustomerGradeGetSearchModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerGradeGetSearchModel
      */
-    customerGradeId?: number;
+    customer_grade_id?: number;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerGradeGetSearchModel
      */
-    gradeName?: string;
+    grade_name?: string;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerGradeGetSearchModel
      */
-    scoreMin?: number;
+    score_min?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerGradeGetSearchModel
      */
-    scoreMax?: number;
+    score_max?: number;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerGradeGetSearchModel
      */
-    colorCode?: string;
+    color_code?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerGradeGetSearchModel
      */
-    updateBy?: string;
+    update_by?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerGradeGetSearchModel
      */
-    updateDate?: string;
+    update_date?: string;
     /**
      * 
      * @type {boolean}
      * @memberof MasterCustomerGradeGetSearchModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
 }
 /**
  * 
@@ -6994,37 +6994,37 @@ export interface MasterCustomerGradeModel {
      * @type {number}
      * @memberof MasterCustomerGradeModel
      */
-    customerGradeId?: number;
+    customer_grade_id?: number;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerGradeModel
      */
-    gradeName?: string;
+    grade_name?: string;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerGradeModel
      */
-    scoreMin?: number;
+    score_min?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerGradeModel
      */
-    scoreMax?: number;
+    score_max?: number;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerGradeModel
      */
-    colorCode?: string;
+    color_code?: string;
     /**
      * 
      * @type {boolean}
      * @memberof MasterCustomerGradeModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
 }
 /**
  * 
@@ -7068,133 +7068,133 @@ export interface MasterCustomerModel {
      * @type {number}
      * @memberof MasterCustomerModel
      */
-    customerId?: number;
+    customer_id?: number;
     /**
      * 
      * @type {PersonType}
      * @memberof MasterCustomerModel
      */
-    customerType?: PersonType;
+    customer_type?: PersonType;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerModel
      */
-    readonly customerTypeName?: string;
+    readonly customer_type_name?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerModel
      */
-    customerCode?: string;
+    customer_code?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerModel
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerModel
      */
-    customerLastname?: string;
+    customer_lastname?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerModel
      */
-    customerNameEn?: string;
+    customer_name_en?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerModel
      */
-    customerLastnameEn?: string;
+    customer_lastname_en?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerModel
      */
-    customerTaxCode?: string;
+    customer_tax_code?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerModel
      */
-    registeredDate?: string;
+    registered_date?: string;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerModel
      */
-    registeredCapital?: number;
+    registered_capital?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerModel
      */
-    registeredTypeId?: number;
+    registered_type_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerModel
      */
-    businessGroupId?: number;
+    business_group_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerModel
      */
-    businessTypeId?: number;
+    business_type_id?: number;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerModel
      */
-    customerGrade?: string;
+    customer_grade?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerModel
      */
-    customerCreditScore?: string;
+    customer_credit_score?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerModel
      */
-    lastCalculateDate?: string;
+    last_calculate_date?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterCustomerModel
      */
-    lastUpdateCreditDate?: string;
+    last_update_credit_date?: string;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerModel
      */
-    organizationId?: number;
+    organization_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {number}
      * @memberof MasterCustomerModel
      */
-    companyId?: number;
+    company_id?: number;
     /**
      * 
      * @type {boolean}
      * @memberof MasterCustomerModel
      */
-    holdStatus?: boolean;
+    hold_status?: boolean;
     /**
      * 
      * @type {Array<MasterCustomerContactModel>}
@@ -7288,7 +7288,7 @@ export interface MasterCustomerOwnerModel {
      * @type {number}
      * @memberof MasterCustomerOwnerModel
      */
-    customerId?: number;
+    customer_id?: number;
     /**
      * 
      * @type {Array<EmployeeOwnerModel>}
@@ -7350,25 +7350,25 @@ export interface MasterEmployeeModel {
      * @type {number}
      * @memberof MasterEmployeeModel
      */
-    employeeId?: number;
+    employee_id?: number;
     /**
      * 
      * @type {string}
      * @memberof MasterEmployeeModel
      */
-    companyName?: string;
+    company_name?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterEmployeeModel
      */
-    employeeCode?: string;
+    employee_code?: string;
     /**
      * 
      * @type {string}
      * @memberof MasterEmployeeModel
      */
-    employeeName?: string;
+    employee_name?: string;
     /**
      * 
      * @type {string}
@@ -7380,7 +7380,7 @@ export interface MasterEmployeeModel {
      * @type {string}
      * @memberof MasterEmployeeModel
      */
-    mobilePhone?: string;
+    mobile_phone?: string;
     /**
      * 
      * @type {string}
@@ -7454,37 +7454,37 @@ export interface MaximumDelayPayModel {
      * @type {number}
      * @memberof MaximumDelayPayModel
      */
-    maximumDelayPay?: number;
+    maximum_delay_pay?: number;
     /**
      * 
      * @type {number}
      * @memberof MaximumDelayPayModel
      */
-    maximumDelayPayScore?: number;
+    maximum_delay_pay_score?: number;
     /**
      * 
      * @type {number}
      * @memberof MaximumDelayPayModel
      */
-    maxscoreMaximum?: number;
+    maxscore_maximum?: number;
     /**
      * 
      * @type {number}
      * @memberof MaximumDelayPayModel
      */
-    actualScoreMaximum?: number;
+    actual_score_maximum?: number;
     /**
      * 
      * @type {number}
      * @memberof MaximumDelayPayModel
      */
-    percentMaximum?: number;
+    percent_maximum?: number;
     /**
      * 
      * @type {number}
      * @memberof MaximumDelayPayModel
      */
-    percentWeightMaximum?: number;
+    percent_weight_maximum?: number;
 }
 /**
  * 
@@ -7497,55 +7497,55 @@ export interface MenuResponseModel {
      * @type {number}
      * @memberof MenuResponseModel
      */
-    menuId?: number;
+    menu_id?: number;
     /**
      * 
      * @type {string}
      * @memberof MenuResponseModel
      */
-    menuName?: string;
+    menu_name?: string;
     /**
      * 
      * @type {string}
      * @memberof MenuResponseModel
      */
-    menuRoute?: string;
+    menu_route?: string;
     /**
      * 
      * @type {string}
      * @memberof MenuResponseModel
      */
-    menuIcon?: string;
+    menu_icon?: string;
     /**
      * 
      * @type {number}
      * @memberof MenuResponseModel
      */
-    menuParent?: number;
+    menu_parent?: number;
     /**
      * 
      * @type {string}
      * @memberof MenuResponseModel
      */
-    menuCode?: string;
+    menu_code?: string;
     /**
      * 
      * @type {boolean}
      * @memberof MenuResponseModel
      */
-    isAllow?: boolean;
+    is_allow?: boolean;
     /**
      * 
      * @type {Array<MenuResponseModel>}
      * @memberof MenuResponseModel
      */
-    subMenu?: Array<MenuResponseModel>;
+    sub_menu?: Array<MenuResponseModel>;
     /**
      * 
      * @type {number}
      * @memberof MenuResponseModel
      */
-    totalNotificaition?: number;
+    total_notificaition?: number;
 }
 /**
  * 
@@ -7589,25 +7589,25 @@ export interface NotFoundMappingDetailModel {
      * @type {number}
      * @memberof NotFoundMappingDetailModel
      */
-    stmtId?: number;
+    stmt_id?: number;
     /**
      * 
      * @type {number}
      * @memberof NotFoundMappingDetailModel
      */
-    glVoucherId?: number;
+    gl_voucher_id?: number;
     /**
      * 
      * @type {string}
      * @memberof NotFoundMappingDetailModel
      */
-    stmtDatetime?: string;
+    stmt_datetime?: string;
     /**
      * 
      * @type {string}
      * @memberof NotFoundMappingDetailModel
      */
-    transactionDate?: string;
+    transaction_date?: string;
     /**
      * 
      * @type {string}
@@ -7619,25 +7619,25 @@ export interface NotFoundMappingDetailModel {
      * @type {string}
      * @memberof NotFoundMappingDetailModel
      */
-    voucherNo?: string;
+    voucher_no?: string;
     /**
      * 
      * @type {number}
      * @memberof NotFoundMappingDetailModel
      */
-    stmtMoneyMovement?: number;
+    stmt_money_movement?: number;
     /**
      * 
      * @type {number}
      * @memberof NotFoundMappingDetailModel
      */
-    glAmount?: number;
+    gl_amount?: number;
     /**
      * 
      * @type {number}
      * @memberof NotFoundMappingDetailModel
      */
-    mapValue?: number;
+    map_value?: number;
 }
 /**
  * 
@@ -7681,97 +7681,97 @@ export interface NotFoundMappingModel {
      * @type {number}
      * @memberof NotFoundMappingModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof NotFoundMappingModel
      */
-    stmtId?: number;
+    stmt_id?: number;
     /**
      * 
      * @type {number}
      * @memberof NotFoundMappingModel
      */
-    glVoucherId?: number;
+    gl_voucher_id?: number;
     /**
      * 
      * @type {number}
      * @memberof NotFoundMappingModel
      */
-    accountId?: number;
+    account_id?: number;
     /**
      * 
      * @type {number}
      * @memberof NotFoundMappingModel
      */
-    bankAccountId?: number;
+    bank_account_id?: number;
     /**
      * 
      * @type {string}
      * @memberof NotFoundMappingModel
      */
-    bankAccountName?: string;
+    bank_account_name?: string;
     /**
      * 
      * @type {string}
      * @memberof NotFoundMappingModel
      */
-    bankAccountNo?: string;
+    bank_account_no?: string;
     /**
      * 
      * @type {string}
      * @memberof NotFoundMappingModel
      */
-    bankAccountType?: string;
+    bank_account_type?: string;
     /**
      * 
      * @type {string}
      * @memberof NotFoundMappingModel
      */
-    stmtDatetime?: string;
+    stmt_datetime?: string;
     /**
      * 
      * @type {string}
      * @memberof NotFoundMappingModel
      */
-    stmtDescription?: string;
+    stmt_description?: string;
     /**
      * 
      * @type {number}
      * @memberof NotFoundMappingModel
      */
-    stmtMoneyMovement?: number;
+    stmt_money_movement?: number;
     /**
      * 
      * @type {string}
      * @memberof NotFoundMappingModel
      */
-    chequeNo?: string;
+    cheque_no?: string;
     /**
      * 
      * @type {string}
      * @memberof NotFoundMappingModel
      */
-    transactionDate?: string;
+    transaction_date?: string;
     /**
      * 
      * @type {string}
      * @memberof NotFoundMappingModel
      */
-    voucherNo?: string;
+    voucher_no?: string;
     /**
      * 
      * @type {string}
      * @memberof NotFoundMappingModel
      */
-    voucherRemark?: string;
+    voucher_remark?: string;
     /**
      * 
      * @type {number}
      * @memberof NotFoundMappingModel
      */
-    glAmount?: number;
+    gl_amount?: number;
     /**
      * 
      * @type {string}
@@ -7783,13 +7783,13 @@ export interface NotFoundMappingModel {
      * @type {number}
      * @memberof NotFoundMappingModel
      */
-    mappedAmount?: number;
+    mapped_amount?: number;
     /**
      * 
      * @type {number}
      * @memberof NotFoundMappingModel
      */
-    remainAmount?: number;
+    remain_amount?: number;
 }
 /**
  * 
@@ -7949,13 +7949,13 @@ export interface OrganizationModel {
      * @type {number}
      * @memberof OrganizationModel
      */
-    organizationId?: number;
+    organization_id?: number;
     /**
      * 
      * @type {string}
      * @memberof OrganizationModel
      */
-    organizationNameTh?: string;
+    organization_name_th?: string;
 }
 
 /**
@@ -8000,25 +8000,25 @@ export interface PermissionResponseModel {
      * @type {number}
      * @memberof PermissionResponseModel
      */
-    permissionId?: number;
+    permission_id?: number;
     /**
      * 
      * @type {string}
      * @memberof PermissionResponseModel
      */
-    permissionName?: string;
+    permission_name?: string;
     /**
      * 
      * @type {number}
      * @memberof PermissionResponseModel
      */
-    menuId?: number;
+    menu_id?: number;
     /**
      * 
      * @type {boolean}
      * @memberof PermissionResponseModel
      */
-    isAllow?: boolean;
+    is_allow?: boolean;
 }
 /**
  * 
@@ -8073,13 +8073,13 @@ export interface ProFileCreditModel {
      * @type {number}
      * @memberof ProFileCreditModel
      */
-    totalScore?: number;
+    total_score?: number;
     /**
      * 
      * @type {string}
      * @memberof ProFileCreditModel
      */
-    creditScore?: string;
+    credit_score?: string;
     /**
      * 
      * @type {string}
@@ -8184,91 +8184,91 @@ export interface ProfileStabilityModel {
      * @type {number}
      * @memberof ProfileStabilityModel
      */
-    registrationNo?: number;
+    registration_no?: number;
     /**
      * 
      * @type {string}
      * @memberof ProfileStabilityModel
      */
-    companyName?: string;
+    company_name?: string;
     /**
      * 
      * @type {string}
      * @memberof ProfileStabilityModel
      */
-    registrationNoPrevious?: string;
+    registration_no_previous?: string;
     /**
      * 
      * @type {string}
      * @memberof ProfileStabilityModel
      */
-    companyStatus?: string;
+    company_status?: string;
     /**
      * 
      * @type {number}
      * @memberof ProfileStabilityModel
      */
-    yearTotal?: number;
+    year_total?: number;
     /**
      * 
      * @type {number}
      * @memberof ProfileStabilityModel
      */
-    yearTotalScore?: number;
+    year_total_score?: number;
     /**
      * 
      * @type {string}
      * @memberof ProfileStabilityModel
      */
-    companyType?: string;
+    company_type?: string;
     /**
      * 
      * @type {string}
      * @memberof ProfileStabilityModel
      */
-    registrationDate?: string;
+    registration_date?: string;
     /**
      * 
      * @type {number}
      * @memberof ProfileStabilityModel
      */
-    registeredCapital?: number;
+    registered_capital?: number;
     /**
      * 
      * @type {number}
      * @memberof ProfileStabilityModel
      */
-    registeredCapitalScore?: number;
+    registered_capital_score?: number;
     /**
      * 
      * @type {string}
      * @memberof ProfileStabilityModel
      */
-    businessSize?: string;
+    business_size?: string;
     /**
      * 
      * @type {number}
      * @memberof ProfileStabilityModel
      */
-    businessSizeScore?: number;
+    business_size_score?: number;
     /**
      * 
      * @type {string}
      * @memberof ProfileStabilityModel
      */
-    inactiveDate?: string;
+    inactive_date?: string;
     /**
      * 
      * @type {string}
      * @memberof ProfileStabilityModel
      */
-    importerExporter?: string;
+    importer_exporter?: string;
     /**
      * 
      * @type {number}
      * @memberof ProfileStabilityModel
      */
-    importerExporterScore?: number;
+    importer_exporter_score?: number;
     /**
      * 
      * @type {string}
@@ -8280,7 +8280,7 @@ export interface ProfileStabilityModel {
      * @type {string}
      * @memberof ProfileStabilityModel
      */
-    subDistrict?: string;
+    sub_district?: string;
     /**
      * 
      * @type {string}
@@ -8304,109 +8304,109 @@ export interface ProfileStabilityModel {
      * @type {string}
      * @memberof ProfileStabilityModel
      */
-    mobilePhone?: string;
+    mobile_phone?: string;
     /**
      * 
      * @type {string}
      * @memberof ProfileStabilityModel
      */
-    officialSignatory?: string;
+    official_signatory?: string;
     /**
      * 
      * @type {string}
      * @memberof ProfileStabilityModel
      */
-    tsicCodeNo1?: string;
+    tsic_code_no_1?: string;
     /**
      * 
      * @type {number}
      * @memberof ProfileStabilityModel
      */
-    tsicCodeNo1Score?: number;
+    tsic_code_no_1_score?: number;
     /**
      * 
      * @type {string}
      * @memberof ProfileStabilityModel
      */
-    tsicCodeNo2?: string;
+    tsic_code_no_2?: string;
     /**
      * 
      * @type {number}
      * @memberof ProfileStabilityModel
      */
-    tsicCodeNo2Score?: number;
+    tsic_code_no_2_score?: number;
     /**
      * 
      * @type {string}
      * @memberof ProfileStabilityModel
      */
-    tsicCodeNo3?: string;
+    tsic_code_no_3?: string;
     /**
      * 
      * @type {number}
      * @memberof ProfileStabilityModel
      */
-    tsicCodeNo3Score?: number;
+    tsic_code_no_3_score?: number;
     /**
      * 
      * @type {string}
      * @memberof ProfileStabilityModel
      */
-    naicsCodeNo1?: string;
+    naics_code_no_1?: string;
     /**
      * 
      * @type {number}
      * @memberof ProfileStabilityModel
      */
-    naicsCodeNo1Score?: number;
+    naics_code_no_1_score?: number;
     /**
      * 
      * @type {string}
      * @memberof ProfileStabilityModel
      */
-    naicsCodeNo2?: string;
+    naics_code_no_2?: string;
     /**
      * 
      * @type {number}
      * @memberof ProfileStabilityModel
      */
-    naicsCodeNo2Score?: number;
+    naics_code_no_2_score?: number;
     /**
      * 
      * @type {string}
      * @memberof ProfileStabilityModel
      */
-    naicsCodeNo3?: string;
+    naics_code_no_3?: string;
     /**
      * 
      * @type {number}
      * @memberof ProfileStabilityModel
      */
-    naicsCodeNo3Score?: number;
+    naics_code_no_3_score?: number;
     /**
      * 
      * @type {number}
      * @memberof ProfileStabilityModel
      */
-    maxscoreG1?: number;
+    maxscore_g1?: number;
     /**
      * 
      * @type {number}
      * @memberof ProfileStabilityModel
      */
-    actualScoreG1?: number;
+    actual_score_g1?: number;
     /**
      * 
      * @type {number}
      * @memberof ProfileStabilityModel
      */
-    percentG1?: number;
+    percent_g1?: number;
     /**
      * 
      * @type {number}
      * @memberof ProfileStabilityModel
      */
-    percentWeightG1?: number;
+    percent_weight_g1?: number;
 }
 /**
  * 
@@ -8419,13 +8419,13 @@ export interface RebateSendApcnFaB2bModel {
      * @type {Array<TrnRbtCnapModel>}
      * @memberof RebateSendApcnFaB2bModel
      */
-    trnRbtCnap?: Array<TrnRbtCnapModel>;
+    trn_rbt_cnap?: Array<TrnRbtCnapModel>;
     /**
      * 
      * @type {Array<TrnRbtCnapFileModel>}
      * @memberof RebateSendApcnFaB2bModel
      */
-    trnRbtCnapFile?: Array<TrnRbtCnapFileModel>;
+    trn_rbt_cnap_file?: Array<TrnRbtCnapFileModel>;
 }
 /**
  * 
@@ -8438,13 +8438,13 @@ export interface RebateSendArcnBrnFaModel {
      * @type {Array<TrnRbtCnarBrandModel>}
      * @memberof RebateSendArcnBrnFaModel
      */
-    trnRbtCnarBrand?: Array<TrnRbtCnarBrandModel>;
+    trn_rbt_cnar_brand?: Array<TrnRbtCnarBrandModel>;
     /**
      * 
      * @type {Array<TrnRbtCnarBrandFileModel>}
      * @memberof RebateSendArcnBrnFaModel
      */
-    trnRbtCnarBrandFile?: Array<TrnRbtCnarBrandFileModel>;
+    trn_rbt_cnar_brand_file?: Array<TrnRbtCnarBrandFileModel>;
 }
 /**
  * 
@@ -8457,13 +8457,13 @@ export interface RebateSendArcnInhFaModel {
      * @type {Array<TrnRbtCnarInhouseModel>}
      * @memberof RebateSendArcnInhFaModel
      */
-    trnRbtCnarInhouse?: Array<TrnRbtCnarInhouseModel>;
+    trn_rbt_cnar_inhouse?: Array<TrnRbtCnarInhouseModel>;
     /**
      * 
      * @type {Array<TrnRbtCnarInhouseFileModel>}
      * @memberof RebateSendArcnInhFaModel
      */
-    trnRbtCnarInhouseFile?: Array<TrnRbtCnarInhouseFileModel>;
+    trn_rbt_cnar_inhouse_file?: Array<TrnRbtCnarInhouseFileModel>;
 }
 
 /**
@@ -8489,7 +8489,7 @@ export interface RefreshTokenModel {
      * @type {string}
      * @memberof RefreshTokenModel
      */
-    refreshToken?: string;
+    refresh_token?: string;
 }
 /**
  * 
@@ -8502,31 +8502,31 @@ export interface RegisterCustomerAddressModel {
      * @type {number}
      * @memberof RegisterCustomerAddressModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerAddressModel
      */
-    regisCustomerId?: number;
+    regis_customer_id?: number;
     /**
      * 
      * @type {CustomerAddressType}
      * @memberof RegisterCustomerAddressModel
      */
-    addressType?: CustomerAddressType;
+    address_type?: CustomerAddressType;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerAddressModel
      */
-    readonly addressTypeName?: string;
+    readonly address_type_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerAddressModel
      */
-    addressDetail?: string;
+    address_detail?: string;
     /**
      * 
      * @type {string}
@@ -8538,49 +8538,49 @@ export interface RegisterCustomerAddressModel {
      * @type {number}
      * @memberof RegisterCustomerAddressModel
      */
-    provinceId?: number;
+    province_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerAddressModel
      */
-    provinceName?: string;
+    province_name?: string;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerAddressModel
      */
-    districtId?: number;
+    district_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerAddressModel
      */
-    districtName?: string;
+    district_name?: string;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerAddressModel
      */
-    subDistrictId?: number;
+    sub_district_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerAddressModel
      */
-    subDistrictName?: string;
+    sub_district_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerAddressModel
      */
-    zipCode?: string;
+    zip_code?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerAddressModel
      */
-    addressRemark?: string;
+    address_remark?: string;
 }
 
 
@@ -8595,37 +8595,37 @@ export interface RegisterCustomerAttachModel {
      * @type {number}
      * @memberof RegisterCustomerAttachModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerAttachModel
      */
-    regisCustomerId?: number;
+    regis_customer_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerAttachModel
      */
-    fileNameId?: number;
+    file_name_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerAttachModel
      */
-    fileName?: string;
+    file_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerAttachModel
      */
-    filePath?: string;
+    file_path?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerAttachModel
      */
-    fileRemark?: string;
+    file_remark?: string;
 }
 /**
  * 
@@ -8638,49 +8638,49 @@ export interface RegisterCustomerBankModel {
      * @type {number}
      * @memberof RegisterCustomerBankModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerBankModel
      */
-    regisCustomerId?: number;
+    regis_customer_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerBankModel
      */
-    bankId?: number;
+    bank_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerBankModel
      */
-    bankName?: string;
+    bank_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerBankModel
      */
-    bankBranch?: string;
+    bank_branch?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerBankModel
      */
-    bankAccountNo?: string;
+    bank_account_no?: string;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerBankModel
      */
-    depositTypeId?: number;
+    deposit_type_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerBankModel
      */
-    depositTypeName?: string;
+    deposit_type_name?: string;
 }
 /**
  * 
@@ -8693,55 +8693,55 @@ export interface RegisterCustomerContactModel {
      * @type {number}
      * @memberof RegisterCustomerContactModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerContactModel
      */
-    regisCustomerId?: number;
+    regis_customer_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerContactModel
      */
-    contactName?: string;
+    contact_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerContactModel
      */
-    contactDept?: string;
+    contact_dept?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerContactModel
      */
-    contactTel?: string;
+    contact_tel?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerContactModel
      */
-    contactFax?: string;
+    contact_fax?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerContactModel
      */
-    contactEmail?: string;
+    contact_email?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerContactModel
      */
-    contactLineId?: string;
+    contact_line_id?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerContactModel
      */
-    contactRemark?: string;
+    contact_remark?: string;
 }
 /**
  * 
@@ -8754,91 +8754,91 @@ export interface RegisterCustomerGetSearchModel {
      * @type {number}
      * @memberof RegisterCustomerGetSearchModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerGetSearchModel
      */
-    regisCustomerId?: number;
+    regis_customer_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerGetSearchModel
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {CustomerCreditType}
      * @memberof RegisterCustomerGetSearchModel
      */
-    customerCreditType?: CustomerCreditType;
+    customer_credit_type?: CustomerCreditType;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerGetSearchModel
      */
-    readonly customerCreditTypeName?: string;
+    readonly customer_credit_type_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerGetSearchModel
      */
-    salesOwner?: string;
+    sales_owner?: string;
     /**
      * 
      * @type {CustomerRegisterStatus}
      * @memberof RegisterCustomerGetSearchModel
      */
-    regisStatus?: CustomerRegisterStatus;
+    regis_status?: CustomerRegisterStatus;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerGetSearchModel
      */
-    readonly regisStatusName?: string;
+    readonly regis_status_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerGetSearchModel
      */
-    registeredDate?: string;
+    registered_date?: string;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerGetSearchModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerGetSearchModel
      */
-    currentStepId?: number;
+    current_step_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerGetSearchModel
      */
-    organizationId?: number;
+    organization_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerGetSearchModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerGetSearchModel
      */
-    requestedDate?: string;
+    requested_date?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerGetSearchModel
      */
-    remarkRequest?: string;
+    remark_request?: string;
 }
 
 
@@ -8908,211 +8908,211 @@ export interface RegisterCustomerUpdateModel {
      * @type {number}
      * @memberof RegisterCustomerUpdateModel
      */
-    companyId?: number;
+    company_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerUpdateModel
      */
-    companyNameTh?: string;
+    company_name_th?: string;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerUpdateModel
      */
-    organizationId?: number;
+    organization_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerUpdateModel
      */
-    orgNameTh?: string;
+    org_name_th?: string;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerUpdateModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerUpdateModel
      */
-    ownerEmployeeCode?: string;
+    owner_employee_code?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerUpdateModel
      */
-    ownerUserName?: string;
+    owner_user_name?: string;
     /**
      * 
      * @type {PersonType}
      * @memberof RegisterCustomerUpdateModel
      */
-    customerType?: PersonType;
+    customer_type?: PersonType;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerUpdateModel
      */
-    readonly customerTypeName?: string;
+    readonly customer_type_name?: string;
     /**
      * 
      * @type {CustomerCreditType}
      * @memberof RegisterCustomerUpdateModel
      */
-    customerCreditType?: CustomerCreditType;
+    customer_credit_type?: CustomerCreditType;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerUpdateModel
      */
-    readonly customerCreditTypeName?: string;
+    readonly customer_credit_type_name?: string;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerUpdateModel
      */
-    amountRequest?: number;
+    amount_request?: number;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerUpdateModel
      */
-    creditDays?: number;
+    credit_days?: number;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerUpdateModel
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerUpdateModel
      */
-    customerLastname?: string;
+    customer_lastname?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerUpdateModel
      */
-    customerNameEn?: string;
+    customer_name_en?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerUpdateModel
      */
-    customerLastnameEn?: string;
+    customer_lastname_en?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerUpdateModel
      */
-    customerTaxCode?: string;
+    customer_tax_code?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerUpdateModel
      */
-    registeredDate?: string;
+    registered_date?: string;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerUpdateModel
      */
-    registeredCapital?: number;
+    registered_capital?: number;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerUpdateModel
      */
-    registeredTypeId?: number;
+    registered_type_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerUpdateModel
      */
-    businessGroupId?: number;
+    business_group_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerUpdateModel
      */
-    businessTypeId?: number;
+    business_type_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerUpdateModel
      */
-    employeeId?: number;
+    employee_id?: number;
     /**
      * 
      * @type {CustomerRegisterStatus}
      * @memberof RegisterCustomerUpdateModel
      */
-    regisStatus?: CustomerRegisterStatus;
+    regis_status?: CustomerRegisterStatus;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerUpdateModel
      */
-    readonly regisStatusName?: string;
+    readonly regis_status_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerUpdateModel
      */
-    regisCode?: string;
+    regis_code?: string;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerUpdateModel
      */
-    lastStep?: number;
+    last_step?: number;
     /**
      * 
      * @type {boolean}
      * @memberof RegisterCustomerUpdateModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerUpdateModel
      */
-    dayOfBilling?: number;
+    day_of_billing?: number;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerUpdateModel
      */
-    amountApprove?: number;
+    amount_approve?: number;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerUpdateModel
      */
-    amountInsuranceApprove?: number;
+    amount_insurance_approve?: number;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerUpdateModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RegisterCustomerUpdateModel
      */
-    currentStepId?: number;
+    current_step_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RegisterCustomerUpdateModel
      */
-    generateToken?: string;
+    generate_token?: string;
     /**
      * 
      * @type {Array<RegisterCustomerContactModel>}
@@ -9142,7 +9142,7 @@ export interface RegisterCustomerUpdateModel {
      * @type {number}
      * @memberof RegisterCustomerUpdateModel
      */
-    regisCustomerId?: number;
+    regis_customer_id?: number;
 }
 
 
@@ -9188,13 +9188,13 @@ export interface RemarkModel {
      * @type {number}
      * @memberof RemarkModel
      */
-    reqTravelId?: number;
+    req_travel_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RemarkModel
      */
-    paymentTravelRemark?: string;
+    payment_travel_remark?: string;
 }
 /**
  * 
@@ -9207,7 +9207,7 @@ export interface ReportBankReconcileModel {
      * @type {number}
      * @memberof ReportBankReconcileModel
      */
-    bankAccountId?: number;
+    bank_account_id?: number;
     /**
      * 
      * @type {string}
@@ -9219,97 +9219,97 @@ export interface ReportBankReconcileModel {
      * @type {string}
      * @memberof ReportBankReconcileModel
      */
-    orgNameTh?: string;
+    org_name_th?: string;
     /**
      * 
      * @type {string}
      * @memberof ReportBankReconcileModel
      */
-    bankAccountName?: string;
+    bank_account_name?: string;
     /**
      * 
      * @type {string}
      * @memberof ReportBankReconcileModel
      */
-    glAccountName?: string;
+    gl_account_name?: string;
     /**
      * 
      * @type {string}
      * @memberof ReportBankReconcileModel
      */
-    endDate?: string;
+    end_date?: string;
     /**
      * 
      * @type {number}
      * @memberof ReportBankReconcileModel
      */
-    accountRemain?: number;
+    account_remain?: number;
     /**
      * 
      * @type {Array<Bankremain>}
      * @memberof ReportBankReconcileModel
      */
-    bankRemainPlus?: Array<Bankremain>;
+    bank_remain_plus?: Array<Bankremain>;
     /**
      * 
      * @type {number}
      * @memberof ReportBankReconcileModel
      */
-    sumBankRemainPlus?: number;
+    sum_bank_remain_plus?: number;
     /**
      * 
      * @type {Array<Bankremain>}
      * @memberof ReportBankReconcileModel
      */
-    bankRemainMinus?: Array<Bankremain>;
+    bank_remain_minus?: Array<Bankremain>;
     /**
      * 
      * @type {number}
      * @memberof ReportBankReconcileModel
      */
-    sumBankRemainMinus?: number;
+    sum_bank_remain_minus?: number;
     /**
      * 
      * @type {Array<Bankremain>}
      * @memberof ReportBankReconcileModel
      */
-    accountRemainPlus?: Array<Bankremain>;
+    account_remain_plus?: Array<Bankremain>;
     /**
      * 
      * @type {number}
      * @memberof ReportBankReconcileModel
      */
-    sumAccountRemainPlus?: number;
+    sum_account_remain_plus?: number;
     /**
      * 
      * @type {Array<Bankremain>}
      * @memberof ReportBankReconcileModel
      */
-    accountRemainMinus?: Array<Bankremain>;
+    account_remain_minus?: Array<Bankremain>;
     /**
      * 
      * @type {number}
      * @memberof ReportBankReconcileModel
      */
-    sumAccountRemainMinus?: number;
+    sum_account_remain_minus?: number;
     /**
      * 
      * @type {number}
      * @memberof ReportBankReconcileModel
      */
-    bankRemain?: number;
+    bank_remain?: number;
     /**
      * 
      * @type {number}
      * @memberof ReportBankReconcileModel
      */
-    otherRemainPlus?: number;
+    other_remain_plus?: number;
     /**
      * 
      * @type {number}
      * @memberof ReportBankReconcileModel
      */
-    otherRemainMinus?: number;
+    other_remain_minus?: number;
 }
 /**
  * 
@@ -9353,13 +9353,13 @@ export interface RequestReportBankReconcileModel {
      * @type {string}
      * @memberof RequestReportBankReconcileModel
      */
-    endDate?: string;
+    end_date?: string;
     /**
      * 
      * @type {number}
      * @memberof RequestReportBankReconcileModel
      */
-    bankAccountId?: number;
+    bank_account_id?: number;
     /**
      * 
      * @type {number}
@@ -9377,7 +9377,7 @@ export interface RequestReportBankReconcileModel {
      * @type {string}
      * @memberof RequestReportBankReconcileModel
      */
-    unitName?: string;
+    unit_name?: string;
 }
 
 /**
@@ -9404,7 +9404,7 @@ export interface RequestUnholdDetailModel {
      * @type {number}
      * @memberof RequestUnholdDetailModel
      */
-    soListId?: number;
+    so_list_id?: number;
 }
 /**
  * 
@@ -9417,55 +9417,55 @@ export interface RequestUnholdGetSearchModel {
      * @type {number}
      * @memberof RequestUnholdGetSearchModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUnholdGetSearchModel
      */
-    reqUnholdId?: number;
+    req_unhold_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdGetSearchModel
      */
-    customerCode?: string;
+    customer_code?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdGetSearchModel
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {number}
      * @memberof RequestUnholdGetSearchModel
      */
-    reqCountItem?: number;
+    req_count_item?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUnholdGetSearchModel
      */
-    reqAmount?: number;
+    req_amount?: number;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdGetSearchModel
      */
-    createDate?: string;
+    create_date?: string;
     /**
      * 
      * @type {RequestUnHoldStatus}
      * @memberof RequestUnholdGetSearchModel
      */
-    reqStatus?: RequestUnHoldStatus;
+    req_status?: RequestUnHoldStatus;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdGetSearchModel
      */
-    readonly reqStatusName?: string;
+    readonly req_status_name?: string;
     /**
      * 
      * @type {string}
@@ -9477,37 +9477,37 @@ export interface RequestUnholdGetSearchModel {
      * @type {number}
      * @memberof RequestUnholdGetSearchModel
      */
-    currentStepId?: number;
+    current_step_id?: number;
     /**
      * 
      * @type {Array<RequestUnholdDetailModel>}
      * @memberof RequestUnholdGetSearchModel
      */
-    reqUnholdDetail?: Array<RequestUnholdDetailModel>;
+    req_unhold_detail?: Array<RequestUnholdDetailModel>;
     /**
      * 
      * @type {number}
      * @memberof RequestUnholdGetSearchModel
      */
-    organizationId?: number;
+    organization_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUnholdGetSearchModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdGetSearchModel
      */
-    requestedDate?: string;
+    requested_date?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdGetSearchModel
      */
-    rejectRemark?: string;
+    reject_remark?: string;
 }
 
 
@@ -9570,25 +9570,25 @@ export interface RequestUnholdGetSearchResponseModel {
      * @type {number}
      * @memberof RequestUnholdGetSearchResponseModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUnholdGetSearchResponseModel
      */
-    approvalTotal?: number;
+    approval_total?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUnholdGetSearchResponseModel
      */
-    approvalConfirmed?: number;
+    approval_confirmed?: number;
     /**
      * 
      * @type {Array<BaseCountStatusModel>}
      * @memberof RequestUnholdGetSearchResponseModel
      */
-    countStatusList?: Array<BaseCountStatusModel>;
+    count_status_list?: Array<BaseCountStatusModel>;
 }
 /**
  * 
@@ -9601,25 +9601,25 @@ export interface RequestUnholdGroupModel {
      * @type {number}
      * @memberof RequestUnholdGroupModel
      */
-    reqUnholdId?: number;
+    req_unhold_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUnholdGroupModel
      */
-    customerId?: number;
+    customer_id?: number;
     /**
      * 
      * @type {RequestUnHoldStatus}
      * @memberof RequestUnholdGroupModel
      */
-    reqStatus?: RequestUnHoldStatus;
+    req_status?: RequestUnHoldStatus;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdGroupModel
      */
-    readonly reqStatusName?: string;
+    readonly req_status_name?: string;
     /**
      * 
      * @type {string}
@@ -9631,7 +9631,7 @@ export interface RequestUnholdGroupModel {
      * @type {Array<RequestUnholdDetailModel>}
      * @memberof RequestUnholdGroupModel
      */
-    reqUnholdDetail?: Array<RequestUnholdDetailModel>;
+    req_unhold_detail?: Array<RequestUnholdDetailModel>;
 }
 
 
@@ -9677,79 +9677,79 @@ export interface RequestUnholdSOGetModel {
      * @type {number}
      * @memberof RequestUnholdSOGetModel
      */
-    reqUnholdId?: number;
+    req_unhold_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUnholdSOGetModel
      */
-    customerId?: number;
+    customer_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdSOGetModel
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {CustomerAddressType}
      * @memberof RequestUnholdSOGetModel
      */
-    addressType?: CustomerAddressType;
+    address_type?: CustomerAddressType;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdSOGetModel
      */
-    readonly addressTypeName?: string;
+    readonly address_type_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdSOGetModel
      */
-    addressDetail?: string;
+    address_detail?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdSOGetModel
      */
-    subDistrictName?: string;
+    sub_district_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdSOGetModel
      */
-    districtName?: string;
+    district_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdSOGetModel
      */
-    provinceName?: string;
+    province_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdSOGetModel
      */
-    zipCode?: string;
+    zip_code?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdSOGetModel
      */
-    contactTel?: string;
+    contact_tel?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdSOGetModel
      */
-    contactEmail?: string;
+    contact_email?: string;
     /**
      * 
      * @type {number}
      * @memberof RequestUnholdSOGetModel
      */
-    totalAmount?: number;
+    total_amount?: number;
     /**
      * 
      * @type {string}
@@ -9761,19 +9761,19 @@ export interface RequestUnholdSOGetModel {
      * @type {Array<RequestUnholdSOListModel>}
      * @memberof RequestUnholdSOGetModel
      */
-    soList?: Array<RequestUnholdSOListModel>;
+    so_list?: Array<RequestUnholdSOListModel>;
     /**
      * 
      * @type {number}
      * @memberof RequestUnholdSOGetModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUnholdSOGetModel
      */
-    currentStepId?: number;
+    current_step_id?: number;
 }
 
 
@@ -9843,43 +9843,43 @@ export interface RequestUnholdSOListModel {
      * @type {number}
      * @memberof RequestUnholdSOListModel
      */
-    soListId?: number;
+    so_list_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdSOListModel
      */
-    soNo?: string;
+    so_no?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdSOListModel
      */
-    refSo?: string;
+    ref_so?: string;
     /**
      * 
      * @type {number}
      * @memberof RequestUnholdSOListModel
      */
-    soTotal?: number;
+    so_total?: number;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdSOListModel
      */
-    creditType?: string;
+    credit_type?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdSOListModel
      */
-    soDate?: string;
+    so_date?: string;
     /**
      * 
      * @type {number}
      * @memberof RequestUnholdSOListModel
      */
-    soStatus?: number;
+    so_status?: number;
     /**
      * 
      * @type {string}
@@ -9898,37 +9898,37 @@ export interface RequestUnholdSearchGetSOModel {
      * @type {number}
      * @memberof RequestUnholdSearchGetSOModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUnholdSearchGetSOModel
      */
-    soListId?: number;
+    so_list_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUnholdSearchGetSOModel
      */
-    customerId?: number;
+    customer_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdSearchGetSOModel
      */
-    customerCode?: string;
+    customer_code?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdSearchGetSOModel
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdSearchGetSOModel
      */
-    soNo?: string;
+    so_no?: string;
     /**
      * 
      * @type {number}
@@ -9940,19 +9940,19 @@ export interface RequestUnholdSearchGetSOModel {
      * @type {string}
      * @memberof RequestUnholdSearchGetSOModel
      */
-    creditType?: string;
+    credit_type?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUnholdSearchGetSOModel
      */
-    soDate?: string;
+    so_date?: string;
     /**
      * 
      * @type {number}
      * @memberof RequestUnholdSearchGetSOModel
      */
-    soHoldStatus?: number;
+    so_hold_status?: number;
 }
 /**
  * 
@@ -10020,31 +10020,31 @@ export interface RequestUpdateCreditAmount {
      * @type {number}
      * @memberof RequestUpdateCreditAmount
      */
-    reqUpdateCustomerId?: number;
+    req_update_customer_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCreditAmount
      */
-    amountApprove?: number;
+    amount_approve?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCreditAmount
      */
-    creditDaysApprove?: number;
+    credit_days_approve?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCreditAmount
      */
-    amountInsuranceApprove?: number;
+    amount_insurance_approve?: number;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCreditAmount
      */
-    remarkApprove?: string;
+    remark_approve?: string;
 }
 /**
  * 
@@ -10088,25 +10088,25 @@ export interface RequestUpdateCustomerAddressModel {
      * @type {number}
      * @memberof RequestUpdateCustomerAddressModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerAddressModel
      */
-    reqUpdateCustomerId?: number;
+    req_update_customer_id?: number;
     /**
      * 
      * @type {CustomerAddressType}
      * @memberof RequestUpdateCustomerAddressModel
      */
-    addressType?: CustomerAddressType;
+    address_type?: CustomerAddressType;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerAddressModel
      */
-    readonly addressTypeName?: string;
+    readonly address_type_name?: string;
     /**
      * 
      * @type {string}
@@ -10118,37 +10118,37 @@ export interface RequestUpdateCustomerAddressModel {
      * @type {number}
      * @memberof RequestUpdateCustomerAddressModel
      */
-    provinceId?: number;
+    province_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerAddressModel
      */
-    districtId?: number;
+    district_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerAddressModel
      */
-    subDistrictId?: number;
+    sub_district_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerAddressModel
      */
-    zipCode?: string;
+    zip_code?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerAddressModel
      */
-    addressDetail?: string;
+    address_detail?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerAddressModel
      */
-    addressRemark?: string;
+    address_remark?: string;
 }
 
 
@@ -10163,37 +10163,37 @@ export interface RequestUpdateCustomerAttachModel {
      * @type {number}
      * @memberof RequestUpdateCustomerAttachModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerAttachModel
      */
-    reqUpdateCustomerId?: number;
+    req_update_customer_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerAttachModel
      */
-    fileNameId?: number;
+    file_name_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerAttachModel
      */
-    fileName?: string;
+    file_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerAttachModel
      */
-    filePath?: string;
+    file_path?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerAttachModel
      */
-    fileRemark?: string;
+    file_remark?: string;
 }
 /**
  * 
@@ -10206,49 +10206,49 @@ export interface RequestUpdateCustomerBankModel {
      * @type {number}
      * @memberof RequestUpdateCustomerBankModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerBankModel
      */
-    reqUpdateCustomerId?: number;
+    req_update_customer_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerBankModel
      */
-    bankId?: number;
+    bank_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerBankModel
      */
-    bankName?: string;
+    bank_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerBankModel
      */
-    bankBranch?: string;
+    bank_branch?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerBankModel
      */
-    bankAccountNo?: string;
+    bank_account_no?: string;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerBankModel
      */
-    depositTypeId?: number;
+    deposit_type_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerBankModel
      */
-    depositTypeName?: string;
+    deposit_type_name?: string;
 }
 /**
  * 
@@ -10261,55 +10261,55 @@ export interface RequestUpdateCustomerContact {
      * @type {number}
      * @memberof RequestUpdateCustomerContact
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerContact
      */
-    reqUpdateCustomerId?: number;
+    req_update_customer_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerContact
      */
-    contactName?: string;
+    contact_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerContact
      */
-    contactDept?: string;
+    contact_dept?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerContact
      */
-    contactTel?: string;
+    contact_tel?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerContact
      */
-    contactFax?: string;
+    contact_fax?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerContact
      */
-    contactEmail?: string;
+    contact_email?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerContact
      */
-    contactLineId?: string;
+    contact_line_id?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerContact
      */
-    contactRemark?: string;
+    contact_remark?: string;
 }
 
 /**
@@ -10333,127 +10333,127 @@ export interface RequestUpdateCustomerGetSearchModel {
      * @type {number}
      * @memberof RequestUpdateCustomerGetSearchModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerGetSearchModel
      */
-    reqUpdateCustomerId?: number;
+    req_update_customer_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerGetSearchModel
      */
-    reqCode?: string;
+    req_code?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerGetSearchModel
      */
-    customerCode?: string;
+    customer_code?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerGetSearchModel
      */
-    customerNameOld?: string;
+    customer_name_old?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerGetSearchModel
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {CustomerCreditType}
      * @memberof RequestUpdateCustomerGetSearchModel
      */
-    customerCreditTypeOld?: CustomerCreditType;
+    customer_credit_type_old?: CustomerCreditType;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerGetSearchModel
      */
-    readonly customerCreditTypeNameOld?: string;
+    readonly customer_credit_type_name_old?: string;
     /**
      * 
      * @type {CustomerCreditType}
      * @memberof RequestUpdateCustomerGetSearchModel
      */
-    customerCreditType?: CustomerCreditType;
+    customer_credit_type?: CustomerCreditType;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerGetSearchModel
      */
-    readonly customerCreditTypeName?: string;
+    readonly customer_credit_type_name?: string;
     /**
      * 
      * @type {RequestUpdateCustomerTypeStatus}
      * @memberof RequestUpdateCustomerGetSearchModel
      */
-    reqType?: RequestUpdateCustomerTypeStatus;
+    req_type?: RequestUpdateCustomerTypeStatus;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerGetSearchModel
      */
-    readonly reqTypeName?: string;
+    readonly req_type_name?: string;
     /**
      * 
      * @type {RequestUpdateCustomerStatus}
      * @memberof RequestUpdateCustomerGetSearchModel
      */
-    regisStatus?: RequestUpdateCustomerStatus;
+    regis_status?: RequestUpdateCustomerStatus;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerGetSearchModel
      */
-    readonly regisStatusName?: string;
+    readonly regis_status_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerGetSearchModel
      */
-    rejectReason?: string;
+    reject_reason?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerGetSearchModel
      */
-    createDate?: string;
+    create_date?: string;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerGetSearchModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerGetSearchModel
      */
-    currentStepId?: number;
+    current_step_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerGetSearchModel
      */
-    organizationId?: number;
+    organization_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerGetSearchModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerGetSearchModel
      */
-    requestedDate?: string;
+    requested_date?: string;
 }
 
 
@@ -10523,301 +10523,301 @@ export interface RequestUpdateCustomerModel {
      * @type {number}
      * @memberof RequestUpdateCustomerModel
      */
-    reqUpdateCustomerId?: number;
+    req_update_customer_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    companyNameTh?: string;
+    company_name_th?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    orgNameTh?: string;
+    org_name_th?: string;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    ownerEmployeeCode?: string;
+    owner_employee_code?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    ownerUserName?: string;
+    owner_user_name?: string;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerModel
      */
-    customerId?: number;
+    customer_id?: number;
     /**
      * 
      * @type {PersonType}
      * @memberof RequestUpdateCustomerModel
      */
-    customerType?: PersonType;
+    customer_type?: PersonType;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    readonly customerTypeName?: string;
+    readonly customer_type_name?: string;
     /**
      * 
      * @type {RequestUpdateCustomerTypeStatus}
      * @memberof RequestUpdateCustomerModel
      */
-    reqType?: RequestUpdateCustomerTypeStatus;
+    req_type?: RequestUpdateCustomerTypeStatus;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    readonly reqTypeName?: string;
+    readonly req_type_name?: string;
     /**
      * 
      * @type {RequestUpdateCustomerCreditTypeStatus}
      * @memberof RequestUpdateCustomerModel
      */
-    reqCreditType?: RequestUpdateCustomerCreditTypeStatus;
+    req_credit_type?: RequestUpdateCustomerCreditTypeStatus;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    readonly reqCreditTypeName?: string;
+    readonly req_credit_type_name?: string;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerModel
      */
-    amountOld?: number;
+    amount_old?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerModel
      */
-    amountRequest?: number;
+    amount_request?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerModel
      */
-    amountApprove?: number;
+    amount_approve?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerModel
      */
-    creditDaysOld?: number;
+    credit_days_old?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerModel
      */
-    creditDayRequest?: number;
+    credit_day_request?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerModel
      */
-    creditDaysApprove?: number;
+    credit_days_approve?: number;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    creditChangeStartDate?: string;
+    credit_change_start_date?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    creditChangeEndDate?: string;
+    credit_change_end_date?: string;
     /**
      * 
      * @type {CustomerCreditType}
      * @memberof RequestUpdateCustomerModel
      */
-    customerCreditTypeOld?: CustomerCreditType;
+    customer_credit_type_old?: CustomerCreditType;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    readonly customerCreditTypeNameOld?: string;
+    readonly customer_credit_type_name_old?: string;
     /**
      * 
      * @type {CustomerCreditType}
      * @memberof RequestUpdateCustomerModel
      */
-    customerCreditType?: CustomerCreditType;
+    customer_credit_type?: CustomerCreditType;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    readonly customerCreditTypeName?: string;
+    readonly customer_credit_type_name?: string;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerModel
      */
-    creditDays?: number;
+    credit_days?: number;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    customerNameOld?: string;
+    customer_name_old?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    customerLastnameOld?: string;
+    customer_lastname_old?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    customerNameEnOld?: string;
+    customer_name_en_old?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    customerLastnameEnOld?: string;
+    customer_lastname_en_old?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    customerLastname?: string;
+    customer_lastname?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    customerNameEn?: string;
+    customer_name_en?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    customerLastnameEn?: string;
+    customer_lastname_en?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    customerTaxCode?: string;
+    customer_tax_code?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    registeredDate?: string;
+    registered_date?: string;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerModel
      */
-    registeredCapital?: number;
+    registered_capital?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerModel
      */
-    registeredTypeId?: number;
+    registered_type_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerModel
      */
-    businessGroupId?: number;
+    business_group_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerModel
      */
-    businessTypeId?: number;
+    business_type_id?: number;
     /**
      * 
      * @type {RequestUpdateCustomerStatus}
      * @memberof RequestUpdateCustomerModel
      */
-    regisStatus?: RequestUpdateCustomerStatus;
+    regis_status?: RequestUpdateCustomerStatus;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    readonly regisStatusName?: string;
+    readonly regis_status_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    reqCode?: string;
+    req_code?: string;
     /**
      * 
      * @type {boolean}
      * @memberof RequestUpdateCustomerModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerModel
      */
-    dayOfBilling?: number;
+    day_of_billing?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerModel
      */
-    amountInsuranceApprove?: number;
+    amount_insurance_approve?: number;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    remarkApprove?: string;
+    remark_approve?: string;
     /**
      * 
      * @type {string}
      * @memberof RequestUpdateCustomerModel
      */
-    remarkRequest?: string;
+    remark_request?: string;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof RequestUpdateCustomerModel
      */
-    currentStepId?: number;
+    current_step_id?: number;
     /**
      * 
      * @type {Array<RequestUpdateCustomerAddressModel>}
@@ -10912,25 +10912,25 @@ export interface RoleModel {
      * @type {number}
      * @memberof RoleModel
      */
-    roleId?: number;
+    role_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RoleModel
      */
-    roleName?: string;
+    role_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RoleModel
      */
-    roleDescription?: string;
+    role_description?: string;
     /**
      * 
      * @type {number}
      * @memberof RoleModel
      */
-    rolLevel?: number;
+    rol_level?: number;
 }
 /**
  * 
@@ -10943,7 +10943,7 @@ export interface RolePermissionRequestModel {
      * @type {number}
      * @memberof RolePermissionRequestModel
      */
-    roleId?: number;
+    role_id?: number;
     /**
      * 
      * @type {Array<MenuResponseModel>}
@@ -10968,31 +10968,31 @@ export interface RoleRequestModel {
      * @type {number}
      * @memberof RoleRequestModel
      */
-    roleId?: number;
+    role_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RoleRequestModel
      */
-    roleName?: string;
+    role_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RoleRequestModel
      */
-    roleDescription?: string;
+    role_description?: string;
     /**
      * 
      * @type {DataAccessType}
      * @memberof RoleRequestModel
      */
-    dataAccessType?: DataAccessType;
+    data_access_type?: DataAccessType;
     /**
      * 
      * @type {boolean}
      * @memberof RoleRequestModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
 }
 
 
@@ -11038,55 +11038,55 @@ export interface RoleResponseModel {
      * @type {number}
      * @memberof RoleResponseModel
      */
-    roleId?: number;
+    role_id?: number;
     /**
      * 
      * @type {string}
      * @memberof RoleResponseModel
      */
-    roleName?: string;
+    role_name?: string;
     /**
      * 
      * @type {string}
      * @memberof RoleResponseModel
      */
-    roleDescription?: string;
+    role_description?: string;
     /**
      * 
      * @type {number}
      * @memberof RoleResponseModel
      */
-    roleLevel?: number;
+    role_level?: number;
     /**
      * 
      * @type {boolean}
      * @memberof RoleResponseModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
     /**
      * 
      * @type {boolean}
      * @memberof RoleResponseModel
      */
-    isDefaultRole?: boolean;
+    is_default_role?: boolean;
     /**
      * 
      * @type {number}
      * @memberof RoleResponseModel
      */
-    createdBy?: number;
+    created_by?: number;
     /**
      * 
      * @type {string}
      * @memberof RoleResponseModel
      */
-    readonly createdDate?: string;
+    readonly created_date?: string;
     /**
      * 
      * @type {DataAccessType}
      * @memberof RoleResponseModel
      */
-    dataAccessType?: DataAccessType;
+    data_access_type?: DataAccessType;
 }
 
 
@@ -11275,31 +11275,31 @@ export interface SysCustomerEvaluationConfigGetSearchModel {
      * @type {number}
      * @memberof SysCustomerEvaluationConfigGetSearchModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof SysCustomerEvaluationConfigGetSearchModel
      */
-    customerEvaluationConfigId?: number;
+    customer_evaluation_config_id?: number;
     /**
      * 
      * @type {string}
      * @memberof SysCustomerEvaluationConfigGetSearchModel
      */
-    evaluationName?: string;
+    evaluation_name?: string;
     /**
      * 
      * @type {EvaluationConfigType}
      * @memberof SysCustomerEvaluationConfigGetSearchModel
      */
-    evaluationConfigType?: EvaluationConfigType;
+    evaluation_config_type?: EvaluationConfigType;
     /**
      * 
      * @type {string}
      * @memberof SysCustomerEvaluationConfigGetSearchModel
      */
-    readonly evaluationConfigTypeName?: string;
+    readonly evaluation_config_type_name?: string;
 }
 
 
@@ -11369,25 +11369,25 @@ export interface SysCustomerEvaluationConfigModel {
      * @type {number}
      * @memberof SysCustomerEvaluationConfigModel
      */
-    customerEvaluationConfigId?: number;
+    customer_evaluation_config_id?: number;
     /**
      * 
      * @type {string}
      * @memberof SysCustomerEvaluationConfigModel
      */
-    evaluationName?: string;
+    evaluation_name?: string;
     /**
      * 
      * @type {EvaluationConfigType}
      * @memberof SysCustomerEvaluationConfigModel
      */
-    evaluationConfigType?: EvaluationConfigType;
+    evaluation_config_type?: EvaluationConfigType;
     /**
      * 
      * @type {string}
      * @memberof SysCustomerEvaluationConfigModel
      */
-    readonly evaluationConfigTypeName?: string;
+    readonly evaluation_config_type_name?: string;
 }
 
 
@@ -11433,7 +11433,7 @@ export interface SysEvaluationConfigId {
      * @type {Array<number>}
      * @memberof SysEvaluationConfigId
      */
-    customerEvaluationConfigId?: Array<number>;
+    customer_evaluation_config_id?: Array<number>;
 }
 /**
  * 
@@ -11446,91 +11446,91 @@ export interface TaxWithholdingModel {
      * @type {number}
      * @memberof TaxWithholdingModel
      */
-    trnTaxId?: number;
+    trn_tax_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TaxWithholdingModel
      */
-    companyId?: number;
+    company_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TaxWithholdingModel
      */
-    organizationId?: number;
+    organization_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TaxWithholdingModel
      */
-    refId?: number;
+    ref_id?: number;
     /**
      * 
      * @type {RefType}
      * @memberof TaxWithholdingModel
      */
-    refType?: RefType;
+    ref_type?: RefType;
     /**
      * 
      * @type {number}
      * @memberof TaxWithholdingModel
      */
-    taxType?: number;
+    tax_type?: number;
     /**
      * 
      * @type {number}
      * @memberof TaxWithholdingModel
      */
-    incomeTypeId?: number;
+    income_type_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TaxWithholdingModel
      */
-    taxOtherType?: number;
+    tax_other_type?: number;
     /**
      * 
      * @type {string}
      * @memberof TaxWithholdingModel
      */
-    branchCode?: string;
+    branch_code?: string;
     /**
      * 
      * @type {string}
      * @memberof TaxWithholdingModel
      */
-    taxDate?: string;
+    tax_date?: string;
     /**
      * 
      * @type {number}
      * @memberof TaxWithholdingModel
      */
-    taxRate?: number;
+    tax_rate?: number;
     /**
      * 
      * @type {string}
      * @memberof TaxWithholdingModel
      */
-    taxRemark?: string;
+    tax_remark?: string;
     /**
      * 
      * @type {number}
      * @memberof TaxWithholdingModel
      */
-    amountBeforeTax?: number;
+    amount_before_tax?: number;
     /**
      * 
      * @type {number}
      * @memberof TaxWithholdingModel
      */
-    taxAmount?: number;
+    tax_amount?: number;
     /**
      * 
      * @type {number}
      * @memberof TaxWithholdingModel
      */
-    amountAfterTax?: number;
+    amount_after_tax?: number;
 }
 
 
@@ -11545,13 +11545,13 @@ export interface TokenModel {
      * @type {string}
      * @memberof TokenModel
      */
-    accessToken?: string;
+    access_token?: string;
     /**
      * 
      * @type {string}
      * @memberof TokenModel
      */
-    refreshToken?: string;
+    refresh_token?: string;
 }
 /**
  * 
@@ -11595,7 +11595,7 @@ export interface TotalSummaryDetail {
      * @type {number}
      * @memberof TotalSummaryDetail
      */
-    totalSummary?: number;
+    total_summary?: number;
 }
 /**
  * 
@@ -11608,19 +11608,19 @@ export interface TransactionHistoryModel {
      * @type {string}
      * @memberof TransactionHistoryModel
      */
-    logStatusName?: string;
+    log_status_name?: string;
     /**
      * 
      * @type {string}
      * @memberof TransactionHistoryModel
      */
-    updatedBy?: string;
+    updated_by?: string;
     /**
      * 
      * @type {string}
      * @memberof TransactionHistoryModel
      */
-    updatedDate?: string;
+    updated_date?: string;
 }
 /**
  * 
@@ -11958,67 +11958,67 @@ export interface TravelEngineerDetailListModel {
      * @type {number}
      * @memberof TravelEngineerDetailListModel
      */
-    reqTravelEngineerId?: number;
+    req_travel_engineer_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TravelEngineerDetailListModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof TravelEngineerDetailListModel
      */
-    reqTravelId?: number;
+    req_travel_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TravelEngineerDetailListModel
      */
-    engineerCode?: string;
+    engineer_code?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelEngineerDetailListModel
      */
-    engineerName?: string;
+    engineer_name?: string;
     /**
      * 
      * @type {number}
      * @memberof TravelEngineerDetailListModel
      */
-    numberOfInvoice?: number;
+    number_of_invoice?: number;
     /**
      * 
      * @type {number}
      * @memberof TravelEngineerDetailListModel
      */
-    numberOfJob?: number;
+    number_of_job?: number;
     /**
      * 
      * @type {number}
      * @memberof TravelEngineerDetailListModel
      */
-    amountOfMoney?: number;
+    amount_of_money?: number;
     /**
      * 
      * @type {number}
      * @memberof TravelEngineerDetailListModel
      */
-    lastAmountOfMoney?: number;
+    last_amount_of_money?: number;
     /**
      * 
      * @type {string}
      * @memberof TravelEngineerDetailListModel
      */
-    costDistanct?: string;
+    cost_distanct?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelEngineerDetailListModel
      */
-    costDistanctSign?: string;
+    cost_distanct_sign?: string;
 }
 /**
  * 
@@ -12031,229 +12031,229 @@ export interface TravelSummaryDataModel {
      * @type {number}
      * @memberof TravelSummaryDataModel
      */
-    rowNumber?: number;
+    row_number?: number;
     /**
      * 
      * @type {number}
      * @memberof TravelSummaryDataModel
      */
-    reqTravelId?: number;
+    req_travel_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TravelSummaryDataModel
      */
-    companyId?: number;
+    company_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TravelSummaryDataModel
      */
-    paymentCompanyId?: number;
+    payment_company_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryDataModel
      */
-    paymentCompany?: string;
+    payment_company?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryDataModel
      */
-    paymentCompanyCode?: string;
+    payment_company_code?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryDataModel
      */
-    paymentCompanyName?: string;
+    payment_company_name?: string;
     /**
      * 
      * @type {number}
      * @memberof TravelSummaryDataModel
      */
-    paymentTravelMonth?: number;
+    payment_travel_month?: number;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryDataModel
      */
-    paymentTravelMonthName?: string;
+    payment_travel_month_name?: string;
     /**
      * 
      * @type {number}
      * @memberof TravelSummaryDataModel
      */
-    paymentTravelYear?: number;
+    payment_travel_year?: number;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryDataModel
      */
-    readonly paymentTravelYearStr?: string;
+    readonly payment_travel_year_str?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryDataModel
      */
-    createDate?: string;
+    create_date?: string;
     /**
      * 
      * @type {number}
      * @memberof TravelSummaryDataModel
      */
-    paymentGasPrice?: number;
+    payment_gas_price?: number;
     /**
      * 
      * @type {number}
      * @memberof TravelSummaryDataModel
      */
-    numberOfEngineer?: number;
+    number_of_engineer?: number;
     /**
      * 
      * @type {number}
      * @memberof TravelSummaryDataModel
      */
-    numberOfInvoice?: number;
+    number_of_invoice?: number;
     /**
      * 
      * @type {number}
      * @memberof TravelSummaryDataModel
      */
-    numberOfJob?: number;
+    number_of_job?: number;
     /**
      * 
      * @type {number}
      * @memberof TravelSummaryDataModel
      */
-    amountOfMoney?: number;
+    amount_of_money?: number;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryDataModel
      */
-    paymentTravelRemark?: string;
+    payment_travel_remark?: string;
     /**
      * 
      * @type {PaymentTravelStatus}
      * @memberof TravelSummaryDataModel
      */
-    paymentTravelStatus?: PaymentTravelStatus;
+    payment_travel_status?: PaymentTravelStatus;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryDataModel
      */
-    paymentTravelStatusName?: string;
+    payment_travel_status_name?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryDataModel
      */
-    fileAttachment1?: string;
+    file_attachment_1?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryDataModel
      */
-    fileAttachment2?: string;
+    file_attachment_2?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryDataModel
      */
-    fileAttachment3?: string;
+    file_attachment_3?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryDataModel
      */
-    companyPayroll?: string;
+    company_payroll?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryDataModel
      */
-    consumtionRateUnit?: string;
+    consumtion_rate_unit?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryDataModel
      */
-    oilCostPriceUnit?: string;
+    oil_cost_price_unit?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryDataModel
      */
-    oilCostSummaryUnit?: string;
+    oil_cost_summary_unit?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryDataModel
      */
-    paymentSendDate?: string;
+    payment_send_date?: string;
     /**
      * 
      * @type {Array<TotalSummaryDetail>}
      * @memberof TravelSummaryDataModel
      */
-    totalSummaryDetail?: Array<TotalSummaryDetail>;
+    total_summary_detail?: Array<TotalSummaryDetail>;
     /**
      * 
      * @type {TravelSummaryTotalDetail}
      * @memberof TravelSummaryDataModel
      */
-    summarySubDetail?: TravelSummaryTotalDetail;
+    summary_sub_detail?: TravelSummaryTotalDetail;
     /**
      * 
      * @type {Array<TravelEngineerDetailListModel>}
      * @memberof TravelSummaryDataModel
      */
-    summarySubDetailList?: Array<TravelEngineerDetailListModel>;
+    summary_sub_detail_list?: Array<TravelEngineerDetailListModel>;
     /**
      * 
      * @type {Array<TravelSummaryHistoryModel>}
      * @memberof TravelSummaryDataModel
      */
-    travelSummaryHistory?: Array<TravelSummaryHistoryModel>;
+    travel_summary_history?: Array<TravelSummaryHistoryModel>;
     /**
      * 
      * @type {number}
      * @memberof TravelSummaryDataModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TravelSummaryDataModel
      */
-    currentStepId?: number;
+    current_step_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TravelSummaryDataModel
      */
-    reqOilRoundId?: number;
+    req_oil_round_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryDataModel
      */
-    rejectReason?: string;
+    reject_reason?: string;
     /**
      * 
      * @type {number}
      * @memberof TravelSummaryDataModel
      */
-    breakageRate?: number;
+    breakage_rate?: number;
     /**
      * 
      * @type {number}
      * @memberof TravelSummaryDataModel
      */
-    oilCostRate?: number;
+    oil_cost_rate?: number;
 }
 
 
@@ -12299,31 +12299,31 @@ export interface TravelSummaryHistoryModel {
      * @type {string}
      * @memberof TravelSummaryHistoryModel
      */
-    logStatusName?: string;
+    log_status_name?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryHistoryModel
      */
-    updatedBy?: string;
+    updated_by?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryHistoryModel
      */
-    updatedDate?: string;
+    updated_date?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryHistoryModel
      */
-    transitionLabel?: string;
+    transition_label?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryHistoryModel
      */
-    transitionType?: string;
+    transition_type?: string;
 }
 /**
  * 
@@ -12481,25 +12481,25 @@ export interface TravelSummaryResponseModel {
      * @type {number}
      * @memberof TravelSummaryResponseModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TravelSummaryResponseModel
      */
-    approvalTotal?: number;
+    approval_total?: number;
     /**
      * 
      * @type {number}
      * @memberof TravelSummaryResponseModel
      */
-    approvalConfirmed?: number;
+    approval_confirmed?: number;
     /**
      * 
      * @type {Array<BaseCountStatusModel>}
      * @memberof TravelSummaryResponseModel
      */
-    countStatusList?: Array<BaseCountStatusModel>;
+    count_status_list?: Array<BaseCountStatusModel>;
 }
 /**
  * 
@@ -12512,19 +12512,19 @@ export interface TravelSummaryRoundList {
      * @type {number}
      * @memberof TravelSummaryRoundList
      */
-    roundId?: number;
+    round_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryRoundList
      */
-    roundMonthname?: string;
+    round_monthname?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryRoundList
      */
-    roundYear?: string;
+    round_year?: string;
 }
 /**
  * 
@@ -12537,49 +12537,49 @@ export interface TravelSummaryTotalDetail {
      * @type {string}
      * @memberof TravelSummaryTotalDetail
      */
-    currentEffectMonth?: string;
+    current_effect_month?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryTotalDetail
      */
-    currentEffectYear?: string;
+    current_effect_year?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryTotalDetail
      */
-    lastEffectMonth?: string;
+    last_effect_month?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryTotalDetail
      */
-    lastEffectYear?: string;
+    last_effect_year?: string;
     /**
      * 
      * @type {number}
      * @memberof TravelSummaryTotalDetail
      */
-    currentTotalCost?: number;
+    current_total_cost?: number;
     /**
      * 
      * @type {number}
      * @memberof TravelSummaryTotalDetail
      */
-    lastTotalCost?: number;
+    last_total_cost?: number;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryTotalDetail
      */
-    percentTotalDistanct?: string;
+    percent_total_distanct?: string;
     /**
      * 
      * @type {string}
      * @memberof TravelSummaryTotalDetail
      */
-    percentTotalDistanctSign?: string;
+    percent_total_distanct_sign?: string;
 }
 /**
  * 
@@ -12592,19 +12592,19 @@ export interface TrnRbtCnapFileModel {
      * @type {string}
      * @memberof TrnRbtCnapFileModel
      */
-    fileName?: string;
+    file_name?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnapFileModel
      */
-    filePath?: string;
+    file_path?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnapFileModel
      */
-    headerReferenceId?: number;
+    header_reference_id?: number;
 }
 /**
  * 
@@ -12617,85 +12617,85 @@ export interface TrnRbtCnapModel {
      * @type {number}
      * @memberof TrnRbtCnapModel
      */
-    companyId?: number;
+    company_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnapModel
      */
-    organizationId?: number;
+    organization_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnapModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnapModel
      */
-    headerReferenceId?: number;
+    header_reference_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnapModel
      */
-    rebateCode?: string;
+    rebate_code?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnapModel
      */
-    rebateDetail?: string;
+    rebate_detail?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnapModel
      */
-    rebateAmount?: number;
+    rebate_amount?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnapModel
      */
-    brandId?: number;
+    brand_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnapModel
      */
-    brandName?: string;
+    brand_name?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnapModel
      */
-    vendorId?: number;
+    vendor_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnapModel
      */
-    recordReferenceId?: number;
+    record_reference_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnapModel
      */
-    cnNo?: string;
+    cn_no?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnapModel
      */
-    cnDate?: string;
+    cn_date?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnapModel
      */
-    cnAmount?: number;
+    cn_amount?: number;
     /**
      * 
      * @type {number}
@@ -12707,109 +12707,109 @@ export interface TrnRbtCnapModel {
      * @type {number}
      * @memberof TrnRbtCnapModel
      */
-    cnAmountCur?: number;
+    cn_amount_cur?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnapModel
      */
-    vatCur?: number;
+    vat_cur?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnapModel
      */
-    currencyId?: number;
+    currency_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnapModel
      */
-    currencyAbbr?: string;
+    currency_abbr?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnapModel
      */
-    exchangeRate?: number;
+    exchange_rate?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnapModel
      */
-    supplierId?: string;
+    supplier_id?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnapModel
      */
-    supplierCode?: string;
+    supplier_code?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnapModel
      */
-    supplierName?: string;
+    supplier_name?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnapModel
      */
-    taxPayerId?: string;
+    tax_payer_id?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnapModel
      */
-    revenueBranchCode?: string;
+    revenue_branch_code?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnapModel
      */
-    fullAddress?: string;
+    full_address?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnapModel
      */
-    provinceId?: number;
+    province_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnapModel
      */
-    provinceName?: string;
+    province_name?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnapModel
      */
-    districtId?: number;
+    district_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnapModel
      */
-    districtName?: string;
+    district_name?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnapModel
      */
-    subDistrictId?: number;
+    sub_district_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnapModel
      */
-    subDistrictName?: string;
+    sub_district_name?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnapModel
      */
-    zipCode?: string;
+    zip_code?: string;
     /**
      * 
      * @type {string}
@@ -12834,19 +12834,19 @@ export interface TrnRbtCnarBrandFileModel {
      * @type {string}
      * @memberof TrnRbtCnarBrandFileModel
      */
-    fileName?: string;
+    file_name?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarBrandFileModel
      */
-    filePath?: string;
+    file_path?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarBrandFileModel
      */
-    backToBackId?: number;
+    back_to_back_id?: number;
 }
 /**
  * 
@@ -12859,91 +12859,91 @@ export interface TrnRbtCnarBrandModel {
      * @type {number}
      * @memberof TrnRbtCnarBrandModel
      */
-    companyId?: number;
+    company_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarBrandModel
      */
-    organizationId?: number;
+    organization_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarBrandModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarBrandModel
      */
-    backToBackId?: number;
+    back_to_back_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarBrandModel
      */
-    rebateCode?: string;
+    rebate_code?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarBrandModel
      */
-    rebateDetail?: string;
+    rebate_detail?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarBrandModel
      */
-    rebateAmount?: number;
+    rebate_amount?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarBrandModel
      */
-    brandId?: number;
+    brand_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarBrandModel
      */
-    brandName?: string;
+    brand_name?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarBrandModel
      */
-    vendorId?: number;
+    vendor_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarBrandModel
      */
-    supplierName?: string;
+    supplier_name?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarBrandModel
      */
-    backToBackImportId?: number;
+    back_to_back_import_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarBrandModel
      */
-    cnNo?: string;
+    cn_no?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarBrandModel
      */
-    cnDate?: string;
+    cn_date?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarBrandModel
      */
-    cnAmount?: number;
+    cn_amount?: number;
     /**
      * 
      * @type {number}
@@ -12955,109 +12955,109 @@ export interface TrnRbtCnarBrandModel {
      * @type {number}
      * @memberof TrnRbtCnarBrandModel
      */
-    cnAmountCur?: number;
+    cn_amount_cur?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarBrandModel
      */
-    vatCur?: number;
+    vat_cur?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarBrandModel
      */
-    currencyId?: number;
+    currency_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarBrandModel
      */
-    currencyAbbr?: string;
+    currency_abbr?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarBrandModel
      */
-    exchangeRate?: number;
+    exchange_rate?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarBrandModel
      */
-    customerId?: string;
+    customer_id?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarBrandModel
      */
-    customerCode?: string;
+    customer_code?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarBrandModel
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarBrandModel
      */
-    taxPayerId?: string;
+    tax_payer_id?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarBrandModel
      */
-    revenueBranchCode?: string;
+    revenue_branch_code?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarBrandModel
      */
-    fullAddress?: string;
+    full_address?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarBrandModel
      */
-    provinceId?: number;
+    province_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarBrandModel
      */
-    provinceName?: string;
+    province_name?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarBrandModel
      */
-    districtId?: number;
+    district_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarBrandModel
      */
-    districtName?: string;
+    district_name?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarBrandModel
      */
-    subDistrictId?: number;
+    sub_district_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarBrandModel
      */
-    subDistrictName?: string;
+    sub_district_name?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarBrandModel
      */
-    zipCode?: string;
+    zip_code?: string;
     /**
      * 
      * @type {string}
@@ -13075,19 +13075,19 @@ export interface TrnRbtCnarBrandModel {
      * @type {number}
      * @memberof TrnRbtCnarBrandModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarBrandModel
      */
-    currentStepId?: number;
+    current_step_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarBrandModel
      */
-    trnStatus?: number;
+    trn_status?: number;
 }
 /**
  * 
@@ -13100,19 +13100,19 @@ export interface TrnRbtCnarInhouseFileModel {
      * @type {string}
      * @memberof TrnRbtCnarInhouseFileModel
      */
-    fileName?: string;
+    file_name?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarInhouseFileModel
      */
-    filePath?: string;
+    file_path?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarInhouseFileModel
      */
-    cnDealerCreateId?: number;
+    cn_dealer_create_id?: number;
 }
 /**
  * 
@@ -13125,127 +13125,127 @@ export interface TrnRbtCnarInhouseModel {
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    companyId?: number;
+    company_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    organizationId?: number;
+    organization_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    ownerUserId?: number;
+    owner_user_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    cnDealerCreateId?: number;
+    cn_dealer_create_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    rebateCampaignId?: number;
+    rebate_campaign_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarInhouseModel
      */
-    campaignName?: string;
+    campaign_name?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarInhouseModel
      */
-    campaignTypeName?: string;
+    campaign_type_name?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    supConSale?: number;
+    sup_con_sale?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    supConQty?: number;
+    sup_con_qty?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    rebateCalculateType?: number;
+    rebate_calculate_type?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    actualSale?: number;
+    actual_sale?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    actualQty?: number;
+    actual_qty?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarInhouseModel
      */
-    startDate?: string;
+    start_date?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarInhouseModel
      */
-    endDate?: string;
+    end_date?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarInhouseModel
      */
-    conPeriodStart?: string;
+    con_period_start?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarInhouseModel
      */
-    conPeriodEnd?: string;
+    con_period_end?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    estRebateAmount?: number;
+    est_rebate_amount?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    cnDealerCreateListId?: number;
+    cn_dealer_create_list_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarInhouseModel
      */
-    cnNo?: string;
+    cn_no?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarInhouseModel
      */
-    cnDate?: string;
+    cn_date?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    cnAmount?: number;
+    cn_amount?: number;
     /**
      * 
      * @type {number}
@@ -13257,109 +13257,109 @@ export interface TrnRbtCnarInhouseModel {
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    cnAmountCur?: number;
+    cn_amount_cur?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    vatCur?: number;
+    vat_cur?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    currencyId?: number;
+    currency_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarInhouseModel
      */
-    currencyAbbr?: string;
+    currency_abbr?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    exchangeRate?: number;
+    exchange_rate?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarInhouseModel
      */
-    customerId?: string;
+    customer_id?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarInhouseModel
      */
-    customerCode?: string;
+    customer_code?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarInhouseModel
      */
-    customerName?: string;
+    customer_name?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarInhouseModel
      */
-    taxPayerId?: string;
+    tax_payer_id?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarInhouseModel
      */
-    revenueBranchCode?: string;
+    revenue_branch_code?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarInhouseModel
      */
-    fullAddress?: string;
+    full_address?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    provinceId?: number;
+    province_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarInhouseModel
      */
-    provinceName?: string;
+    province_name?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    districtId?: number;
+    district_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarInhouseModel
      */
-    districtName?: string;
+    district_name?: string;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    subDistrictId?: number;
+    sub_district_id?: number;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarInhouseModel
      */
-    subDistrictName?: string;
+    sub_district_name?: string;
     /**
      * 
      * @type {string}
      * @memberof TrnRbtCnarInhouseModel
      */
-    zipCode?: string;
+    zip_code?: string;
     /**
      * 
      * @type {string}
@@ -13377,19 +13377,19 @@ export interface TrnRbtCnarInhouseModel {
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    workflowId?: number;
+    workflow_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    currentStepId?: number;
+    current_step_id?: number;
     /**
      * 
      * @type {number}
      * @memberof TrnRbtCnarInhouseModel
      */
-    trnStatus?: number;
+    trn_status?: number;
 }
 
 /**
@@ -13415,13 +13415,13 @@ export interface UpdateActiveFlagMasterCustomerCreditScoreModel {
      * @type {number}
      * @memberof UpdateActiveFlagMasterCustomerCreditScoreModel
      */
-    customerCreditScoreId?: number;
+    customer_credit_score_id?: number;
     /**
      * 
      * @type {boolean}
      * @memberof UpdateActiveFlagMasterCustomerCreditScoreModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
 }
 /**
  * 
@@ -13465,13 +13465,13 @@ export interface UpdateActiveFlagMasterCustomerGradeModel {
      * @type {number}
      * @memberof UpdateActiveFlagMasterCustomerGradeModel
      */
-    customerGradeId?: number;
+    customer_grade_id?: number;
     /**
      * 
      * @type {boolean}
      * @memberof UpdateActiveFlagMasterCustomerGradeModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
 }
 /**
  * 
@@ -13515,19 +13515,19 @@ export interface UpdateAmountRegistterCustomerModel {
      * @type {number}
      * @memberof UpdateAmountRegistterCustomerModel
      */
-    regisCustomerId?: number;
+    regis_customer_id?: number;
     /**
      * 
      * @type {number}
      * @memberof UpdateAmountRegistterCustomerModel
      */
-    amountApprove?: number;
+    amount_approve?: number;
     /**
      * 
      * @type {number}
      * @memberof UpdateAmountRegistterCustomerModel
      */
-    amountInsuranceApprove?: number;
+    amount_insurance_approve?: number;
 }
 /**
  * 
@@ -13571,13 +13571,13 @@ export interface UpdateCustomerEvaluationActiveFlag {
      * @type {number}
      * @memberof UpdateCustomerEvaluationActiveFlag
      */
-    customerEvaluationId?: number;
+    customer_evaluation_id?: number;
     /**
      * 
      * @type {boolean}
      * @memberof UpdateCustomerEvaluationActiveFlag
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
 }
 /**
  * 
@@ -13621,19 +13621,19 @@ export interface UserChangePasswordByEmailModel {
      * @type {string}
      * @memberof UserChangePasswordByEmailModel
      */
-    forgotPasswordToken?: string;
+    forgot_password_token?: string;
     /**
      * 
      * @type {string}
      * @memberof UserChangePasswordByEmailModel
      */
-    newPassword?: string;
+    new_password?: string;
     /**
      * 
      * @type {string}
      * @memberof UserChangePasswordByEmailModel
      */
-    validateNewPassword?: string;
+    validate_new_password?: string;
 }
 /**
  * 
@@ -13646,25 +13646,25 @@ export interface UserChangePasswordByUserIDModel {
      * @type {number}
      * @memberof UserChangePasswordByUserIDModel
      */
-    userId?: number;
+    user_id?: number;
     /**
      * 
      * @type {string}
      * @memberof UserChangePasswordByUserIDModel
      */
-    oldPassword?: string;
+    old_password?: string;
     /**
      * 
      * @type {string}
      * @memberof UserChangePasswordByUserIDModel
      */
-    newPassword?: string;
+    new_password?: string;
     /**
      * 
      * @type {string}
      * @memberof UserChangePasswordByUserIDModel
      */
-    validateNewPassword?: string;
+    validate_new_password?: string;
 }
 /**
  * 
@@ -13689,7 +13689,7 @@ export interface UserCreateModel {
      * @type {UserType}
      * @memberof UserCreateModel
      */
-    userType?: UserType;
+    user_type?: UserType;
     /**
      * 
      * @type {string}
@@ -13707,13 +13707,13 @@ export interface UserCreateModel {
      * @type {number}
      * @memberof UserCreateModel
      */
-    businessRoleId?: number;
+    business_role_id?: number;
     /**
      * 
      * @type {number}
      * @memberof UserCreateModel
      */
-    orgId?: number;
+    org_id?: number;
     /**
      * 
      * @type {string}
@@ -13725,31 +13725,31 @@ export interface UserCreateModel {
      * @type {string}
      * @memberof UserCreateModel
      */
-    mobilePhone?: string;
+    mobile_phone?: string;
     /**
      * 
      * @type {string}
      * @memberof UserCreateModel
      */
-    employeeCode?: string;
+    employee_code?: string;
     /**
      * 
      * @type {boolean}
      * @memberof UserCreateModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
     /**
      * 
      * @type {DataAccessType}
      * @memberof UserCreateModel
      */
-    dataAccessType?: DataAccessType;
+    data_access_type?: DataAccessType;
     /**
      * 
      * @type {Set<number>}
      * @memberof UserCreateModel
      */
-    accessDepartment?: Set<number>;
+    access_department?: Set<number>;
     /**
      * 
      * @type {Array<RoleModel>}
@@ -13761,19 +13761,19 @@ export interface UserCreateModel {
      * @type {string}
      * @memberof UserCreateModel
      */
-    userProfilePath?: string;
+    user_profile_path?: string;
     /**
      * 
      * @type {string}
      * @memberof UserCreateModel
      */
-    userSignaturePath?: string;
+    user_signature_path?: string;
     /**
      * 
      * @type {string}
      * @memberof UserCreateModel
      */
-    userSignatureBase64?: string;
+    user_signature_base64?: string;
 }
 
 
@@ -13788,7 +13788,7 @@ export interface UserDetailModel {
      * @type {number}
      * @memberof UserDetailModel
      */
-    userId?: number;
+    user_id?: number;
     /**
      * 
      * @type {string}
@@ -13800,7 +13800,7 @@ export interface UserDetailModel {
      * @type {UserType}
      * @memberof UserDetailModel
      */
-    userType?: UserType;
+    user_type?: UserType;
     /**
      * 
      * @type {string}
@@ -13818,13 +13818,13 @@ export interface UserDetailModel {
      * @type {number}
      * @memberof UserDetailModel
      */
-    employeeId?: number;
+    employee_id?: number;
     /**
      * 
      * @type {string}
      * @memberof UserDetailModel
      */
-    employeeCode?: string;
+    employee_code?: string;
     /**
      * 
      * @type {string}
@@ -13836,37 +13836,37 @@ export interface UserDetailModel {
      * @type {string}
      * @memberof UserDetailModel
      */
-    mobilePhone?: string;
+    mobile_phone?: string;
     /**
      * 
      * @type {boolean}
      * @memberof UserDetailModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
     /**
      * 
      * @type {DataAccessType}
      * @memberof UserDetailModel
      */
-    dataAccessType?: DataAccessType;
+    data_access_type?: DataAccessType;
     /**
      * 
      * @type {string}
      * @memberof UserDetailModel
      */
-    readonly dataAccessTypeName?: string;
+    readonly data_access_type_name?: string;
     /**
      * 
      * @type {string}
      * @memberof UserDetailModel
      */
-    orgName?: string;
+    org_name?: string;
     /**
      * 
      * @type {string}
      * @memberof UserDetailModel
      */
-    companyName?: string;
+    company_name?: string;
     /**
      * 
      * @type {Array<RoleModel>}
@@ -13902,13 +13902,13 @@ export interface UserDetailModel {
      * @type {boolean}
      * @memberof UserDetailModel
      */
-    changePassword?: boolean;
+    change_password?: boolean;
     /**
      * 
      * @type {string}
      * @memberof UserDetailModel
      */
-    userProfilePath?: string;
+    user_profile_path?: string;
 }
 
 
@@ -13973,7 +13973,7 @@ export interface UserModel {
      * @type {number}
      * @memberof UserModel
      */
-    userId?: number;
+    user_id?: number;
     /**
      * 
      * @type {string}
@@ -14003,13 +14003,13 @@ export interface UserModel {
      * @type {string}
      * @memberof UserModel
      */
-    firstnameTh?: string;
+    firstname_th?: string;
     /**
      * 
      * @type {boolean}
      * @memberof UserModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
     /**
      * 
      * @type {Array<RoleModel>}
@@ -14021,7 +14021,7 @@ export interface UserModel {
      * @type {string}
      * @memberof UserModel
      */
-    lastLoginDate?: string;
+    last_login_date?: string;
 }
 /**
  * 
@@ -14113,7 +14113,7 @@ export interface UserUpdateRequestModel {
      * @type {number}
      * @memberof UserUpdateRequestModel
      */
-    userId?: number;
+    user_id?: number;
     /**
      * 
      * @type {string}
@@ -14131,7 +14131,7 @@ export interface UserUpdateRequestModel {
      * @type {UserType}
      * @memberof UserUpdateRequestModel
      */
-    userType?: UserType;
+    user_type?: UserType;
     /**
      * 
      * @type {string}
@@ -14149,13 +14149,13 @@ export interface UserUpdateRequestModel {
      * @type {number}
      * @memberof UserUpdateRequestModel
      */
-    businessRoleId?: number;
+    business_role_id?: number;
     /**
      * 
      * @type {number}
      * @memberof UserUpdateRequestModel
      */
-    orgId?: number;
+    org_id?: number;
     /**
      * 
      * @type {string}
@@ -14167,31 +14167,31 @@ export interface UserUpdateRequestModel {
      * @type {string}
      * @memberof UserUpdateRequestModel
      */
-    mobilePhone?: string;
+    mobile_phone?: string;
     /**
      * 
      * @type {string}
      * @memberof UserUpdateRequestModel
      */
-    employeeCode?: string;
+    employee_code?: string;
     /**
      * 
      * @type {boolean}
      * @memberof UserUpdateRequestModel
      */
-    activeFlag?: boolean;
+    active_flag?: boolean;
     /**
      * 
      * @type {DataAccessType}
      * @memberof UserUpdateRequestModel
      */
-    dataAccessType?: DataAccessType;
+    data_access_type?: DataAccessType;
     /**
      * 
      * @type {Set<number>}
      * @memberof UserUpdateRequestModel
      */
-    accessDepartment?: Set<number>;
+    access_department?: Set<number>;
     /**
      * 
      * @type {Array<RoleModel>}
@@ -14203,19 +14203,19 @@ export interface UserUpdateRequestModel {
      * @type {string}
      * @memberof UserUpdateRequestModel
      */
-    userProfilePath?: string;
+    user_profile_path?: string;
     /**
      * 
      * @type {string}
      * @memberof UserUpdateRequestModel
      */
-    userSignaturePath?: string;
+    user_signature_path?: string;
     /**
      * 
      * @type {string}
      * @memberof UserUpdateRequestModel
      */
-    userSignatureBase64?: string;
+    user_signature_base64?: string;
 }
 
 
@@ -14261,31 +14261,31 @@ export interface VoucherDetailModel {
      * @type {number}
      * @memberof VoucherDetailModel
      */
-    trnVoucherDetailId?: number;
+    trn_voucher_detail_id?: number;
     /**
      * 
      * @type {number}
      * @memberof VoucherDetailModel
      */
-    trnVoucherId?: number;
+    trn_voucher_id?: number;
     /**
      * 
      * @type {number}
      * @memberof VoucherDetailModel
      */
-    chartAccountsId?: number;
+    chart_accounts_id?: number;
     /**
      * 
      * @type {number}
      * @memberof VoucherDetailModel
      */
-    currencyId?: number;
+    currency_id?: number;
     /**
      * 
      * @type {number}
      * @memberof VoucherDetailModel
      */
-    exchangeRate?: number;
+    exchange_rate?: number;
     /**
      * 
      * @type {number}
@@ -14303,13 +14303,13 @@ export interface VoucherDetailModel {
      * @type {number}
      * @memberof VoucherDetailModel
      */
-    depId?: number;
+    dep_id?: number;
     /**
      * 
      * @type {number}
      * @memberof VoucherDetailModel
      */
-    projectId?: number;
+    project_id?: number;
 }
 /**
  * 
@@ -14322,25 +14322,25 @@ export interface VoucherMappingStatementModel {
      * @type {number}
      * @memberof VoucherMappingStatementModel
      */
-    mappingStmtId?: number;
+    mapping_stmt_id?: number;
     /**
      * 
      * @type {number}
      * @memberof VoucherMappingStatementModel
      */
-    stmtId?: number;
+    stmt_id?: number;
     /**
      * 
      * @type {number}
      * @memberof VoucherMappingStatementModel
      */
-    refSystemId?: number;
+    ref_system_id?: number;
     /**
      * 
      * @type {number}
      * @memberof VoucherMappingStatementModel
      */
-    mappingValue?: number;
+    mapping_value?: number;
 }
 /**
  * 
@@ -14353,49 +14353,49 @@ export interface VoucherModel {
      * @type {number}
      * @memberof VoucherModel
      */
-    trnVoucherId?: number;
+    trn_voucher_id?: number;
     /**
      * 
      * @type {RefType}
      * @memberof VoucherModel
      */
-    refType?: RefType;
+    ref_type?: RefType;
     /**
      * 
      * @type {number}
      * @memberof VoucherModel
      */
-    voucherType?: number;
+    voucher_type?: number;
     /**
      * 
      * @type {string}
      * @memberof VoucherModel
      */
-    voucherDate?: string;
+    voucher_date?: string;
     /**
      * 
      * @type {string}
      * @memberof VoucherModel
      */
-    voucherCode?: string;
+    voucher_code?: string;
     /**
      * 
      * @type {string}
      * @memberof VoucherModel
      */
-    voucherRemark?: string;
+    voucher_remark?: string;
     /**
      * 
      * @type {number}
      * @memberof VoucherModel
      */
-    voucherAmount?: number;
+    voucher_amount?: number;
     /**
      * 
      * @type {Array<VoucherDetailModel>}
      * @memberof VoucherModel
      */
-    voucherDetail?: Array<VoucherDetailModel>;
+    voucher_detail?: Array<VoucherDetailModel>;
 }
 
 
@@ -14440,19 +14440,19 @@ export interface WorkflowStepStatusModel {
      * @type {WorkFlowRefType}
      * @memberof WorkflowStepStatusModel
      */
-    workflowRefType?: WorkFlowRefType;
+    workflow_ref_type?: WorkFlowRefType;
     /**
      * 
      * @type {number}
      * @memberof WorkflowStepStatusModel
      */
-    workflowStepId?: number;
+    workflow_step_id?: number;
     /**
      * 
      * @type {string}
      * @memberof WorkflowStepStatusModel
      */
-    targetStatusName?: string;
+    target_status_name?: string;
 }
 
 
@@ -14498,43 +14498,43 @@ export interface WorkflowTransitionInfoModel {
      * @type {WorkFlowRefType}
      * @memberof WorkflowTransitionInfoModel
      */
-    workflowRefType?: WorkFlowRefType;
+    workflow_ref_type?: WorkFlowRefType;
     /**
      * 
      * @type {number}
      * @memberof WorkflowTransitionInfoModel
      */
-    transitionId?: number;
+    transition_id?: number;
     /**
      * 
      * @type {number}
      * @memberof WorkflowTransitionInfoModel
      */
-    currentStepId?: number;
+    current_step_id?: number;
     /**
      * 
      * @type {number}
      * @memberof WorkflowTransitionInfoModel
      */
-    targetStepId?: number;
+    target_step_id?: number;
     /**
      * 
      * @type {string}
      * @memberof WorkflowTransitionInfoModel
      */
-    targetStepType?: string;
+    target_step_type?: string;
     /**
      * 
      * @type {string}
      * @memberof WorkflowTransitionInfoModel
      */
-    targetStepName?: string;
+    target_step_name?: string;
     /**
      * 
      * @type {boolean}
      * @memberof WorkflowTransitionInfoModel
      */
-    requiredSave?: boolean;
+    required_save?: boolean;
 }
 
 
@@ -14580,31 +14580,31 @@ export interface WorkflowTransitionRequest {
      * @type {WorkFlowRefType}
      * @memberof WorkflowTransitionRequest
      */
-    workflowRefType?: WorkFlowRefType;
+    workflow_ref_type?: WorkFlowRefType;
     /**
      * 
      * @type {number}
      * @memberof WorkflowTransitionRequest
      */
-    currentStepId?: number;
+    current_step_id?: number;
     /**
      * 
      * @type {number}
      * @memberof WorkflowTransitionRequest
      */
-    targetStepId?: number;
+    target_step_id?: number;
     /**
      * 
      * @type {Array<number>}
      * @memberof WorkflowTransitionRequest
      */
-    entityIdList?: Array<number>;
+    entity_id_list?: Array<number>;
     /**
      * 
      * @type {number}
      * @memberof WorkflowTransitionRequest
      */
-    transitionId?: number;
+    transition_id?: number;
     /**
      * 
      * @type {string}

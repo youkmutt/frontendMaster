@@ -17,6 +17,7 @@ function Login() {
       setLoading(true);
       await user_api.apiUserSigninPost({ body: model }).then((response) => {
         setLoading(false);
+        console.log(response);
         if (response.success == true) {
           sessionStorage.removeItem("authToken");
           sessionStorage.removeItem("refreshToken");
@@ -27,11 +28,11 @@ function Login() {
 
           sessionStorage.setItem(
             "authToken",
-            response.data?.token?.accessToken?.toString() ?? ""
+            response.data?.token?.access_token?.toString() ?? ""
           );
           sessionStorage.setItem(
             "refreshToken",
-            response.data?.token?.refreshToken?.toString() ?? ""
+            response.data?.token?.refresh_token?.toString() ?? ""
           );
           sessionStorage.setItem("user", JSON.stringify(response.data) ?? "");
           sessionStorage.setItem(
@@ -45,13 +46,13 @@ function Login() {
           sessionStorage.setItem("lang", "th");
 
           const extractedData: UserDetailModel = {
-            employeeId: response.data?.employeeId,
-            employeeCode: response.data?.employeeCode,
+            employee_id: response.data?.employee_id,
+            employee_code: response.data?.employee_code,
             username: response.data?.username,
             firstName: response.data?.firstName,
             lastName: response.data?.lastName,
             email: response.data?.email,
-            activeFlag: response.data?.activeFlag,
+            active_flag: response.data?.active_flag,
           };
 
           sessionStorage.setItem("userDetail", JSON.stringify(extractedData));

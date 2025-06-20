@@ -9,9 +9,9 @@
     "start": "env-cmd -f .env.production next start",
     "lint": "next lint",
     "update-api": "npm run main-api && npm run img-api && npm run jasper-api",
-    "main-api": "rimraf ./src/api_main && openapi-generator-cli generate -i http://10.11.60.173:30510/swagger/v1/swagger.json -g typescript-fetch -o ./src/api_main --skip-validate-spec --additional-properties=useSingleRequestParameter=true,supportsES6=true,withInterfaces=true,modelSuffix=Dto,withoutRuntimeChecks=true,skipObjectModel=true && node ./scripts/fix-main-api.js",
-    "img-api": "rimraf ./src/api_url && openapi-generator-cli generate -i http://10.11.60.173:30500/swagger/v1/swagger.json -g typescript-fetch -o ./src/api_url --skip-validate-spec --additional-properties=useSingleRequestParameter=true,supportsES6=true,withInterfaces=true,modelSuffix=Dto,withoutRuntimeChecks=true,skipObjectModel=true && node ./scripts/fix-url-api.js",
-    "jasper-api": "rimraf ./src/api_jasper && openapi-generator-cli generate -i http://10.11.60.173:30514/v3/api-docs -g typescript-fetch -o ./src/api_jasper --skip-validate-spec --additional-properties=useSingleRequestParameter=true,supportsES6=true,withInterfaces=true,modelSuffix=Dto,withoutRuntimeChecks=true,skipObjectModel=true && node ./scripts/fix-jasper-api.js"
+    "main-api": "rimraf ./src/api_main && openapi-generator-cli generate -i http://10.11.60.173:30510/swagger/v1/swagger.json -g typescript-fetch -o ./src/api_main --skip-validate-spec --additional-properties=modelPropertyNaming=original,supportsES6=true,withInterfaces=true,modelSuffix=Dto,withoutRuntimeChecks=true,skipObjectModel=true && node ./scripts/fix-main-api.js",
+    "img-api": "rimraf ./src/api_url && openapi-generator-cli generate -i http://10.11.60.173:30500/swagger/v1/swagger.json -g typescript-fetch -o ./src/api_url --skip-validate-spec --additional-properties=modelPropertyNaming=original,supportsES6=true,withInterfaces=true,modelSuffix=Dto,withoutRuntimeChecks=true,skipObjectModel=true && node ./scripts/fix-url-api.js",
+    "jasper-api": "rimraf ./src/api_jasper && openapi-generator-cli generate -i http://10.11.60.173:30514/v3/api-docs -g typescript-fetch -o ./src/api_jasper --skip-validate-spec --additional-properties=modelPropertyNaming=original,supportsES6=true,withInterfaces=true,modelSuffix=Dto,withoutRuntimeChecks=true,skipObjectModel=true && node ./scripts/fix-jasper-api.js"
   },
   "dependencies": {
     "framer-motion": "^12.17.3",

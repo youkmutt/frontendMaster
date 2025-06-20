@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useAlert } from "@/app/context/AlertContext";
 import TextSearch from "@/app/components/search/TextSearch";
 import DropdownSearch from "@/app/components/search/DropdownSearch";
@@ -7,8 +7,7 @@ import Box from "@/app/components/search/Box";
 import MoneySearch from "@/app/components/search/MoneySearch";
 import SampleButton from "@/app/components/SampleButton";
 import { useLoading } from "@/app/context/LoadingContext";
-import Table, { TableHeaderModel } from "@/app/components/Table";
-import ExampleDataTable from "@/app/components/ExampleDataTable";
+import DT from "@/app/components/DataTable";
 import {
   DropdownModel,
   DropdownApi,
@@ -23,45 +22,36 @@ function Tab1() {
   const ddl_api = new DropdownApi();
   const { setLoading } = useLoading();
   const [ddl_bankaccount, set_ddl_bankaccount] = useState<DropdownModel[]>([]);
-  const [table_header, set_table_header] = useState<TableHeaderModel[]>([]);
   const [data, set_data] = useState<LogImportStatementResponseModel>();
+  const [clearTrigger, setClearTrigger] = useState(0);
+  const isMounted = useRef(false);
 
   useEffect(() => {
-    setLoading(true);
-    set_table_header([
-      {
-        position: "text-center",
-        text: "ลำดับ",
-      },
-      {
-        position: "text-center",
-        text: "วันที่นำเข้าข้อมูล",
-      },
-      {
-        position: "text-center",
-        text: "บัญชีเงินฝาก",
-      },
-      {
-        position: "text-center",
-        text: "ชื่อไฟล์",
-      },
-      {
-        position: "text-center",
-        text: "ช่วงเวลาข้อมูล",
-      },
-      {
-        position: "text-center",
-        text: "จำนวนรายการ",
-      },
-      {
-        position: "text-center",
-        text: "จำนวนเงินรวม",
-      },
-      {
-        position: "text-center",
-        text: "จัดการ",
-      },
-    ]);
+    if (!isMounted.current) {
+      isMounted.current = true;
+      setLoading(true);
+      get_ddl_bank();
+      search();
+    }
+  }, []);
+
+  const [model, setModel] = useState<ApiBankReconcileListGetRequest>({
+    accountId: undefined,
+    dateStart: null,
+    dateEnd: null,
+    startCreateDate: undefined,
+    endCreateDate: undefined,
+    fileName: undefined,
+    fromMoneyCumulative: undefined,
+    toMoneyCumulative: undefined,
+    pageSize: 100,
+    pageIndex: 1,
+    activeFlag: true,
+  });
+
+  const bank_api = new BankReconcileApi(apiConfig);
+
+  const get_ddl_bank = async () => {
     try {
       ddl_api.apiDropdownDdlBankAccountGet().then((response) => {
         setLoading(false);
@@ -72,28 +62,45 @@ function Tab1() {
       console.error("API error:", err);
       showAlert("API error: " + err, "error");
     }
-  }, []);
-
-  const model: ApiBankReconcileListGetRequest = {
-    pageSize: 100,
-    pageIndex: 1,
-    activeFlag: true,
   };
-  const bank_api = new BankReconcileApi(apiConfig);
-  const search = async (model: ApiBankReconcileListGetRequest) => {
+
+  const search = async () => {
     try {
       setLoading(true);
       await bank_api.apiBankReconcileListGet(model).then((response) => {
         set_data(response);
-        setLoading(false);
-        console.log(response);
       });
     } catch (err) {
       setLoading(false);
       console.error("API error:", err);
-      showAlert("Invalid username or password", "error");
+      showAlert(String(err), "error");
+    } finally {
+      setLoading(false);
     }
   };
+
+  const clear = () => {
+    setModel({
+      accountId: undefined,
+      dateStart: null,
+      dateEnd: null,
+      startCreateDate: undefined,
+      endCreateDate: undefined,
+      fileName: undefined,
+      fromMoneyCumulative: undefined,
+      toMoneyCumulative: undefined,
+      pageSize: 100,
+      pageIndex: 1,
+      activeFlag: true,
+    });
+    setClearTrigger((prev) => prev + 1);
+  };
+
+  useEffect(() => {
+    if (clearTrigger > 0) {
+      search();
+    }
+  }, [clearTrigger]);
 
   return (
     <>
@@ -103,14 +110,19 @@ function Tab1() {
 
       <h3 className="text-lg font-medium text-gray-700 mb-4">ค้นหา</h3>
 
-      <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+      <div className="grid xl:grid-cols-3 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
         <Box
           label="วันที่นำเข้าข้อมูล"
           component={
             <DateRangePicker
               onChange={function (start: string, end: string): void {
-                showAlert(start + " - " + end, "success");
+                setModel((prev) => ({
+                  ...prev,
+                  startCreateDate: start,
+                  endCreateDate: end,
+                }));
               }}
+              clearTrigger={clearTrigger}
             ></DateRangePicker>
           }
         ></Box>
@@ -120,8 +132,13 @@ function Tab1() {
           component={
             <DropdownSearch
               list={ddl_bankaccount}
+              clearTrigger={clearTrigger}
               onClick={function (id?: any, value?: string): void {
                 console.log(id, value);
+                setModel((prev) => ({
+                  ...prev,
+                  accountId: id,
+                }));
               }}
             ></DropdownSearch>
           }
@@ -131,8 +148,12 @@ function Tab1() {
           component={
             <TextSearch
               label="ชื่อไฟล์"
-              onChange={function (value: string): void {
-                console.log(value);
+              clearTrigger={clearTrigger}
+              onChange={function (value: string | undefined): void {
+                setModel((prev) => ({
+                  ...prev,
+                  fileName: value,
+                }));
               }}
             ></TextSearch>
           }
@@ -142,9 +163,15 @@ function Tab1() {
           label="ช่วงเวลาข้อมูล"
           component={
             <DateRangePicker
+              dateOnly={true}
               onChange={function (start: string, end: string): void {
-                showAlert(start + " - " + end, "success");
+                setModel((prev) => ({
+                  ...prev,
+                  dateStart: start,
+                  dateEnd: end,
+                }));
               }}
+              clearTrigger={clearTrigger}
             ></DateRangePicker>
           }
         ></Box>
@@ -154,14 +181,22 @@ function Tab1() {
           component={
             <div className="flex space-x-2">
               <MoneySearch
-                onChange={function (value: string): void {
-                  console.log("MoneySearch :", value);
+                clearTrigger={clearTrigger}
+                onChange={function (value: number | undefined): void {
+                  setModel((prev) => ({
+                    ...prev,
+                    fromMoneyCumulative: value,
+                  }));
                 }}
               ></MoneySearch>
               <span className="self-center text-gray-500">-</span>
               <MoneySearch
-                onChange={function (value: string): void {
-                  console.log("MoneySearch :", value);
+                clearTrigger={clearTrigger}
+                onChange={function (value: number | undefined): void {
+                  setModel((prev) => ({
+                    ...prev,
+                    toMoneyCumulative: value,
+                  }));
                 }}
               ></MoneySearch>
             </div>
@@ -170,13 +205,10 @@ function Tab1() {
       </div>
 
       <div className="flex justify-center space-x-4 ">
-        <SampleButton
-          text={"ค้นหา"}
-          onClick={() => search(model)}
-        ></SampleButton>
+        <SampleButton text={"ค้นหา"} onClick={() => search()}></SampleButton>
         <SampleButton
           text="ล้าง"
-          onClick={() => console.log("clear")}
+          onClick={() => clear()}
           additional_class={
             "mr-2 font-semibold rounded-t-md bg-white text-fa-primary hover:text-white  border border-gray-300"
           }
@@ -184,17 +216,7 @@ function Tab1() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4">
-        <Table
-          header={"ประวัติการนำเข้า"}
-          onClick={function (): void {
-            throw new Error("Function not implemented.");
-          }}
-          thead={table_header}
-        ></Table>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4">
-        <ExampleDataTable data={data?.data}></ExampleDataTable>
+        <DT data={data?.data}></DT>
       </div>
     </>
   );

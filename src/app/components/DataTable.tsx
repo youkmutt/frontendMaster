@@ -3,27 +3,15 @@
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { LogImportStatementModel } from "@/api_main";
-import "./style/ExampleDataTable.css";
 import { ApiFilesV2FileNameGetRequest, FilesApi } from "@/api_url";
+import { Dropdown } from "primereact/dropdown";
+import { PaginatorPassThroughMethodOptions } from "primereact/paginator";
 
-interface Product {
-  id: string;
-  name: string;
-  price: number;
-  category: string;
-}
-
-const products: Product[] = [
-  { id: "1", name: "Apple", price: 120, category: "Fruit" },
-  { id: "2", name: "Carrot", price: 50, category: "Vegetable" },
-  { id: "3", name: "Bread", price: 80, category: "Bakery" },
-];
-
-interface ExampleDataTableProps {
+interface DTProps {
   data?: Array<LogImportStatementModel>;
 }
 
-const ExampleDataTable: React.FC<ExampleDataTableProps> = ({ data }) => {
+const DT: React.FC<DTProps> = ({ data }) => {
   const file_api = new FilesApi();
   const download = (request: ApiFilesV2FileNameGetRequest) => {
     file_api
@@ -32,8 +20,19 @@ const ExampleDataTable: React.FC<ExampleDataTableProps> = ({ data }) => {
           Authorization: `Bearer ${sessionStorage.getItem("authToken")}`,
         },
       })
-      .then((response) => {
-        console.log(response);
+      .then((blobResponse: Blob) => {
+        console.log(blobResponse);
+        const url = window.URL.createObjectURL(blobResponse);
+        const a = document.createElement("a");
+        a.href = url;
+        const fileName = request.fileName;
+        a.download = fileName || "downloaded_file";
+        document.body.appendChild(a);
+
+        a.click();
+
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(a);
       });
   };
 
@@ -48,11 +47,50 @@ const ExampleDataTable: React.FC<ExampleDataTableProps> = ({ data }) => {
           value={data}
           paginator
           rows={10}
-          rowsPerPageOptions={[10, 30, 50, 100]}
-          //   paginatorTemplate=" CurrentPageReport PrevPageLink PageLinks NextPageLink RowsPerPageDropdown"
-          //   currentPageReportTemplate="แสดง {first} ถึง {last} จาก {totalRecords} รายการ"
-          tableStyle={{ minWidth: "50rem" }}
           className="border rounded-lg"
+          tableStyle={{ minWidth: "50rem" }}
+          rowsPerPageOptions={[10, 30, 50, 100]}
+          // currentPageReportTemplate="{first} - {last} {totalRecords}"
+          pt={{
+            paginator: {
+              pageButton: (options: PaginatorPassThroughMethodOptions) => {
+                const isActive = options?.context?.active;
+                return {
+                  className: isActive
+                    ? "bg-fa-primary text-white rounded-md focus:shadow-none text-sm"
+                    : "bg-white text-fa-primary hover:bg-fa-primary hover:text-white rounded-md text-sm",
+                };
+              },
+            },
+          }}
+          paginatorTemplate={{
+            layout:
+              "FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown",
+            RowsPerPageDropdown: (options) => {
+              return (
+                <span className="flex flex-row w-10 pl-10 mr-20">
+                  <Dropdown
+                    inputId="rows"
+                    value={options.value}
+                    options={options.options}
+                    onChange={options.onChange}
+                    className="focus:border-fa-primary hover:border-fa-primary"
+                    pt={{
+                      input: { className: "text-sm" },
+                      item: (options) => {
+                        const isSelected = options?.context?.selected;
+                        return {
+                          className: isSelected
+                            ? "bg-fa-primary text-white text-sm"
+                            : "hover:bg-rose-100 text-black text-sm",
+                        };
+                      },
+                    }}
+                  />
+                </span>
+              );
+            },
+          }}
         >
           <Column
             field="row_number"
@@ -90,7 +128,7 @@ const ExampleDataTable: React.FC<ExampleDataTableProps> = ({ data }) => {
             bodyClassName="text-sm text-left"
             body={(item) => (
               <a
-                href="javascript:void(0);"
+                className="text-fa-primary cursor-pointer hover:underline"
                 onClick={() =>
                   download({
                     fileName: item.imp_file_name,
@@ -147,4 +185,4 @@ const ExampleDataTable: React.FC<ExampleDataTableProps> = ({ data }) => {
   );
 };
 
-export default ExampleDataTable;
+export default DT;

@@ -67,3 +67,18 @@ input:focus {
 .custom-header-center .flex {
   justify-content: center !important;
 }
+
+.border-inpt {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity)) /* #d1d5db */;
+}
+
+.calendarbtn {
+  color: #e3325c;
+  background-color: #ffffff;
+  border: none;
+  justify-content: space-between;
+  font-family:
+    Bai Jamjuree,
+    sans-serif;
+}

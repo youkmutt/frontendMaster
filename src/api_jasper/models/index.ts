@@ -11,13 +11,13 @@ export interface BaseRequestModel {
      * @type {string}
      * @memberof BaseRequestModel
      */
-    jrxmlName: string;
+    jrxml_name: string;
     /**
      * 
      * @type {string}
      * @memberof BaseRequestModel
      */
-    reportName: string;
+    report_name: string;
     /**
      * 
      * @type {{ [key: string]: object; }}
@@ -48,5 +48,5 @@ export interface BaseResponseModel {
      * @type {string}
      * @memberof BaseResponseModel
      */
-    urlDownload?: string;
+    url_download?: string;
 }
