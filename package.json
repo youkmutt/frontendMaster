@@ -14,6 +14,7 @@
     "jasper-api": "rimraf ./src/api_jasper && openapi-generator-cli generate -i http://10.11.60.173:30514/v3/api-docs -g typescript-fetch -o ./src/api_jasper --skip-validate-spec --additional-properties=modelPropertyNaming=original,supportsES6=true,withInterfaces=true,modelSuffix=Dto,withoutRuntimeChecks=true,skipObjectModel=true && node ./scripts/fix-jasper-api.js"
   },
   "dependencies": {
+    "crypto-js": "^4.2.0",
     "framer-motion": "^12.17.3",
     "next": "15.3.3",
     "primeicons": "^7.0.0",
@@ -25,6 +26,7 @@
     "@eslint/eslintrc": "^3",
     "@openapitools/openapi-generator-cli": "^2.20.2",
     "@tailwindcss/postcss": "^4",
+    "@types/crypto-js": "^4.2.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

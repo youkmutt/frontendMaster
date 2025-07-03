@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef, useState } from "react";
 import { useAlert } from "@/app/context/AlertContext";
 import TextSearch from "@/app/components/search/TextSearch";
@@ -7,7 +8,6 @@ import Box from "@/app/components/search/Box";
 import MoneySearch from "@/app/components/search/MoneySearch";
 import SampleButton from "@/app/components/SampleButton";
 import { useLoading } from "@/app/context/LoadingContext";
-import DT from "@/app/components/DataTable";
 import {
   DropdownModel,
   DropdownApi,
@@ -16,8 +16,13 @@ import {
   LogImportStatementResponseModel,
 } from "@/api_main";
 import { apiConfig } from "@/app/utils/api-client";
+import Tab1_table from "./tab1_table";
+import { useRouter, usePathname } from "next/navigation";
+import { encryptId } from "@/app/utils/encryption";
 
 function Tab1() {
+  const router = useRouter();
+  const pathname = usePathname();
   const { showAlert } = useAlert();
   const ddl_api = new DropdownApi();
   const { setLoading } = useLoading();
@@ -67,12 +72,13 @@ function Tab1() {
   const search = async () => {
     try {
       setLoading(true);
-      await bank_api.apiBankReconcileListGet(model).then((response) => {
-        set_data(response);
-      });
+      await bank_api
+        .apiBankReconcileListGet(model)
+        .then((response: LogImportStatementResponseModel) => {
+          set_data(response);
+        });
     } catch (err) {
       setLoading(false);
-      console.error("API error:", err);
       showAlert(String(err), "error");
     } finally {
       setLoading(false);
@@ -101,6 +107,16 @@ function Tab1() {
       search();
     }
   }, [clearTrigger]);
+
+  const Detail = (id: number) => {
+    const encrypted = encodeURIComponent(encryptId(id));
+    router.push(`${pathname}/detail?id=${encrypted}`);
+  };
+
+  const Delete = (id: number) => {
+    // router.push(pathname + "/detail");
+    console.log("DELETE : " + id);
+  };
 
   return (
     <>
@@ -134,7 +150,6 @@ function Tab1() {
               list={ddl_bankaccount}
               clearTrigger={clearTrigger}
               onClick={function (id?: any, value?: string): void {
-                console.log(id, value);
                 setModel((prev) => ({
                   ...prev,
                   accountId: id,
@@ -216,7 +231,15 @@ function Tab1() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4">
-        <DT data={data?.data}></DT>
+        <Tab1_table
+          data={data?.data}
+          onEdit={function (value: number): void {
+            Detail(value);
+          }}
+          onDelete={function (value: number): void {
+            Delete(value);
+          }}
+        ></Tab1_table>
       </div>
     </>
   );

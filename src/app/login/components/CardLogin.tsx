@@ -5,12 +5,13 @@ import { UserLoginRequestModel } from "@/api_main";
 import ToggleButtonGroup from "@/app/components/ToggleButtonGroup";
 import InputTextLogin from "./InputTextLogin";
 import ForgotPassword from "@/app/components/ForgotPassword";
-import Modal from "@/app/components/Modal";
+import { Dialog } from "primereact/dialog";
 
 interface CardLoginProps {
   header: ReactNode;
   detail_header: string;
   onLogin: (requestData: UserLoginRequestModel) => void;
+  onResetPassword: (request: string) => void;
 }
 
 interface StateOption {
@@ -22,6 +23,7 @@ const CardLogin: React.FC<CardLoginProps> = ({
   header,
   detail_header,
   onLogin,
+  onResetPassword,
 }) => {
   const [count, setCount] = useState(0);
   const [signInValidate, setSignInValidate] = useState(false);
@@ -32,6 +34,7 @@ const CardLogin: React.FC<CardLoginProps> = ({
     { label: "LDAP", value: 2 },
   ];
   const [requestData, setRequestData] = useState<UserLoginRequestModel>({});
+  const [forgotPassword, setForgotPassword] = useState<string>();
 
   const handleStateSelect = (label: string, value: number) => {
     console.log("Selected authentication type label:", label);
@@ -47,8 +50,7 @@ const CardLogin: React.FC<CardLoginProps> = ({
   };
 
   const handleResetPasswordSubmit = (email: string) => {
-    console.log("Reset password request for email:", email);
-    alert(`Password reset link sent to ${email} (simulated)`);
+    onResetPassword(email);
     handleCloseModal();
   };
 
@@ -122,29 +124,38 @@ const CardLogin: React.FC<CardLoginProps> = ({
                   <ForgotPassword
                     onClick={handleForgotPasswordClick}
                   ></ForgotPassword>
-                  {isModalOpen && (
-                    <Modal onClose={handleCloseModal}>
-                      <h2>Reset Your Password</h2>
-                      <p>
-                        Enter your email address to receive a password reset
-                        link.
-                      </p>
-                      {/* Add your password reset form here */}
-                      <input
-                        type="email"
-                        placeholder="Your email"
-                        className="border p-2 mt-2"
-                      />
-                      <button
-                        className="bg-blue-500 text-white p-2 mt-2"
-                        onClick={() => {
-                          handleResetPasswordSubmit("");
-                        }}
-                      >
-                        Send Reset Link
-                      </button>
-                    </Modal>
-                  )}
+                  <Dialog
+                    visible={isModalOpen}
+                    style={{ width: "40%" }}
+                    onHide={() => setIsModalOpen(false)}
+                    modal
+                  >
+                    <div className="row">
+                      <div className="justify-left items-left px-6">
+                        <InputTextLogin
+                          label={"Email"}
+                          placeholder="Email"
+                          validator={forgotPassword == ""}
+                          validate_txt="กรุณากรอกข้อมูล Email"
+                          onChange={(value) => {
+                            setForgotPassword(value);
+                          }}
+                          onEnter={() => {
+                            handleResetPasswordSubmit(forgotPassword ?? "");
+                          }}
+                        />
+                      </div>
+
+                      <div className="flex justify-center items-center my-4">
+                        <SampleButton
+                          onClick={() =>
+                            handleResetPasswordSubmit(forgotPassword ?? "")
+                          }
+                          text={"Send"}
+                        />
+                      </div>
+                    </div>
+                  </Dialog>
                 </div>
 
                 <div className="flex justify-center items-center  px-6">

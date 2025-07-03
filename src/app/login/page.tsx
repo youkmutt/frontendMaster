@@ -2,7 +2,12 @@
 import "./style.css";
 import { useRouter } from "next/navigation";
 import CardLogin from "./components/CardLogin";
-import { UserApi, UserLoginRequestModel, UserDetailModel } from "@/api_main";
+import {
+  UserApi,
+  UserLoginRequestModel,
+  UserDetailModel,
+  UserResetPasswordRequest,
+} from "@/api_main";
 import { useAlert } from "@/app/context/AlertContext";
 import { useLoading } from "../context/LoadingContext";
 
@@ -17,7 +22,6 @@ function Login() {
       setLoading(true);
       await user_api.apiUserSigninPost({ body: model }).then((response) => {
         setLoading(false);
-        console.log(response);
         if (response.success == true) {
           sessionStorage.removeItem("authToken");
           sessionStorage.removeItem("refreshToken");
@@ -59,13 +63,32 @@ function Login() {
 
           router.push("/pages/dashboard");
         } else {
-          console.log(response);
           showAlert("Invalid username or password", "error");
         }
       });
     } catch (err) {
-      console.error("API error:", err);
       showAlert("Invalid username or password", "error");
+    }
+  };
+
+  const forgotPassword = async (value: string) => {
+    const model: UserResetPasswordRequest = {
+      email: value,
+    };
+    try {
+      setLoading(true);
+      await user_api
+        .apiUserRequestResetPasswordPost({ body: model })
+        .then((response) => {
+          setLoading(false);
+          if (response.success == true) {
+            showAlert(response.message ?? "OK", "info");
+          } else {
+            showAlert(response.message ?? "Invalid", "error");
+          }
+        });
+    } catch (err) {
+      showAlert(String(err), "error");
     }
   };
 
@@ -79,6 +102,9 @@ function Login() {
       detail_header="Login to continue"
       onLogin={(requestData: UserLoginRequestModel) => {
         handleLogin(requestData);
+      }}
+      onResetPassword={function (request: string): void {
+        forgotPassword(request);
       }}
     ></CardLogin>
   );

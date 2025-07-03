@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Tab1 from "./components/tab1";
-import Tab2 from "./cancle/tab2";
+import Tab2 from "./cancel/tab2";
 import SampleButton from "@/app/components/SampleButton";
 import { useLoading } from "@/app/context/LoadingContext";
 

@@ -14,9 +14,12 @@ export default function Menu({ children }: { children: React.ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openMenuId, setOpenMenuId] = useState<number | null>(null);
   const [openSubMenuId, setOpenSubMenuId] = useState<number | null>(null);
+  const [openSubMenuId2, setOpenSubMenuId2] = useState<number | null>(null);
   const [nowMenuId, setNowMenuId] = useState<number | null>(null);
   const [nowSubMenuId, setNowSubMenuId] = useState<number | null>(null);
+  const [nowSubMenuId2, setNowSubMenuId2] = useState<number | null>(null);
   const [userDetail, setUserDetail] = useState<UserDetailModel | null>(null);
+  const [checked, setChecked] = useState(false);
   const [menu, setMenu] = useState<MenuResponseModelListBaseResponseModel>({
     data: [],
     success: false,
@@ -45,26 +48,60 @@ export default function Menu({ children }: { children: React.ReactNode }) {
         handleMenuToggle(0);
         setOpenMenuId(0);
         setOpenSubMenuId(0);
+        setOpenSubMenuId2(0);
         setNowMenuId(0);
         setNowSubMenuId(0);
+        setNowSubMenuId2(0);
       } else if (menuResponse.data) {
-        for (const item of menuResponse.data) {
-          if (item.sub_menu) {
-            for (const subItem of item.sub_menu) {
-              if ("/pages/" + subItem.menu_route === pathname) {
-                handleMenuToggle(item.menu_id ?? 0);
-                setOpenMenuId(item.menu_id ?? 0);
-                setOpenSubMenuId(subItem.menu_id ?? 0);
-                setNowMenuId(item.menu_id ?? 0);
-                setNowSubMenuId(subItem.menu_id ?? 0);
-                break;
-              }
-            }
-          }
+        const checked = BreadCamps(menuResponse, pathname);
+        if (checked == false) {
+          const parts = pathname.split("/");
+          parts.pop();
+          const basePath = parts.join("/");
+          BreadCamps(menuResponse, basePath);
         }
       }
     }
   }, [pathname]);
+
+  const BreadCamps = (
+    menuResponse: MenuResponseModelListBaseResponseModel,
+    url: string
+  ) => {
+    for (const item of menuResponse.data ?? []) {
+      if (item.sub_menu) {
+        for (const subItem of item.sub_menu) {
+          if (subItem.sub_menu) {
+            for (const subItem2 of subItem.sub_menu) {
+              if ("/pages/" + subItem2.menu_route === url) {
+                handleMenuToggle(item.menu_id ?? 0);
+                setOpenMenuId(item.menu_id ?? 0);
+                setOpenSubMenuId(subItem.menu_id ?? 0);
+                setOpenSubMenuId2(subItem2.menu_id ?? 0);
+                setNowMenuId(item.menu_id ?? 0);
+                setNowSubMenuId(subItem.menu_id ?? 0);
+                setNowSubMenuId2(subItem2.menu_id ?? 0);
+                setChecked(true);
+                return checked;
+              }
+            }
+          }
+          if ("/pages/" + subItem.menu_route === url) {
+            handleMenuToggle(item.menu_id ?? 0);
+            setOpenMenuId(item.menu_id ?? 0);
+            setOpenSubMenuId(subItem.menu_id ?? 0);
+            setOpenSubMenuId2(0);
+            setNowMenuId(item.menu_id ?? 0);
+            setNowSubMenuId(subItem.menu_id ?? 0);
+            setNowSubMenuId2(0);
+            setChecked(true);
+            return checked;
+          }
+        }
+      }
+    }
+    return checked;
+  };
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -90,6 +127,12 @@ export default function Menu({ children }: { children: React.ReactNode }) {
     );
     router.push(path);
   };
+  const handleSubClick = (path: string, subitemId: number) => {
+    setOpenSubMenuId2((currentId) =>
+      currentId === subitemId ? null : subitemId
+    );
+    router.push(path);
+  };
 
   const handleLogout = async () => {
     sessionStorage.removeItem("authToken");
@@ -103,6 +146,9 @@ export default function Menu({ children }: { children: React.ReactNode }) {
 
   const handleMenuToggle = (itemId: number) => {
     setOpenMenuId((currentId) => (currentId === itemId ? null : itemId));
+  };
+  const handleSubMenuToggle = (itemId: number) => {
+    setOpenSubMenuId((currentId) => (currentId === itemId ? null : itemId));
   };
 
   return (
@@ -211,17 +257,17 @@ export default function Menu({ children }: { children: React.ReactNode }) {
             
           `}
           >
-            <div className="p-0 mb-2 overflow-y-auto h-max min-w-max w-auto bg-white border border-gray-300 rounded-xl">
+            <div className="p-0 mb-2 overflow-x-auto overflow-y-auto h-max w-64 bg-white border border-gray-300 rounded-xl">
               <ul className={`space-y-1 ${isMenuOpen ? "p-2" : "px-0"}`}>
                 {menu.data?.map((item) => (
                   <li key={item.menu_id}>
                     {item.sub_menu && item.sub_menu.length > 0 ? (
                       <>
                         <button
-                          className="group flex items-center justify-between w-full p-3 text-gray-700 rounded-lg hover:bg-fa-primary hover:text-white transition-colors duration-200 focus:outline-none"
+                          className="group flex items-center justify-between w-56 p-3 text-gray-700 rounded-lg hover:bg-fa-primary hover:text-white transition-colors duration-200 focus:outline-none"
                           onClick={() => handleMenuToggle(item.menu_id ?? 0)}
                         >
-                          <div className="flex items-center">
+                          <div key={item.menu_id} className="flex items-center">
                             {item.menu_name}
                           </div>
 
@@ -245,23 +291,97 @@ export default function Menu({ children }: { children: React.ReactNode }) {
                           >
                             {item.sub_menu.map((subItem) => (
                               <li key={subItem.menu_id}>
-                                <button
-                                  onClick={() =>
-                                    handleClick(
-                                      "/pages/" + (subItem.menu_route ?? "#"),
-                                      subItem.menu_id ?? 0
-                                    )
-                                  }
-                                  className={`flex items-center justify-between w-full p-3 ${
-                                    openSubMenuId === subItem.menu_id
-                                      ? "text-fa-primary"
-                                      : "text-gray-700 "
-                                  } rounded-lg transition-colors duration-200 focus:outline-none hover:bg-fa-primary hover:text-white`}
-                                >
-                                  <div className="flex items-center">
-                                    {subItem.menu_name}
-                                  </div>
-                                </button>
+                                {subItem.sub_menu &&
+                                subItem.sub_menu.length > 0 ? (
+                                  <>
+                                    <button
+                                      className="group flex items-center justify-between w-48 p-3 text-gray-700 rounded-lg hover:bg-fa-primary hover:text-white transition-colors duration-200 focus:outline-none"
+                                      onClick={() =>
+                                        handleSubMenuToggle(
+                                          subItem.menu_id ?? 0
+                                        )
+                                      }
+                                    >
+                                      <div
+                                        key={subItem.menu_id}
+                                        className="flex items-center"
+                                      >
+                                        {subItem.menu_name}
+                                      </div>
+
+                                      {openSubMenuId === subItem.menu_id ? (
+                                        <i className="pi pi-chevron-down transform rotate-180 text-fa-primary group-hover:text-gray-50 transition-transform duration-300"></i>
+                                      ) : (
+                                        <i className="pi pi-chevron-down text-fa-primary group-hover:text-gray-50 transition-transform duration-300"></i>
+                                      )}
+                                    </button>
+
+                                    <div
+                                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                                        openSubMenuId === subItem.menu_id
+                                          ? "max-h-screen opacity-100 pt-1"
+                                          : "max-h-0 opacity-0 pt-0"
+                                      }`}
+                                    >
+                                      <ul
+                                        key={subItem.menu_id + "-sub-sub"}
+                                        className="pl-8 space-y-1"
+                                      >
+                                        {subItem.sub_menu.map((subItem2) => (
+                                          <li key={subItem2.menu_id}>
+                                            <button
+                                              onClick={() =>
+                                                handleSubClick(
+                                                  "/pages/" +
+                                                    (subItem2.menu_route ??
+                                                      "#"),
+                                                  subItem2.menu_id ?? 0
+                                                )
+                                              }
+                                              className={`flex items-center justify-between w-full p-3 ${
+                                                openSubMenuId2 ===
+                                                subItem2.menu_id
+                                                  ? "text-fa-primary"
+                                                  : "text-gray-700 "
+                                              } rounded-lg transition-colors duration-200 focus:outline-none hover:bg-fa-primary hover:text-white`}
+                                            >
+                                              <div
+                                                key={subItem2.menu_id}
+                                                className="flex items-center"
+                                              >
+                                                {subItem2.menu_name}
+                                              </div>
+                                            </button>
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    </div>
+                                  </>
+                                ) : (
+                                  <>
+                                    <button
+                                      onClick={() =>
+                                        handleClick(
+                                          "/pages/" +
+                                            (subItem.menu_route ?? "#"),
+                                          subItem.menu_id ?? 0
+                                        )
+                                      }
+                                      className={`flex items-center justify-between w-full p-3 ${
+                                        openSubMenuId === subItem.menu_id
+                                          ? "text-fa-primary"
+                                          : "text-gray-700 "
+                                      } rounded-lg transition-colors duration-200 focus:outline-none hover:bg-fa-primary hover:text-white`}
+                                    >
+                                      <div
+                                        key={subItem.menu_id}
+                                        className="flex items-center"
+                                      >
+                                        {subItem.menu_name}
+                                      </div>
+                                    </button>
+                                  </>
+                                )}
                               </li>
                             ))}
                           </ul>
@@ -288,7 +408,6 @@ export default function Menu({ children }: { children: React.ReactNode }) {
                 className="mt-0 pr-1 pb-0.5 rounded-md transition-colors duration-200 hover:bg-gray-200 hover:text-fa-primary text-gray-500"
                 onClick={() => handleClick("/pages/dashboard", 0)}
               >
-                {/* <House className="w-4 h-4" /> */}
                 <i className="pi pi-home w-4 h-4"></i>
               </button>{" "}
               {menu.data?.map((item) =>

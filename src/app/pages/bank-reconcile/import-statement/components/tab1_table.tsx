@@ -7,11 +7,13 @@ import { ApiFilesV2FileNameGetRequest, FilesApi } from "@/api_url";
 import { Dropdown } from "primereact/dropdown";
 import { PaginatorPassThroughMethodOptions } from "primereact/paginator";
 
-interface DTProps {
+interface Tab1_tableProps {
   data?: Array<LogImportStatementModel>;
+  onEdit: (value: number) => void;
+  onDelete: (value: number) => void;
 }
 
-const DT: React.FC<DTProps> = ({ data }) => {
+const Tab1_table: React.FC<Tab1_tableProps> = ({ data, onEdit, onDelete }) => {
   const file_api = new FilesApi();
   const download = (request: ApiFilesV2FileNameGetRequest) => {
     file_api
@@ -21,16 +23,13 @@ const DT: React.FC<DTProps> = ({ data }) => {
         },
       })
       .then((blobResponse: Blob) => {
-        console.log(blobResponse);
         const url = window.URL.createObjectURL(blobResponse);
         const a = document.createElement("a");
         a.href = url;
         const fileName = request.fileName;
         a.download = fileName || "downloaded_file";
         document.body.appendChild(a);
-
         a.click();
-
         window.URL.revokeObjectURL(url);
         document.body.removeChild(a);
       });
@@ -53,7 +52,7 @@ const DT: React.FC<DTProps> = ({ data }) => {
 
     const result = `${datePart} ${timePart}`;
 
-    return result; // ตัวอย่าง: 30/05/2025 17:28:45
+    return result;
   };
 
   return (
@@ -179,12 +178,12 @@ const DT: React.FC<DTProps> = ({ data }) => {
                 <i
                   className="pi pi-pencil cursor-pointer text-gray-500 hover:text-fa-primary"
                   title="แก้ไข"
-                  onClick={() => console.log("Edit", rowData)}
+                  onClick={() => onEdit(rowData.import_stmt_id)}
                 />
                 <i
                   className="pi pi-trash cursor-pointer text-gray-500 hover:text-fa-primary"
                   title="ลบ"
-                  onClick={() => console.log("Delete", rowData)}
+                  onClick={() => onDelete(rowData.import_stmt_id)}
                 />
               </div>
             )}
@@ -195,4 +194,4 @@ const DT: React.FC<DTProps> = ({ data }) => {
   );
 };
 
-export default DT;
+export default Tab1_table;

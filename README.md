@@ -87,6 +87,10 @@ npm install primeicons
 npm install rimraf --save-dev
 npm install @openapitools/openapi-generator-cli -D
 
+# Install Encrypt Decrypt Tools
+
+npm install crypto-js
+
 # in package.json
 
 "update-api": "npm run main-api && npm run img-api && npm run jasper-api",
